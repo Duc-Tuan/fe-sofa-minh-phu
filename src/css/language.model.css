@@ -1,0 +1,52 @@
+.header-language {
+  cursor: pointer;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.header-language .menu-language {
+  position: absolute;
+  top: 110%;
+  left: -0.5rem;
+  min-width: 300px;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  background-color: white;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.header-language .menu-language .menu-item {
+  padding: 0.5rem;
+}
+.header-language .menu-language .menu-item.activate,
+.header-language .menu-language .menu-item:hover {
+  background-color: #0000001a;
+}
+.header-language .header-language_button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.48rem;
+  color: rgba(255, 255, 255, 1);
+  padding: 0.5rem;
+  margin-left: -0.5rem;
+  border-radius: 1rem;
+}
+.header-language .header-language_button svg {
+  width: 0.93938rem;
+  height: 0.93938rem;
+}
+.header-language .header-language_button .icon-down {
+  width: 0.52125rem;
+  height: 0.52125rem;
+}
+.header-language .header-language_button h4 {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}

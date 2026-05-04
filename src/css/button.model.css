@@ -1,0 +1,73 @@
+.button {
+  display: inline-flex;
+  height: 3.5rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+
+  border-radius: 0 0.75rem 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.47);
+  backdrop-filter: blur(10px);
+}
+.button.white {
+  background: #fff;
+}
+.button.black {
+  background: #000;
+  color: white;
+}
+.button.vavariant {
+  background: transparent;
+  color: #1d262d;
+  border: 1px solid rgba(29, 38, 45, 0.47);
+}
+.button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.button h4 {
+  /* color: var(
+    --Foundation-Text-Green-800,
+    var(--Foundation-Blue-blue-800, #252525)
+  ); */
+  text-align: center;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 1.05rem */
+  text-transform: uppercase;
+}
+
+.button span {
+  transform: rotate(45deg);
+}
+
+.button .button-sub {
+  position: relative;
+  overflow: hidden;
+}
+
+.button .button-sub .whitespace-nowrap {
+  white-space: nowrap;
+}
+
+.button .button-sub .title-sub {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media (max-width: 640px) {
+  .button {
+    padding: 0.88rem 1rem;
+    height: 2.25rem;
+  }
+  .button h4 {
+    font-size: 0.75rem;
+  }
+  .button svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}

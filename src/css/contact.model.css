@@ -1,0 +1,40 @@
+.contact {
+  display: flex;
+  /* width: 20.54313rem; */
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.5625rem;
+  flex-shrink: 0;
+
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.contact .contact-separation {
+  width: 0.0625rem;
+  height: 0.73063rem;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.contact svg {
+  color: rgba(255, 255, 255, 1);
+}
+
+.icon-menu-header {
+  display: none;
+  padding-bottom: 8px;
+}
+.icon-menu-header svg {
+  width: 1.625rem;
+}
+
+@media (max-width: 640px) {
+  .icon-menu-header {
+    display: block;
+  }
+}

@@ -1,0 +1,150 @@
+/* @import "tailwindcss"; */
+
+@font-face {
+  font-family: "GoogleSans-Regular";
+  src: url("../assets/fonts/GoogleSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --root-font-size: 1vw;
+  --root-font-family: "GoogleSans-Regular", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  font-family: var(--root-font-family);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: var(--root-font-size);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  /* background-color: white; */
+  padding: 0;
+  margin: 0;
+}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: initial;
+  width: 100%;
+}
+
+input,
+textarea {
+  border: none;
+}
+::-webkit-scrollbar {
+  /* width: 8px; */
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  cursor: grabbing;
+}
+
+@media screen and (max-width: 639px) {
+  :root {
+    --root-font-size: 4.26667vw;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  :root {
+    --root-font-size: 16px;
+  }
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+
+@layer base {
+  :root {
+  }
+}
+
+.text-imperial-script {
+  font-family: "ImperialScript-Regular", sans-serif;
+  font-weight: 600;
+  font-size: calc(var(--root-font-size) * 3);
+  line-height: 120%;
+}
+
+.my-container {
+  width: 100%;
+  padding-left: 6.25rem;
+  padding-right: 6.25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .my-container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+.text-line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Số dòng muốn hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (max-width: 640px) {
+  .none-mobile{
+    display: none !important;
+  }
+}
