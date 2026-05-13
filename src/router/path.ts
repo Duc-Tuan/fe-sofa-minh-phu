@@ -5,4 +5,5 @@ export const PathName = {
     CONTACT: "/contact",
     MANUFACTURE: "/manufacture",
     TYPICALPROJECT: "/typical-project",
+    PRODUCT: "/product",
 }

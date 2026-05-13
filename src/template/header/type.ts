@@ -36,7 +36,7 @@ export const dataMenu: IMenuHeader[] = [
     },
     {
         name: "Sản phẩm",
-        path: PathName.ARTICLE
+        path: PathName.PRODUCT
     },
     {
         name: "Tin tức & blog",

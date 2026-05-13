@@ -30,8 +30,8 @@ function Header() {
       setScrollButton(true);
     } else if (current < previous) {
       setHidden(false);
-      setScrollButton(false);
     } else if (current <= 50) {
+      setScrollButton(false);
       setHidden(false);
     }
   });

@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useRef } from "react";
-import banner from "@/assets/images/imageFooter.png";
+import slide1 from "@/assets/images/figma/home/slide-1.png";
+import slide2 from "@/assets/images/figma/home/slide-2.png";
+import capacity1 from "@/assets/images/figma/home/capacity-1.png";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { motion } from "framer-motion";
@@ -14,7 +16,7 @@ import "swiper/css/navigation";
 import "@/css/banner.model.css";
 import Button from "@/components/button/Button";
 
-const images = [banner.src, banner.src, banner.src, banner.src];
+const images = [slide1.src, slide2.src, capacity1.src];
 
 function Banner() {
   return (

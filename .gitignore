@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# figma cache (downloaded screenshots)
+.figma-cache/
+.claude/
+.gitignore
+AGENTS.md
+CLAUDE.md

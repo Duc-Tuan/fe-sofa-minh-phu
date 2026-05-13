@@ -1,0 +1,64 @@
+.input-form__field {
+  width: 100%;
+}
+.input-form__field label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.input-form__field input {
+  width: 100%;
+  display: flex;
+  padding: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  background: #f4f4f4;
+}
+/* Ẩn nút lên xuống trên Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Ẩn nút lên xuống trên Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.input-form__field textarea {
+  resize: none;
+  display: flex;
+  padding: 0.75rem;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex: 1 0 0;
+  align-self: stretch;
+  background: #f4f4f4;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .input-form__field label {
+    color: var(
+      --Foundation-Text-Green-800,
+      var(--Foundation-Blue-blue-800, #252525)
+    );
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.3125rem */
+    letter-spacing: -0.00875rem;
+  }
+
+  input {
+    color: var(
+      --Foundation-Text-Green-800,
+      var(--Foundation-Blue-blue-800, #252525)
+    );
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 1.3125rem */
+  }
+}

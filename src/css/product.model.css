@@ -1,0 +1,212 @@
+.product-page {
+  background: #fff;
+  color: #1d262d;
+  overflow: hidden;
+}
+
+/* ========== Hero ========== */
+.product-hero {
+  position: relative;
+  height: 26rem;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.product-hero__bg {
+  position: absolute;
+  inset: 0;
+}
+.product-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+}
+.product-hero__content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 3rem;
+}
+.product-hero__breadcrumb {
+  display: inline-flex;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1rem;
+}
+.product-hero__breadcrumb a {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.product-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ========== List wrapper ========== */
+.product-list {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+/* ========== Filter ========== */
+.product-filter {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1rem;
+  border-bottom: 1px solid rgba(29, 38, 45, 0.12);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.product-filter__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 0.25rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: rgba(29, 38, 45, 0.7);
+  transition: color 0.25s;
+}
+.product-filter__item-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-filter__item-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 1.4;
+}
+.product-filter__item-name {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.product-filter__item.is-active,
+.product-filter__item:hover {
+  color: #1d262d;
+}
+.product-filter__item.is-active .product-filter__item-name {
+  font-weight: 700;
+}
+
+/* ========== Grid ========== */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem 1.5rem;
+}
+
+/* ========== Card ========== */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.product-card__image {
+  width: 100%;
+  height: 18rem;
+  background: #f6f4ef;
+  border-radius: 0 0.625rem 0 0;
+  overflow: hidden;
+  display: block;
+}
+.product-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.5s;
+}
+.product-card:hover .product-card__image img {
+  transform: scale(1.05);
+}
+.product-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.25rem 0;
+}
+.product-card__collection {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  color: rgba(29, 38, 45, 0.55);
+  text-transform: uppercase;
+}
+.product-card__name {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ========== Pagination ========== */
+.product-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+.product-pagination__btn {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid rgba(29, 38, 45, 0.2);
+  background: transparent;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s;
+}
+.product-pagination__btn.is-active,
+.product-pagination__btn:hover {
+  background: #1d262d;
+  color: #fff;
+  border-color: #1d262d;
+}
+
+@media (max-width: 768px) {
+  .product-hero {
+    height: 18rem;
+  }
+  .product-hero h1 {
+    font-size: 1.5rem;
+  }
+  .product-list {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+  .product-filter {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .product-filter__item-icon {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+  .product-filter__item-name {
+    font-size: 0.625rem;
+  }
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+  .product-card__image {
+    height: 11rem;
+  }
+}

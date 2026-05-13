@@ -2,6 +2,7 @@ import { SVGProps } from "react";
 
 import IconLogo from "./icons/IconLogo.svg";
 import IconArrow from "./icons/IconArrow.svg";
+import IconArrowLine from "./icons/IconArrowLine.svg";
 import IconLanguage from "./icons/IconLanguage.svg";
 import IconDown from "./icons/IconDown.svg";
 import IconSearch from "./icons/IconSearch.svg";
@@ -19,12 +20,60 @@ import IconZalo from "./icons/IconZalo.svg";
 import IconPhone from "./icons/IconPhone.svg";
 import IconMessager from "./icons/IconMessager.svg";
 
+import IconProcess1 from "./icons/IconProcess1.svg";
+import IconProcess2 from "./icons/IconProcess2.svg";
+import IconProcess3 from "./icons/IconProcess3.svg";
+import IconProcess4 from "./icons/IconProcess4.svg";
+import IconProcess5 from "./icons/IconProcess5.svg";
+import IconProcess6 from "./icons/IconProcess6.svg";
+import IconProcess7 from "./icons/IconProcess7.svg";
+
+import IconChooseUs1 from "./icons/IconChooseUs1.svg";
+import IconChooseUs2 from "./icons/IconChooseUs2.svg";
+import IconChooseUs3 from "./icons/IconChooseUs3.svg";
+import IconChooseUs4 from "./icons/IconChooseUs4.svg";
+
+import IconWhy1 from "./icons/IconWhy1.svg";
+import IconWhy2 from "./icons/IconWhy2.svg";
+import IconWhy3 from "./icons/IconWhy3.svg";
+import IconWhy4 from "./icons/IconWhy4.svg";
+
 type IconProps = SVGProps<SVGSVGElement> & {
   name?: string;
 };
 
 export default function Icon({ name, className, ...props }: IconProps) {
   switch (name?.toLowerCase()) {
+    case "icon-why-1":
+      return <IconWhy1 className={className} {...props} />;
+    case "icon-why-2":
+      return <IconWhy2 className={className} {...props} />;
+    case "icon-why-3":
+      return <IconWhy3 className={className} {...props} />;
+    case "icon-why-4":
+      return <IconWhy4 className={className} {...props} />;
+    case "icon-choose-us-1":
+      return <IconChooseUs1 className={className} {...props} />;
+    case "icon-choose-us-2":
+      return <IconChooseUs2 className={className} {...props} />;
+    case "icon-choose-us-3":
+      return <IconChooseUs3 className={className} {...props} />;
+    case "icon-choose-us-4":
+      return <IconChooseUs4 className={className} {...props} />;
+    case "icon-process-1":
+      return <IconProcess1 className={className} {...props} />;
+    case "icon-process-2":
+      return <IconProcess2 className={className} {...props} />;
+    case "icon-process-3":
+      return <IconProcess3 className={className} {...props} />;
+    case "icon-process-4":
+      return <IconProcess4 className={className} {...props} />;
+    case "icon-process-5":
+      return <IconProcess5 className={className} {...props} />;
+    case "icon-process-6":
+      return <IconProcess6 className={className} {...props} />;
+    case "icon-process-7":
+      return <IconProcess7 className={className} {...props} />;
     case "icon-close":
       return <IconClose className={className} {...props} />;
     case "icon-zalo":
@@ -53,6 +102,8 @@ export default function Icon({ name, className, ...props }: IconProps) {
       return <IconLogo className={className} {...props} />;
     case "icon-arrow":
       return <IconArrow className={className} {...props} />;
+    case "icon-arrow-line":
+      return <IconArrowLine className={className} {...props} />;
     case "icon-menu":
       return <IconMenu className={className} {...props} />;
     case "icon-headquarters":

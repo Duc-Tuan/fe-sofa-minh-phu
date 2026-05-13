@@ -49,6 +49,12 @@ a:visited {
   width: 100%;
 }
 
+[class*="__breadcrumb"] a,
+[class*="__breadcrumb"] a:link,
+[class*="__breadcrumb"] a:visited {
+  width: auto;
+}
+
 input,
 textarea {
   border: none;
@@ -142,9 +148,15 @@ svg {
   width: 1rem;
   height: 1rem;
 }
+.none-pc {
+  display: none !important;
+}
 
 @media (max-width: 640px) {
-  .none-mobile{
+  .none-mobile {
     display: none !important;
+  }
+  .none-pc {
+    display: flex !important;
   }
 }

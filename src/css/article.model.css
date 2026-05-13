@@ -1,0 +1,225 @@
+.article-page {
+  background: #fff;
+  color: #1d262d;
+  overflow: hidden;
+}
+
+.article-hero {
+  position: relative;
+  height: 28rem;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.article-hero__bg {
+  position: absolute;
+  inset: 0;
+}
+.article-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.article-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+}
+.article-hero__content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 3rem;
+}
+.article-hero__breadcrumb {
+  display: inline-flex;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1rem;
+}
+.article-hero__breadcrumb a {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.article-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.article-featured {
+  padding: 4rem 6.25rem 2rem;
+}
+.article-featured__head {
+  margin-bottom: 1.5rem;
+}
+.article-featured__head span {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  color: rgba(29, 38, 45, 0.55);
+  text-transform: uppercase;
+}
+.article-featured__card {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  background: #fafafa;
+  border-radius: 0 0.875rem 0 0;
+  padding: 1.25rem;
+}
+.article-featured__image {
+  width: 100% !important;
+  height: 22rem;
+  border-radius: 0 0.625rem 0 0;
+  overflow: hidden;
+  display: block;
+}
+.article-featured__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+.article-featured__image:hover img {
+  transform: scale(1.04);
+}
+.article-featured__content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+.article-featured__date {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  color: rgba(29, 38, 45, 0.55);
+  text-transform: uppercase;
+}
+.article-featured__content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+.article-featured__content p {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: rgba(29, 38, 45, 0.7);
+}
+
+.article-grid {
+  padding: 2rem 6.25rem 5rem;
+}
+.article-grid__head {
+  margin-bottom: 1.5rem;
+}
+.article-grid__head span {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  color: rgba(29, 38, 45, 0.55);
+  text-transform: uppercase;
+}
+.article-grid__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.article-grid__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.article-grid__image {
+  width: 100% !important;
+  height: 14rem;
+  border-radius: 0 0.5rem 0 0;
+  overflow: hidden;
+  display: block;
+}
+.article-grid__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+.article-grid__card:hover .article-grid__image img {
+  transform: scale(1.04);
+}
+.article-grid__date {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  color: rgba(29, 38, 45, 0.55);
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+.article-grid__card h3 {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  line-height: 1.45;
+  text-transform: uppercase;
+  color: #1d262d;
+  transition: color 0.3s;
+}
+.article-grid__card:hover h3 {
+  color: #cdb27c;
+}
+.article-grid__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+.article-grid__page-btn {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid rgba(29, 38, 45, 0.2);
+  background: transparent;
+  font-size: 0.875rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.article-grid__page-btn.is-active {
+  background: #1d262d;
+  color: #fff;
+  border-color: #1d262d;
+}
+
+@media (max-width: 768px) {
+  .article-hero {
+    height: 18rem;
+  }
+  .article-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .article-featured {
+    padding: 2.5rem 1rem 1.5rem;
+  }
+  .article-featured__card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .article-featured__image {
+    height: 14rem;
+  }
+  .article-featured__content h2 {
+    font-size: 1.125rem;
+  }
+
+  .article-grid {
+    padding: 1.5rem 1rem 4rem;
+  }
+  .article-grid__list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .article-grid__image {
+    height: 12rem;
+  }
+}
