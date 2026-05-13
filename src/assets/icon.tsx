@@ -38,12 +38,25 @@ import IconWhy2 from "./icons/IconWhy2.svg";
 import IconWhy3 from "./icons/IconWhy3.svg";
 import IconWhy4 from "./icons/IconWhy4.svg";
 
+import IconPhoneV2 from "./icons/IconPhoneV2.svg";
+import IconEmailV2 from "./icons/IconEmailV2.svg";
+import IconLocalV2 from "./icons/IconLocalV2.svg";
+import IconFacebookV2 from "./icons/IconFacebookV2.svg";
+
 type IconProps = SVGProps<SVGSVGElement> & {
   name?: string;
 };
 
 export default function Icon({ name, className, ...props }: IconProps) {
   switch (name?.toLowerCase()) {
+    case "icon-phone-v2":
+      return <IconPhoneV2 className={className} {...props} />;
+    case "icon-email-v2":
+      return <IconEmailV2 className={className} {...props} />;
+    case "icon-local-v2":
+      return <IconLocalV2 className={className} {...props} />;
+    case "icon-facebook-v2":
+      return <IconFacebookV2 className={className} {...props} />;
     case "icon-why-1":
       return <IconWhy1 className={className} {...props} />;
     case "icon-why-2":

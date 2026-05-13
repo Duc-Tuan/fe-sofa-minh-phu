@@ -2,62 +2,62 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import bgMission from "@/assets/images/figma/home/slide-2.png";
+import Icon from "@/assets/icon";
 
-interface MissionItem {
-  title: string;
-  desc: string;
-}
-
-const items: MissionItem[] = [
+const CARDS = [
   {
-    title: "Hiện thực hóa bản vẽ độc bản:",
-    desc: "Là “cánh tay nối dài” biến mọi ý tưởng táo bạo trên giấy thành kiệt tác hiện hữu.",
+    icon: "icon-choose-us-1",
+    title: "Trung thực tuyệt đối",
+    desc: "Minh bạch vật liệu, đúng nguồn gốc, chuẩn xác 100% bản vẽ kỹ thuật.",
   },
   {
-    title: "Nâng tầm trải nghiệm:",
-    desc: "Tạo ra những di sản bền bỉ, tối ưu hóa công năng và thẩm mỹ cho gia chủ.",
+    icon: "icon-choose-us-2",
+    title: "Kỹ nghệ bậc thầy",
+    desc: "Hội tụ công nghệ và bàn tay nghệ nhân, tinh tế từng đường kim.",
   },
   {
-    title: "Trách nhiệm môi trường:",
-    desc: "Nghiên cứu, cải tiến máy móc để giảm thải, hướng tới không gian sống “Xanh”, an toàn.",
+    icon: "icon-choose-us-3",
+    title: "Cá nhân hóa độc bản",
+    desc: "Thấu hiểu ý tưởng riêng biệt, kiến tạo trải nghiệm duy nhất cho gia chủ.",
   },
   {
-    title: "Phát huy giá trị con người:",
-    desc: "Kết hợp bàn tay nghệ nhân với tư duy công nghệ để giữ nguyên “linh hồn” sản phẩm từ bản vẽ 3D.",
+    icon: "icon-choose-us-4",
+    title: "Sản xuất thông minh",
+    desc: "Cải tiến công nghệ, tối ưu quy trình, hướng tới sản xuất xanh bền vững.",
   },
 ];
 
 function CoreValues() {
   return (
-    <section className="about-mission">
-      <div className="about-mission__bg">
-        <img src={bgMission.src} alt="" aria-hidden="true" />
-        <div className="about-mission__bg-overlay" />
-      </div>
+    <section className="about-core">
+      <div className="about-core__inner my-container">
+        <motion.div
+          className="about-core__head"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="about-core__eyebrow">Giá trị cốt lõi</span>
+          <h2 className="about-core__title">Nền tảng niềm tin – bản lĩnh thực thi</h2>
+        </motion.div>
 
-      <div className="about-mission__inner my-container">
-        <div className="about-mission__head">
-          <span className="about-mission__eyebrow">Sứ mệnh</span>
-          <h2 className="about-mission__title">
-            KIẾN TẠO CHUẨN MỰC SẢN XUẤT <br />
-            ĐỒNG HÀNH CÙNG NHỮNG Ý TƯỞNG LỚN
-          </h2>
-        </div>
-
-        <div className="about-mission__cards">
-          {items.map((it, idx) => (
-            <motion.div
-              key={it.title}
-              className={`about-mission__card about-mission__card--${idx % 2 === 0 ? "left" : "right"}`}
-              initial={{ opacity: 0, y: 30 }}
+        <div className="about-core__grid">
+          {CARDS.map((c, idx) => (
+            <motion.article
+              key={c.title}
+              className="about-core__card"
+              initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
             >
-              <h3>{it.title}</h3>
-              <p>{it.desc}</p>
-            </motion.div>
+              <span className="about-core__card-icon">
+                <Icon name={c.icon} />
+              </span>
+              <h3>{c.title}</h3>
+              <p>{c.desc}</p>
+            </motion.article>
           ))}
         </div>
       </div>

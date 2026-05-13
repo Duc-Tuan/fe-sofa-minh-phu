@@ -38,6 +38,18 @@ input[type="number"] {
   background: #f4f4f4;
   width: 100%;
 }
+.input-error-message {
+  color: #ef2020;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+.input-form__field.has-error input,
+.input-form__field.has-error textarea {
+  border: 1px solid #ef2020 !important;
+}
+
 @media (max-width: 768px) {
   .input-form__field label {
     color: var(

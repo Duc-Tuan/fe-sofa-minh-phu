@@ -1,18 +1,16 @@
 "use client";
-import React from "react";
 import "@/css/contact.model.css";
+import ContactForm from "../home/ContactForm";
 import Hero from "./Hero";
 import Intro from "./Intro";
-import FormBlock from "./FormBlock";
-import Locations from "./Locations";
+import imagebgForm from "@/assets/images/figma/contact/bg-cantact-2.png"
 
 function ContactPage() {
   return (
     <div className="contact-page">
       <Hero />
       <Intro />
-      <FormBlock />
-      <Locations />
+      <ContactForm background={imagebgForm.src} />
     </div>
   );
 }

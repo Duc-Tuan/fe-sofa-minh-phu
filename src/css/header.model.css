@@ -13,12 +13,14 @@
   will-change: transform, opacity;
   backdrop-filter: blur(9.949999809265137px);
 }
+
 .header .header-menu-sub {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   height: 3.13rem;
   background: rgba(0, 0, 0, 0.2);
 }
+
 .header-menu h5,
 .header .header-menu-sub .icon-logo a {
   display: flex;
@@ -26,23 +28,27 @@
   align-items: center;
   height: 100%;
 }
+
 .header .header-menu-sub .icon-logo svg {
   width: 3.64013rem;
   height: 2.27681rem;
   flex-shrink: 0;
 }
+
 .header-menu {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   height: 2.7rem;
 }
+
 .header-menu .header-menu_item {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 2.25rem;
 }
+
 .header-menu .header-menu_item a {
   color: #fff;
   font-size: 1rem;
@@ -52,12 +58,15 @@
   letter-spacing: 0;
   white-space: nowrap;
 }
+
 .header-menu .header-menu_item a:hover {
   opacity: 0.8;
 }
+
 .header-menu .header-menu_item:last-child {
   justify-content: flex-end;
 }
+
 .header-menu h5 {
   color: #fff;
   font-size: 1.125rem;
@@ -69,12 +78,20 @@
   text-align: center;
   white-space: nowrap;
 }
+
 .icon-logo a .header-menu_item-title {
   display: none;
 }
+
 .contact-sub {
   display: none;
 }
+
+.contact-link {
+  display: inline-block;
+  width: auto !important;
+}
+
 .contact-social-network {
   position: fixed;
   top: 50%;
@@ -85,6 +102,7 @@
   gap: 0.62rem;
   z-index: 100;
 }
+
 .contact-social-network .contact-social-network__link {
   width: 3rem;
   height: 3rem;
@@ -97,10 +115,12 @@
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
   margin: 0.37rem 0;
 }
+
 .contact-social-network .contact-social-network__link.red {
   background: #eb001b;
   position: relative;
 }
+
 .contact-social-network .contact-social-network__link::after {
   position: absolute;
   border-radius: 5.34975rem;
@@ -109,6 +129,7 @@
   content: "";
   inset: -0.37rem;
 }
+
 .contact-social-network .contact-social-network__link.red::after {
   background: #eb001b;
 }
@@ -117,6 +138,7 @@
   width: 1.5rem;
   height: 1.5rem;
 }
+
 .button-scroll-top {
   background: #fff !important;
 }
@@ -126,6 +148,7 @@
   height: 1rem;
   transform: rotate(-45deg);
 }
+
 @media (max-width: 640px) {
   .contact-sub {
     display: block;
@@ -143,37 +166,46 @@
     background-size: cover;
     overflow: hidden;
   }
-  .contact-social-network .contact-social-network__link{
+
+  .contact-social-network .contact-social-network__link {
     width: 2.5rem;
     height: 2.5rem;
   }
-  .contact-social-network{
+
+  .contact-social-network {
     right: 1rem;
   }
+
   .show-menu-sub {
     transform: none !important;
   }
+
   .icon-logo a {
     flex-direction: column;
   }
+
   .icon-logo a .header-menu_item-title {
     display: block;
     font-size: 0.75rem !important;
     white-space: nowrap;
     color: #fff;
   }
+
   .header-menu_item-title {
     font-size: 0.99106rem !important;
   }
+
   .header-menu {
     grid-template-columns: repeat(1, 1fr);
     padding: 0.58rem;
   }
+
   .header .header-menu-sub {
     height: auto;
     padding: 0.4rem 1rem;
     background-color: rgba(26, 26, 26, 1);
   }
+
   .header-menu-mobile {
     display: flex;
     flex-direction: column;
@@ -181,6 +213,7 @@
     padding: 1rem;
     border: none;
   }
+
   .header-menu-mobile a {
     color: #fff;
     display: flex;
@@ -194,10 +227,12 @@
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(9.449999809265137px);
   }
+
   .header-menu-mobile a svg {
     width: 0.75rem;
     height: 0.75rem;
   }
+
   .header-menu-mobile__contact {
     padding: 1.31rem 1rem;
     padding-top: 0;
@@ -206,6 +241,7 @@
     align-items: center;
     align-self: stretch;
   }
+
   .header-menu-mobile__contact h3 {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.75rem;
@@ -214,16 +250,19 @@
     line-height: normal;
     text-transform: uppercase;
   }
+
   .contact-sub {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-bottom: 2.3rem;
   }
+
   .contact-sub .footer-contact__email-hotline--sub {
     border: none;
     padding: 0.56rem 1rem;
   }
+
   .contact-sub .footer-contact__email-hotline--sub p {
     text-transform: initial;
   }

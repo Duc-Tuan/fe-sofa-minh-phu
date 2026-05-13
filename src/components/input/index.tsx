@@ -10,6 +10,7 @@ function Input({
   requi,
   type = "text",
   name,
+  error,
 }: {
   handleChange: any;
   value: string;
@@ -18,6 +19,7 @@ function Input({
   requi?: boolean;
   type?: React.HTMLInputTypeAttribute | "textarea";
   name: string;
+  error?: string;
 }) {
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (type === "number") {
@@ -38,13 +40,20 @@ function Input({
   };
 
   return (
-    <div className="input-form__field">
+    <div className={`input-form__field ${error ? "has-error" : ""}`}>
       <label htmlFor={title}>
         {title} {requi && <span style={{ color: "#EF2020" }}>*</span>}
       </label>
 
       {type === "textarea" ? (
-        <textarea name={name} id={title} placeholder={placeholder}/>
+        <textarea
+          name={name}
+          id={title}
+          placeholder={placeholder}
+          rows={6}
+          value={value}
+          onChange={handleChange}
+        />
       ) : (
         <input
           id={title}
@@ -58,6 +67,7 @@ function Input({
           inputMode={type === "number" ? "numeric" : "text"}
         />
       )}
+      {error && <span className="input-error-message">{error}</span>}
     </div>
   );
 }

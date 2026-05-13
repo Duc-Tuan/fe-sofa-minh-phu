@@ -20,7 +20,7 @@ export interface IMenuHeader {
 export const dataMenu: IMenuHeader[] = [
     {
         name: "Giới thiệu",
-        path: PathName.CONTACT
+        path: PathName.ABOUT
     },
     {
         name: "Năng lực sản xuất",

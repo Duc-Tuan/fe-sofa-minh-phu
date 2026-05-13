@@ -1,99 +1,99 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-import img1 from "@/assets/images/figma/home/capacity-1.png";
-import img2 from "@/assets/images/figma/home/capacity-2.png";
-import img3 from "@/assets/images/figma/home/capacity-3.png";
-import img4 from "@/assets/images/figma/home/capacity-4.png";
+import { motion, AnimatePresence } from "framer-motion";
+import t1 from "@/assets/images/figma/about/timeline-1.png";
+import t2 from "@/assets/images/figma/about/timeline-2.png";
+import t3 from "@/assets/images/figma/about/timeline-3.png";
 
-interface Milestone {
-  year: string;
-  title: string;
-  desc: string;
-  image: string;
-}
-
-const milestones: Milestone[] = [
+const STEPS = [
   {
     year: "2012",
     title: "Khởi nguồn đam mê",
-    desc: "Thành lập Công ty TNHH Sản xuất Nội thất & Thương mại Minh Phú. Bắt đầu hành trình từ một xưởng sản xuất nhỏ với khát vọng nội thất tử tế.",
-    image: img1.src,
+    desc: "Thành lập Công ty TNHH Sản xuất Nội thất & Thương mại Minh Phú. Bắt đầu hành trình từ một xưởng sản xuất nhỏ với khát vọng lớn.",
   },
   {
     year: "2015",
-    title: "Đặt nền móng",
-    desc: "Mở rộng đội ngũ thợ lành nghề, hoàn thiện quy trình sản xuất chuẩn mực và xác lập tệp khách hàng cốt lõi đầu tiên.",
-    image: img2.src,
+    title: "Mở rộng quy mô",
+    desc: "Đầu tư máy móc, chuẩn hóa quy trình sản xuất, trở thành đối tác tin cậy của nhiều kiến trúc sư.",
   },
   {
     year: "2018",
-    title: "Vươn ra dự án",
-    desc: "Trở thành đối tác sản xuất tin cậy của các kiến trúc sư hàng đầu, tham gia chuỗi dự án biệt thự và khách sạn cao cấp.",
-    image: img3.src,
+    title: "Khẳng định thương hiệu",
+    desc: "Mở rộng nhà xưởng, phát triển đội ngũ nghệ nhân may đo bậc thầy.",
   },
   {
     year: "2022",
-    title: "Mở rộng nhà máy",
-    desc: "Đầu tư hệ thống nhà máy mới với máy móc nhập khẩu hiện đại, nâng năng lực gia công lên gấp 5 lần.",
-    image: img4.src,
+    title: "Chuyển đổi công nghệ",
+    desc: "Ứng dụng dây chuyền CNC hiện đại, nâng cao độ chuẩn xác trên từng sản phẩm.",
   },
   {
     year: "2024",
-    title: "Bước ngoặt 8.000m²",
-    desc: "Hai nhà máy 8.000m² hoạt động song song theo quy trình khép kín, năng lực 20.000+ sản phẩm/năm.",
-    image: img1.src,
+    title: "Vươn tầm sản xuất",
+    desc: "Hoàn thiện nhà máy 8.000m² vận hành song song, đảm bảo năng lực cung ứng quy mô lớn.",
   },
   {
     year: "2026",
-    title: "Định vị Luxury",
-    desc: "Khẳng định vị thế nhà máy sản xuất nội thất Luxury hàng đầu khu vực, tiên phong tích hợp công nghệ và bền vững.",
-    image: img2.src,
+    title: "Hệ sinh thái nội thất",
+    desc: "Hướng tới hệ sinh thái Sạch – Sang – Bền vững, đồng hành cùng hàng nghìn kiến trúc sư trên toàn quốc.",
   },
 ];
 
 function Milestones() {
   const [active, setActive] = useState(0);
-  const current = milestones[active];
+  const step = STEPS[active];
 
   return (
-    <section className="about-timeline my-container">
-      <div className="about-timeline__head">
-        <span className="about-timeline__eyebrow">Về chúng tôi</span>
-        <h2 className="about-timeline__title">HÀNH TRÌNH PHÁT TRIỂN</h2>
-      </div>
+    <section className="about-mile">
+      <div className="about-mile__inner my-container">
+        <motion.div
+          className="about-mile__head"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+          <span className="about-mile__eyebrow">Về chúng tôi</span>
+          <h2 className="about-mile__title">Hành trình phát triển</h2>
+        </motion.div>
 
-      <div className="about-timeline__rail">
-        {milestones.map((m, idx) => (
-          <button
-            key={m.year}
-            type="button"
-            onClick={() => setActive(idx)}
-            className={`about-timeline__node ${active === idx ? "is-active" : ""}`}
-            aria-label={`Năm ${m.year}`}
-          >
-            <span className="about-timeline__diamond" />
-            <span className="about-timeline__year">{m.year}</span>
-          </button>
-        ))}
-      </div>
+        <div className="about-mile__timeline">
+          {STEPS.map((s, idx) => (
+            <button
+              key={s.year}
+              className={`about-mile__node ${idx === active ? "is-active" : ""}`}
+              onClick={() => setActive(idx)}
+            >
+              <span className="about-mile__diamond" />
+              <span className="about-mile__year">{s.year}</span>
+            </button>
+          ))}
+        </div>
 
-      <motion.div
-        key={current.year}
-        className="about-timeline__panel"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-      >
-        <div className="about-timeline__panel-text">
-          <h3>{current.title}</h3>
-          <p>{current.desc}</p>
+        <div className="about-mile__body">
+          <div className="about-mile__content">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={step.year}
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -16 }}
+                transition={{ duration: 0.35 }}
+              >
+                <span className="about-mile__big-year">{step.year}</span>
+                <h3>{step.title}</h3>
+                <p>{step.desc}</p>
+              </motion.div>
+            </AnimatePresence>
+          </div>
+
+          <div className="about-mile__media">
+            <img className="m1" src={t1.src} alt="Cột mốc Minh Phú" />
+            <img className="m2" src={t2.src} alt="Cột mốc Minh Phú" />
+            <img className="m3" src={t3.src} alt="Cột mốc Minh Phú" />
+          </div>
         </div>
-        <div className="about-timeline__panel-image">
-          <img src={current.image} alt={current.title} />
-        </div>
-      </motion.div>
+      </div>
     </section>
   );
 }

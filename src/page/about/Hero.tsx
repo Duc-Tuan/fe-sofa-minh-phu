@@ -3,14 +3,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import banner from "@/assets/images/figma/home/slide-1.png";
+import heroBg from "@/assets/images/figma/about/hero.png";
 import { PathName } from "@/router/path";
 
 function Hero() {
   return (
     <section className="about-hero">
       <div className="about-hero__bg">
-        <img src={banner.src} alt="Về chúng tôi" />
+        <img src={heroBg.src} alt="Về chúng tôi" />
         <div className="about-hero__overlay" />
       </div>
 

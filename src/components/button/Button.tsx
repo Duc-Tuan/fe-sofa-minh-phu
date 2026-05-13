@@ -11,14 +11,23 @@ interface Props {
   handleClick: Func;
   color?: "white" | "black";
   vavariant?: boolean;
+  type?: "button" | "submit" | "reset";
 }
 
 function Button(props: Props) {
-  const { handleClick, title, typeIcon, color = "white", vavariant } = props;
+  const {
+    handleClick,
+    title,
+    typeIcon,
+    color = "white",
+    vavariant,
+    type = "button",
+  } = props;
 
   const [isHovered, setIsHovered] = useState<Boolean>(false);
   return (
     <motion.button
+      type={type}
       onClick={handleClick}
       className={`button ${color} ${vavariant ? "vavariant" : ""}`}
       onHoverStart={() => setIsHovered(true)}

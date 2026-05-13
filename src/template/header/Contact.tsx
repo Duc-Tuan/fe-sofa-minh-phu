@@ -2,7 +2,9 @@
 import Icon from "@/assets/icon";
 import SearchButton from "@/components/search/SearchButton";
 import "@/css/contact.model.css";
+import { PathName } from "@/router/path";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 function Contact({
   handleToogleMenu,
@@ -15,7 +17,9 @@ function Contact({
     <div className="contact">
       <h3 className="none-mobile">Catalogues</h3>
       <div className="contact-separation none-mobile" />
-      <h3 className="none-mobile">Liên hệ</h3>
+      <Link href={PathName.CONTACT} className="contact-link">
+        <h3 className="none-mobile">Liên hệ</h3>
+      </Link>
       <div className="contact-separation none-mobile" />
       <SearchButton />
       <motion.div

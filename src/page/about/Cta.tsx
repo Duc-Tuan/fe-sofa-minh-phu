@@ -51,7 +51,7 @@ function Cta() {
               <h3>{c.title}</h3>
               <p>{c.desc}</p>
               <Link href={c.href}>
-                <Button title="TÌM HIỂU NGAY" typeIcon="cross" color="white" handleClick={() => {}} />
+                <Button title="KHÁM PHÁ NGAY" typeIcon="cross" color="white" handleClick={() => {}} />
               </Link>
             </div>
           </motion.article>
