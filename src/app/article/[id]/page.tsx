@@ -8,7 +8,6 @@ interface PageProps {
 
 function page({ params }: PageProps) {
   const { id } = params;
-
   return <DetailPage id={id} />;
 }
 
