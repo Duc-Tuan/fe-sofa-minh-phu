@@ -1576,6 +1576,9 @@
   z-index: 0;
   pointer-events: none;
 }
+.about-why__bg img{
+  height: 100%;
+}
 .about-why__inner {
   position: relative;
   z-index: 1;

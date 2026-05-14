@@ -7,12 +7,110 @@
   font-display: swap;
 }
 
+/* ===== Averta Std CY ===== */
+@font-face {
+  font-family: "AvertaStdCY-Extrathin";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCy-Extrathin_1.otf")
+    format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvertaStdCY-ExtrathinItalic";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCy-ExtrathinItalic_1.otf")
+    format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvertaStdCY-Thin";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCY-Thin_1.otf")
+    format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvertaStdCY-ThinItalic";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCY-ThinItalic_1.otf")
+    format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvertaStdCY-Light";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCY-Light_1.otf")
+    format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvertaStdCY-LightItalic";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCY-LightItalic_1.otf")
+    format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvertaStdCY-Regular";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCY-Regular_3.otf")
+    format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvertaStdCY-RegularItalic";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCY-RegularItalic_1.otf")
+    format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvertaStdCY-Semibold";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCY-Semibold_1.otf")
+    format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvertaStdCY-SemiboldItalic";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCY-SemiboldItalic_1.otf")
+    format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvertaStdCY-Bold";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCY-Bold_1.otf")
+    format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvertaStdCY-BoldItalic";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCY-BoldItalic_1.otf")
+    format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvertaStdCY-Extrabold";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCY-Extrabold_1.otf")
+    format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvertaStdCY-ExtraboldItalic";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCY-ExtraboldItalic_1.otf")
+    format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvertaStdCY-Black";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCY-Black_1.otf")
+    format("opentype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "AvertaStdCY-BlackItalic";
+  src: url("../assets/fonts/Intelligent Design - AvertaStdCY-BlackItalic_1.otf")
+    format("opentype");
+  font-display: swap;
+}
+
 :root {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   --root-font-size: 1vw;
-  --root-font-family: "GoogleSans-Regular", sans-serif;
+  --root-font-family: "AvertaStdCY-Regular", sans-serif;
 }
 
 *,
