@@ -41,7 +41,9 @@ import IconWhy4 from "./icons/IconWhy4.svg";
 import IconPhoneV2 from "./icons/IconPhoneV2.svg";
 import IconEmailV2 from "./icons/IconEmailV2.svg";
 import IconLocalV2 from "./icons/IconLocalV2.svg";
+
 import IconFacebookV2 from "./icons/IconFacebookV2.svg";
+
 import IconComma from "./icons/IconComma.svg";
 import IconCircle from "./icons/IconCircle.svg";
 import IconMission1 from "./icons/IconMission1.svg";
