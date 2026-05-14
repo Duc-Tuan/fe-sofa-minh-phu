@@ -14,10 +14,26 @@ function Hero() {
         <div className="about-hero__overlay" />
       </div>
 
-      <div className="about-hero__content my-container">
+      <div className="about-hero__top-gradient" />
+
+      <div className="about-hero__content">
         <nav className="about-hero__breadcrumb">
           <Link href={PathName.HOME}>Trang chủ</Link>
-          <span className="about-hero__breadcrumb-sep">›</span>
+          <svg
+            className="about-hero__breadcrumb-sep"
+            viewBox="0 0 8 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden
+          >
+            <path
+              d="M2 1l4 3-4 3"
+              stroke="currentColor"
+              strokeWidth="1"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
           <span>Về chúng tôi</span>
         </nav>
 

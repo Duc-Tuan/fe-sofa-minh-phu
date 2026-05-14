@@ -15,7 +15,7 @@ function SwiperOne({ children, className }: { children: React.ReactNode,classNam
         clickable: true,
         dynamicBullets: false,
       }}
-      spaceBetween={10}
+      spaceBetween={20}
       slidesPerView={1}
       className={className}
     >

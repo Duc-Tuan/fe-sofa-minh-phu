@@ -2,12 +2,21 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import bg from "@/assets/images/figma/about/about-team.png";
+import bg1 from "@/assets/images/figma/about/about-team-1.png";
 
-const DEPARTMENTS = [
-  { title: "Phòng Thiết kế & R&D", desc: "Đọc hiểu bản vẽ, bóc tách kỹ thuật và phát triển vật liệu mới." },
-  { title: "Phòng Sản xuất", desc: "Vận hành dây chuyền CNC và tổ thợ may đo, chế tác từng chi tiết." },
-  { title: "Phòng QC & Hoàn thiện", desc: "Kiểm soát chất lượng từng công đoạn, đảm bảo độ bền và thẩm mỹ." },
-  { title: "Phòng Kinh doanh dự án", desc: "Đồng hành cùng KTS, quản lý tiến độ và bàn giao công trình." },
+const LEFT_TEAMS = [
+  "Tổ khung-mộc",
+  "Tổ cơ khí",
+  "Tổ cắt may",
+  "Tổ hoàn thiện",
+  "Tổ QC",
+];
+const RIGHT_TEAMS = [
+  "P.Kinh doanh",
+  "P.Thiết kế",
+  "P.Marketing",
+  "P.HCNS-Kế toán",
 ];
 
 function Team() {
@@ -21,42 +30,41 @@ function Team() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="about-team__eyebrow">Về chúng tôi</span>
-          <h2 className="about-team__title">Đội ngũ nhân sự: “linh hồn” của nhà máy</h2>
+          <div className="about-team__head-left">
+            <span className="about-team__eyebrow">ĐỘI NGŨ NHÂN SỰ</span>
+            <h2 className="about-team__title">
+              ĐỘI NGŨ NHÂN SỰ:
+              <br />
+              &quot;LINH HỒN&quot; CỦA NHÀ MÁY
+            </h2>
+          </div>
           <p className="about-team__lead">
-            Mỗi sản phẩm Minh Phú là kết tinh của một tập thể được tổ chức bài bản – từ ban điều
-            hành, phòng thiết kế & R&D, đội ngũ sản xuất, kiểm soát chất lượng đến bộ phận kinh doanh
-            dự án – cùng nhau giữ trọn “linh hồn” của từng tác phẩm.
+            Với 14+ năm kinh nghiệm, đội ngũ nghệ nhân tại Minh Phú am hiểu
+            tường tận mọi cấu trúc nội thất. Mỗi nhân sự là một mắt xích tâm
+            huyết, tỉ mỉ trong từng đường kim mũi chỉ để tạo nên những kiệt tác
+            bền vững vượt thời gian.
           </p>
         </motion.div>
 
-        <div className="about-team__chart">
-          <motion.div
-            className="about-team__top"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.5 }}
-          >
-            Ban Giám đốc
-          </motion.div>
-          <div className="about-team__connector" />
-          <div className="about-team__row">
-            {DEPARTMENTS.map((d, idx) => (
-              <motion.div
-                key={d.title}
-                className="about-team__dept"
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.45, delay: idx * 0.1 }}
-              >
-                <h3>{d.title}</h3>
-                <p>{d.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+        <motion.div
+          className="about-team__center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.5 }}
+        >
+          <img src={bg.src} alt="" />
+        </motion.div>
+
+        <motion.div
+          className="about-team__org"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6 }}
+        >
+          <img src={bg1.src} alt="" />
+        </motion.div>
       </div>
     </section>
   );

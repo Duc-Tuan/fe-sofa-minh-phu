@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 91 32" fill="none">
+    <foreignObject x="-2.1" y="10.7633" width="22.6453" height="22.6453">
+        <div xmlns="http://www.w3.org/1999/xhtml"
+            style="backdrop-filter:blur(1.05px);clip-path:url(#bgblur_0_3299_21160_clip_path);height:100%;width:100%"></div>
+    </foreignObject>
+    <circle data-figma-bg-blur-radius="2.1" cx="9.22266" cy="22.0859" r="9.22266" fill="white"
+        fill-opacity="0.1" />
+    <circle cx="9.22266" cy="22.0859" r="5.84766" fill="white" />
+    <path d="M6.58594 23.2623L33.6569 0.5H90.7793" stroke="white" />
+    <defs>
+        <clipPath id="bgblur_0_3299_21160_clip_path" transform="translate(2.1 -10.7633)">
+            <circle cx="9.22266" cy="22.0859" r="9.22266" />
+        </clipPath>
+    </defs>
+</svg>

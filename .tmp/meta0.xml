@@ -1,0 +1,671 @@
+<section id="3372:14742" name="Về chúng tôi" x="58279" y="-8178.5703125" width="8490" height="15119">
+  <frame id="3327:9387" name="Frame 2147264236" x="6090" y="552" width="375" height="10756.9130859375">
+    <instance id="3327:9388" name="Frame 2147264047" x="0" y="0" width="375" height="56" />
+    <frame id="3406:14103" name="Frame 2147264227" x="0" y="55" width="375" height="176">
+      <frame id="3406:14104" name="Frame 2147264048" x="0" y="0" width="375" height="271">
+        <frame id="3406:14105" name="Frame 2147264049" x="0" y="0" width="375" height="176">
+          <rounded-rectangle id="3406:14106" name="4" x="0" y="-0.0859375" width="375" height="176.083984375" />
+          <rounded-rectangle id="3406:14107" name="5" x="0" y="18.7578125" width="375" height="162.725830078125" />
+        </frame>
+      </frame>
+      <frame id="3406:14108" name="Frame 2147263835" x="0" y="93.64453125" width="375" height="82.35491943359375">
+        <frame id="3406:14109" name="Frame 2147256180" x="16" y="16" width="133.55087280273438" height="11">
+          <frame id="3406:14110" name="Breadcrumbs White" x="0" y="0" width="133.55087280273438" height="11">
+            <text id="3406:14111" name="Trang chủ" x="0" y="0" width="53" height="11" />
+            <frame id="3406:14112" name="Image" x="58.62312316894531" y="8.152313232421875" width="5.3046271735511255" height="5.304627173553854">
+              <frame id="3406:14113" name="icon-select.svg fill" x="0" y="0" width="5.3046271735511255" height="5.304627173553854">
+                <frame id="3406:14114" name="icon-select.svg" x="-4.9345544539391994e-8" y="1.12890625" width="3.0531456405005883" height="5.304627075138342" />
+              </frame>
+            </frame>
+            <text id="3406:14117" name="VỀ CHÚNG TÔI" x="69.55087280273438" y="0" width="64" height="11" />
+          </frame>
+        </frame>
+        <frame id="3406:14118" name="Frame 2147263625" x="16" y="40.35491943359375" width="343" height="26">
+          <text id="3406:14119" name="Heading 1 → Makes Everything Lovely Within Reach" x="0" y="0" width="151" height="26" />
+        </frame>
+      </frame>
+    </frame>
+    <frame id="3327:9406" name="Frame 2147264094" x="0" y="230" width="375" height="831.5499877929688">
+      <frame id="3327:9407" name="Mask group" x="374.8046875" y="376.15625" width="375.0030258001061" height="382.38272541913193">
+        <rounded-rectangle id="3327:9408" name="image 12" x="374.8046883154602" y="376.15625" width="375.0030258001061" height="382.38272541913193" />
+        <rounded-rectangle id="3327:9409" name="image 13" x="383.2109375" y="376.15625010024354" width="392.4040572938393" height="382.34872904460553" />
+      </frame>
+      <frame id="3327:9410" name="Frame 2147263786" x="16" y="36" width="343" height="86.55000305175781">
+        <text id="3327:9411" name="MINH PHÚ SOFA FACTORY" x="0" y="0" width="343" height="22.549999237060547" />
+        <text id="3327:9412" name="Heading 2 → Explore Our Brands" x="0" y="34.54999923706055" width="343" height="52" />
+      </frame>
+      <frame id="3327:9413" name="Frame 2147264040" x="16" y="142.5500030517578" width="343" height="170">
+        <text id="3327:9414" name="Khởi nguồn từ năm 2012, Minh Phú Sofa Factory tự hào là hệ sinh thái sản xuất tin cậy của hàng nghìn Kiến trúc sư trên toàn quốc." x="0" y="0" width="343" height="57" />
+        <text id="3327:9415" name="14 năm bản lĩnh, chúng tôi vận hành quy trình chuyên nghiệp để hiện thực hóa bản vẽ 3D chính xác tuyệt đối. Mỗi sản phẩm là một kiệt tác Luxury, khẳng định năng lực cung ứng và giá trị thực hữu cho mọi không gian sống." x="0" y="70" width="343" height="100" />
+      </frame>
+      <frame id="3330:9768" name="Frame 2147264250" x="15.999771118164062" y="332.54998779296875" width="343.0004577636719" height="323">
+        <rounded-rectangle id="3330:9769" name="image 26" x="0.203125" y="0.04296875" width="170.0879669189453" height="322.21484375" />
+        <frame id="3330:9770" name="A blue side table with a book and a glass of wine placed on top in front of a blue armchair with marine-inspired artwork hanging above." x="179.1328125" y="0.04296875" width="163.86764526367188" height="203.3352813720703" />
+        <frame id="3330:9771" name="Picture" x="179.234375" y="212.44921875" width="164" height="110" />
+      </frame>
+      <text id="3330:9779" name="Từ quy mô xưởng nhỏ, chúng tôi đã đầu tư hệ thống nhà máy hiện đại, sẵn sàng đồng hành cùng các Kiến trúc sư để hiện thực hóa những bản vẽ độc bản, những ý tưởng thiết kế táo bạo nhất. Sự chuyển mình này là sự kết hợp hoàn hảo giữa kỹ thuật thủ công tinh xảo và năng lực sản xuất quy mô lớn." x="16" y="675.5499877929688" width="343" height="120" />
+    </frame>
+    <frame id="3330:9796" name="Frame 2147264176" x="0" y="1060.550048828125" width="375" height="808.38232421875" />
+    <frame id="3331:9857" name="Frame 2147264177" x="0" y="1867.932373046875" width="375" height="479.83953857421875" />
+    <frame id="3332:9884" name="Frame 2147264178" x="0" y="2346.77197265625" width="375" height="763.5499877929688" />
+    <frame id="3332:9916" name="Frame 2147264179" x="0" y="3109.322021484375" width="375" height="520.3312377929688">
+      <frame id="3332:9920" name="Frame 2147263786" x="16" y="36" width="343" height="86.55000305175781">
+        <text id="3332:9921" name="GIÁ TRỊ CỐT LÕI" x="0" y="0" width="343" height="22.549999237060547" />
+        <text id="3332:9922" name="Heading 2 → Explore Our Brands" x="0" y="34.54999923706055" width="343" height="52" />
+      </frame>
+      <frame id="3360:9830" name="Frame 2147264265" x="16" y="142.5498046875" width="343" height="341.78125">
+        <frame id="3332:9926" name="Paragraph+Border" x="0" y="0" width="343" height="319.78125" />
+        <frame id="3360:9824" name="Pagination" x="114.77100372314453" y="339.78125" width="113.45799255371094" height="2">
+          <rounded-rectangle id="3360:9825" name="Active" x="0" y="0" width="25.364498138427734" height="2" />
+          <rounded-rectangle id="3360:9826" name="Inactive" x="29.364498138427734" y="0" width="25.3644962310791" height="2" />
+          <rounded-rectangle id="3360:9827" name="Inactive" x="58.72899627685547" y="0" width="25.364498138427734" height="2" />
+          <rounded-rectangle id="3360:9828" name="Inactive" x="88.09349060058594" y="0" width="25.364498138427734" height="2" />
+        </frame>
+      </frame>
+    </frame>
+    <frame id="3341:9816" name="Frame 1618871470" x="0" y="3628.6533203125" width="375" height="760.7399291992188" />
+    <frame id="3354:10172" name="Frame 2147264181" x="0" y="4388.39306640625" width="375" height="766.5499877929688" />
+    <frame id="3341:10180" name="Component 1060" x="0" y="5153.94287109375" width="375" height="588">
+      <frame id="3347:9810" name="Frame 2147264255" x="0" y="36" width="375" height="516">
+        <frame id="3354:10244" name="Frame 2147263786" x="14" y="0" width="347" height="60.54999923706055">
+          <text id="3354:10245" name="Vè chúng tôi" x="0" y="0" width="347" height="22.549999237060547" />
+          <text id="3354:10246" name="Heading 2 → Explore Our Brands" x="0" y="34.54999923706055" width="343" height="26" />
+        </frame>
+        <frame id="3713:11310" name="Frame 2147263787" x="14" y="97.54998779296875" width="347" height="384">
+          <frame id="3713:11311" name="Frame 1410139407" x="1877.7967529296875" y="-8.78515625" width="1877.7811301042602" height="21.433561633993122">
+            <frame id="3713:11312" name="Frame 2147264321" x="0" y="0" width="302.13019016286125" height="21.433442940655823">
+              <line id="3713:11313" name="Line 460" x="0.000001871208951342851" y="10.817241668701172" width="271.6967736013321" height="0.20108453519151226" />
+              <instance id="3713:11314" name="Frame 2147263864" x="302.13018798828125" y="21.433420181274414" width="21.43341827392578" height="21.43341827392578" />
+            </frame>
+            <frame id="3713:11315" name="Frame 2147264325" x="315.13018798828125" y="0" width="302.13019016286125" height="21.433442940655823">
+              <line id="3713:11316" name="Line 460" x="0.000001871208951342851" y="10.817241668701172" width="271.6967736013321" height="0.20108453519151226" />
+              <instance id="3713:11317" name="Frame 2147263864" x="302.13018798828125" y="21.433420181274414" width="21.43341827392578" height="21.43341827392578" />
+            </frame>
+            <frame id="3713:11318" name="Frame 2147264320" x="630.2603759765625" y="0" width="302.130190162854" height="21.433442940655823">
+              <line id="3713:11319" name="Line 459" x="0.000001871208951342851" y="10.817241668701172" width="271.6967736013321" height="0.20108453519151226" />
+              <instance id="3713:11320" name="Frame 2147263863" x="302.13018798828125" y="21.433420181274414" width="21.43341827392578" height="21.43341827392578" />
+            </frame>
+            <frame id="3713:11321" name="Frame 2147264322" x="945.3905639648438" y="0" width="302.130190162854" height="21.433442940655823">
+              <line id="3713:11322" name="Line 459" x="0.000001871208951342851" y="10.817241668701172" width="271.6967736013321" height="0.20108453519151226" />
+              <instance id="3713:11323" name="Frame 2147263863" x="302.13018798828125" y="21.433420181274414" width="21.43341827392578" height="21.43341827392578" />
+            </frame>
+            <frame id="3713:11324" name="Frame 2147264323" x="1260.520751953125" y="0" width="302.130190162854" height="21.433442940655823">
+              <line id="3713:11325" name="Line 459" x="0.000001871208951342851" y="10.817241668701172" width="271.6967736013321" height="0.20108453519151226" />
+              <instance id="3713:11326" name="Frame 2147263863" x="302.13018798828125" y="21.433420181274414" width="21.43341827392578" height="21.43341827392578" />
+            </frame>
+            <frame id="3713:11327" name="Frame 2147264324" x="1575.65087890625" y="0" width="302.130190162854" height="21.433442940655823">
+              <line id="3713:11328" name="Line 459" x="0.000001871208951342851" y="10.817241668701172" width="271.6967736013321" height="0.20108453519151226" />
+              <instance id="3713:11329" name="Frame 2147263863" x="302.13018798828125" y="21.433420181274414" width="21.43341827392578" height="21.43341827392578" />
+            </frame>
+          </frame>
+          <frame id="3713:11330" name="Frame 1618871544" x="0.015625" y="20.8359375" width="1872.199951171875" height="390.1945495605469">
+            <frame id="3713:11331" name="Frame 1618871542" x="0" y="0" width="298.6999816894531" height="390.1945495605469">
+              <text id="3713:11332" name="2019" x="0" y="0" width="83" height="62" />
+              <frame id="3713:11333" name="Frame 2147264274" x="0" y="79" width="298.69921875" height="90">
+                <text id="3713:11334" name="Khởi nguồn đam mê" x="0" y="0" width="298.69921875" height="27" />
+                <text id="3713:11335" name="Thành lập Công ty TNHH Sản xuất Nội thất &amp; Thương mại Minh Phú. Bắt đầu hành trình từ một xưởng sản xuất nhỏ với khát vọng" x="0" y="27" width="298.69921875" height="63" />
+              </frame>
+              <instance id="3713:11336" name="Frame 1410139406" x="0.000004462813194550108" y="390.1945495605469" width="298.69999061508133" height="204.1945473583487" />
+            </frame>
+            <frame id="3713:11337" name="Frame 1618871547" x="314.6999816894531" y="0" width="298.6999816894531" height="390.1945495605469">
+              <text id="3713:11338" name="2015" x="0" y="0" width="85" height="62" />
+              <frame id="3713:11339" name="Frame 2147264274" x="0" y="79" width="298.69921875" height="90">
+                <text id="3713:11340" name="Khởi nguồn đam mê" x="0" y="0" width="298.69921875" height="27" />
+                <text id="3713:11341" name="Thành lập Công ty TNHH Sản xuất Nội thất &amp; Thương mại Minh Phú. Bắt đầu hành trình từ một xưởng sản xuất nhỏ với khát vọng" x="0" y="27" width="298.69921875" height="63" />
+              </frame>
+              <instance id="3713:11342" name="Frame 1410139406" x="0.000004462813194550108" y="390.1945495605469" width="298.69999061508133" height="204.1945473583487" />
+            </frame>
+            <frame id="3713:11343" name="Frame 1618871546" x="629.3999633789062" y="0" width="298.6999816894531" height="363.1945495605469">
+              <text id="3713:11344" name="2018" x="0" y="0" width="86" height="62" />
+              <text id="3713:11345" name="07/2019: Khai trương Văn phòng Ami&amp;M Kinh Bắc tại trung tâm thành phố Bắc Ninh. 09/09/2019 : Công ty Cổ phần Tập đoàn Ami&amp;M Việt Nam chính thức đi vào hoạt động." x="0" y="79" width="298.69921875" height="63" />
+              <instance id="3713:11346" name="Frame 1410139406" x="0.000004462813194550108" y="363.1945495605469" width="298.69999061508133" height="204.1945473583487" />
+            </frame>
+            <frame id="3713:11347" name="Frame 1618871548" x="944.0999755859375" y="0" width="298.6999816894531" height="363.1945495605469">
+              <text id="3713:11348" name="2022" x="0" y="0" width="90" height="62" />
+              <text id="3713:11349" name="07/2019: Khai trương Văn phòng Ami&amp;M Kinh Bắc tại trung tâm thành phố Bắc Ninh. 09/09/2019 : Công ty Cổ phần Tập đoàn Ami&amp;M Việt Nam chính thức đi vào hoạt động." x="0" y="79" width="298.69921875" height="63" />
+              <instance id="3713:11350" name="Frame 1410139406" x="0.000004462813194550108" y="363.1945495605469" width="298.69999061508133" height="204.1945473583487" />
+            </frame>
+            <frame id="3713:11351" name="Frame 1618871549" x="1258.7999267578125" y="0" width="298.6999816894531" height="363.1945495605469">
+              <text id="3713:11352" name="2024" x="0" y="0" width="91" height="62" />
+              <text id="3713:11353" name="07/2019: Khai trương Văn phòng Ami&amp;M Kinh Bắc tại trung tâm thành phố Bắc Ninh. 09/09/2019 : Công ty Cổ phần Tập đoàn Ami&amp;M Việt Nam chính thức đi vào hoạt động." x="0" y="79" width="298.69921875" height="63" />
+              <instance id="3713:11354" name="Frame 1410139406" x="0.000004462813194550108" y="363.1945495605469" width="298.69999061507406" height="204.1945473583487" />
+            </frame>
+            <frame id="3713:11355" name="Frame 1618871550" x="1573.4998779296875" y="0" width="298.6999816894531" height="363.1945495605469">
+              <text id="3713:11356" name="2026" x="0" y="0" width="92" height="62" />
+              <text id="3713:11357" name="07/2019: Khai trương Văn phòng Ami&amp;M Kinh Bắc tại trung tâm thành phố Bắc Ninh. 09/09/2019 : Công ty Cổ phần Tập đoàn Ami&amp;M Việt Nam chính thức đi vào hoạt động." x="0" y="79" width="298.69921875" height="63" />
+              <instance id="3713:11358" name="Frame 1410139406" x="0.000004462813194550108" y="363.1945495605469" width="298.69999061507406" height="204.1945473583487" />
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+      <frame id="3341:10181" name="Frame 1000007325" x="76.9990234375" y="438" width="263" height="356.0003662109375" hidden="true">
+        <frame id="3341:10182" name="Frame 1000007323" x="0" y="0" width="188" height="89.90801239013672">
+          <text id="3341:10183" name="BƯỚC ĐI ĐẦU TIÊN" x="0" y="0" width="136" height="19" />
+          <text id="3341:10184" name="Năng lực vượt trội giúp Top Dec trở thành Nhà thầu chính các dự án Eurowindow Resort, Alma Resort, Chung cư B2 TPHCM" x="0" y="25.90801239013672" width="188" height="64" />
+        </frame>
+        <vector id="3341:10185" name="Rectangle 34624670" x="0" y="104.8753662109375" width="263" height="262" />
+      </frame>
+      <rounded-rectangle id="3347:9811" name="Rectangle 34626093" x="301.828125" y="90.421875" width="72.7021484375" height="557.18994140625" />
+    </frame>
+    <frame id="3358:9750" name="Frame 2147264182" x="0" y="5740.94287109375" width="375" height="728.5499877929688">
+      <frame id="3358:9751" name="Mask group" x="-0.19921875" y="349.0038757324219" width="375.003037954717" height="382.3827373391682">
+        <rounded-rectangle id="3358:9752" name="image 12" x="-0.19921956546022557" y="349.0038757324218" width="375.003037954717" height="382.3827373391682" />
+        <rounded-rectangle id="3358:9753" name="image 13" x="-8.625000000170763" y="349.00778198245735" width="392.40406944736606" height="382.34874151776035" />
+      </frame>
+      <frame id="3358:9754" name="Frame 2147263786" x="16" y="36" width="343" height="86.55000305175781">
+        <text id="3358:9755" name="ĐỘI ngũ nhân sự" x="0" y="0" width="343" height="22.549999237060547" />
+        <text id="3358:9756" name="Heading 2 → Explore Our Brands" x="0" y="34.54999923706055" width="343" height="52" />
+      </frame>
+      <frame id="3358:9762" name="Frame 2147263917" x="16" y="142.5500030517578" width="343" height="105">
+        <frame id="3358:9764" name="Frame 2147263803" x="0" y="0" width="343" height="105">
+          <text id="3358:9766" name="Với 14+ năm kinh nghiệm, đội ngũ nghệ nhân tại Minh Phú am hiểu tường tận mọi cấu trúc nội thất. Mỗi nhân sự là một mắt xích tâm huyết, tỉ mỉ trong từng đường kim mũi chỉ để tạo nên những kiệt tác bền vững vượt thời gian." x="0" y="0" width="343" height="105" />
+        </frame>
+      </frame>
+      <frame id="3389:11418" name="Frame 2147264301" x="16" y="267.54998779296875" width="343" height="425">
+        <frame id="3389:11419" name="Frame 2147264300" x="-0.234375" y="-0.3203125" width="342.765625" height="425.525146484375">
+          <vector id="3389:11420" name="Vector 2346" x="57.06640625" y="64.109375" width="24.16766357421875" height="50.452754974365234" />
+          <vector id="3389:11421" name="Vector 2357" x="285.625" y="64.109375" width="24.16766357421875" height="50.452754974365234" />
+          <vector id="3389:11422" name="Vector 2347" x="1.4551915228366852e-11" y="141.26182556152344" width="24.16766357421875" height="266.8486328125" />
+          <vector id="3389:11423" name="Vector 2352" x="342.765625" y="141.26182556152344" width="24.16766357421875" height="215.95458984375" />
+          <vector id="3389:11424" name="Vector 2348" x="0" y="350.359375" width="24.068769454956055" height="8.607288360595703" />
+          <vector id="3389:11425" name="Vector 2349" x="0" y="298.18359375" width="24.068769454956055" height="8.607288360595703" />
+          <vector id="3389:11426" name="Vector 2354" x="342.765625" y="298.18359375" width="24.068769454956055" height="8.607288360595703" />
+          <vector id="3389:11427" name="Vector 2350" x="0" y="249.01953125" width="24.068769454956055" height="8.607288360595703" />
+          <vector id="3389:11428" name="Vector 2355" x="342.765625" y="249.01953125" width="24.068769454956055" height="8.607288360595703" />
+          <vector id="3389:11429" name="Vector 2351" x="0" y="198.84375" width="24.068769454956055" height="8.607288360595703" />
+          <vector id="3389:11430" name="Vector 2356" x="342.765625" y="198.84375" width="24.068769454956055" height="8.607288360595703" />
+          <frame id="3389:11431" name="Frame 2147264298" x="88.21875" y="0" width="166.25650024414062" height="87.3833236694336">
+            <frame id="3389:11432" name="Frame 2147264275" x="-1.2421875" y="43.7734375" width="167.4974365234375" height="38">
+              <text id="3389:11433" name="Giám Đốc" x="37.248722076416016" y="8" width="93" height="22" />
+            </frame>
+            <frame id="3389:11434" name="Frame 2147263867" x="39.859375" y="0" width="84.05204010009766" height="54.27223587036133">
+              <rounded-rectangle id="3389:11435" name="Rectangle 34627885" x="42.02734375" y="5.7421875" width="84.05203485475795" height="48.5274658203125" />
+              <rounded-rectangle id="3389:11436" name="Rectangle 34627888" x="42.02734375" y="13.01171875" width="84.05203485475795" height="48.5274658203125" />
+              <rounded-rectangle id="3389:11437" name="Rectangle 34626024" x="42.02734375" y="3.38671875" width="84.05203485475795" height="48.5274658203125" />
+              <rounded-rectangle id="3389:11438" name="Rectangle 34627886" x="42.02734375" y="11.96875" width="50.75931775510253" height="29.305906295776367" />
+              <rounded-rectangle id="3389:11439" name="Rectangle 34627887" x="42.02734375" y="10.54296875" width="50.75931775510253" height="29.305906295776367" />
+              <frame id="3389:11440" name="Frame 1410139333" x="28.53125" y="0" width="26.97835922241211" height="26.62218475341797" />
+            </frame>
+          </frame>
+          <frame id="3389:11444" name="Frame 2147264296" x="24.16796875" y="188.0625" width="139.0013427734375" height="237.4645233154297">
+            <frame id="3389:11445" name="Frame 2147264276" x="0" y="0" width="139.0013427734375" height="37.59333038330078">
+              <frame id="3389:11446" name="Frame 2147264291" x="6.359538555145264" y="9.711610794067383" width="18.170108795166016" height="18.170108795166016" />
+              <text id="3389:11448" name="Tổ khung-mộc" x="29.980680465698242" y="12.29666519165039" width="88" height="13" />
+            </frame>
+            <frame id="3389:11449" name="Frame 2147264282" x="0" y="50.312408447265625" width="139.0013427734375" height="37.248722076416016">
+              <frame id="3627:23348" name="Frame 2147264294" x="6.359539031982422" y="9.539306640625" width="18.170108795166016" height="18.170108795166016">
+                <frame id="3627:23355" name="Frame" x="3.21875" y="3.21875" width="11.734375" height="11.734375" />
+              </frame>
+              <text id="3389:11457" name="Tổ cơ khí" x="29.980680465698242" y="12.124361038208008" width="56" height="13" />
+            </frame>
+            <frame id="3389:11458" name="Frame 2147264283" x="0" y="100.28021240234375" width="139.0013427734375" height="37.248722076416016">
+              <frame id="3628:23369" name="Frame 2147264294" x="6.359539031982422" y="9.539306640625" width="18.170108795166016" height="18.170108795166016">
+                <frame id="3628:23370" name="Frame 2147264292" x="2.765625" y="2.765625" width="12.63308048248291" height="12.63308048248291">
+                  <frame id="3628:23371" name="Icons" x="0" y="0" width="12.63308048248291" height="12.63308048248291" />
+                </frame>
+              </frame>
+              <text id="3389:11464" name="Tổ cắt may" x="29.980680465698242" y="12.124361038208008" width="65" height="13" />
+            </frame>
+            <frame id="3389:11465" name="Frame 2147264284" x="0" y="150.24801635742188" width="139.0013427734375" height="37.248722076416016">
+              <frame id="3628:23377" name="Frame 2147264294" x="6.359539031982422" y="9.539306640625" width="18.170108795166016" height="18.170108795166016">
+                <frame id="3628:23378" name="Frame 2147264292" x="3.0390625" y="4.265625" width="12.095503807067871" height="9.641263008117676" />
+              </frame>
+              <text id="3389:11472" name="Tổ hoàn thiện" x="29.980680465698242" y="12.124361038208008" width="85" height="13" />
+            </frame>
+            <frame id="3389:11473" name="Frame 2147264285" x="0" y="200.2158203125" width="139.0013427734375" height="37.248722076416016">
+              <frame id="3628:23383" name="Frame 2147264294" x="6.359539031982422" y="9.539306640625" width="18.170108795166016" height="18.170108795166016">
+                <frame id="3628:23384" name="Frame 2147264292" x="2.765625" y="2.76953125" width="12.63308048248291" height="12.63308048248291">
+                  <frame id="3628:23385" name="Capa_1" x="0" y="0" width="12.63308048248291" height="12.63308048248291" />
+                </frame>
+              </frame>
+              <text id="3389:11482" name="Tổ QC" x="29.980680465698242" y="12.124361038208008" width="35" height="13" />
+            </frame>
+          </frame>
+          <frame id="3389:11483" name="Frame 2147264297" x="179.49609375" y="188.0625" width="139.0013427734375" height="187.15211486816406">
+            <frame id="3389:11484" name="Frame 2147264286" x="0" y="0" width="139.0013427734375" height="37.248722076416016">
+              <frame id="3389:11485" name="Frame 2147264295" x="6.359538555145264" y="9.539306640625" width="18.170108795166016" height="18.170108795166016">
+                <frame id="3389:11486" name="Frame 2147264294" x="2.49609375" y="2.6328125" width="13.173382759094238" height="12.900772094726562" />
+              </frame>
+              <text id="3389:11493" name="P.Kinh doanh" x="29.980680465698242" y="12.124361038208008" width="78" height="13" />
+            </frame>
+            <frame id="3389:11494" name="Frame 2147264287" x="0" y="49.96780014038086" width="139.0013427734375" height="37.248722076416016">
+              <frame id="3389:11495" name="Frame 2147264295" x="6.359538555145264" y="9.539306640625" width="18.170108795166016" height="18.170108795166016">
+                <frame id="3389:11496" name="Frame 2147264294" x="3.7109375" y="3.7109375" width="10.751558303833008" height="10.751558303833008">
+                  <frame id="3389:11497" name="BeBold" x="0" y="0" width="10.751558303833008" height="10.751558303833008" />
+                </frame>
+              </frame>
+              <text id="3389:11501" name="P.Thiết kế" x="29.980680465698242" y="12.124361038208008" width="55" height="13" />
+            </frame>
+            <frame id="3389:11502" name="Frame 2147264288" x="0" y="99.93560028076172" width="139.0013427734375" height="37.248722076416016">
+              <frame id="3389:11503" name="Frame 2147264295" x="6.359538555145264" y="9.539306640625" width="18.170108795166016" height="18.170108795166016">
+                <frame id="3389:11504" name="Frame 2147264294" x="1.29296875" y="1.421875" width="15.58975887298584" height="15.32097053527832">
+                  <frame id="3389:11505" name="Capa_1" x="0" y="0" width="15.58975887298584" height="15.32097053527832" />
+                </frame>
+              </frame>
+              <text id="3389:11527" name="P.Marketing" x="29.980680465698242" y="12.124361038208008" width="73" height="13" />
+            </frame>
+            <frame id="3389:11528" name="Frame 2147264290" x="0" y="149.9033966064453" width="139.0013427734375" height="37.248722076416016">
+              <frame id="3389:11529" name="Frame 2147264295" x="6.359538555145264" y="9.539306640625" width="18.170108795166016" height="18.170108795166016">
+                <frame id="3389:11530" name="Frame 2147264294" x="2.63671875" y="2.63671875" width="12.901869773864746" height="12.901869773864746">
+                  <frame id="3389:11531" name="Capa_1" x="0" y="0" width="12.901869773864746" height="12.901869773864746" />
+                </frame>
+              </frame>
+              <text id="3389:11537" name="P.HCNS-kế toán" x="29.980680465698242" y="12.124361038208008" width="90" height="13" />
+            </frame>
+          </frame>
+          <frame id="3389:11538" name="Frame 2147264299" x="24.16796875" y="104.48046875" width="294.35577392578125" height="58.14434814453125">
+            <frame id="3389:11539" name="Frame 2147264280" x="0" y="0.9085044860839844" width="139.0013427734375" height="57.235843658447266">
+              <frame id="3389:11540" name="Frame 2147264276" x="0" y="18.171875" width="139.0013427734375" height="35.80413055419922">
+                <text id="3389:11541" name="KHối nhà máy" x="24.50067138671875" y="10.90206527709961" width="90" height="14" />
+              </frame>
+              <frame id="3389:11542" name="Frame 2147264279" x="42.26953125" y="-5.47265625" width="44.46059036254883" height="33.981388092041016" />
+            </frame>
+            <frame id="3389:11567" name="Frame 2147264281" x="155.3544464111328" y="0" width="139.0013427734375" height="58.14434814453125">
+              <frame id="3389:11568" name="Frame 2147264277" x="0" y="19.078125" width="139.0013427734375" height="35.80413055419922">
+                <text id="3389:11569" name="KHối văn phòng" x="17.50067138671875" y="10.90206527709961" width="104" height="14" />
+              </frame>
+              <frame id="3389:11570" name="Frame 2147264278" x="48.58984375" y="-3.546875" width="41.8123779296875" height="32.85640335083008" />
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+    <frame id="3364:11677" name="Frame 1618871402" x="0" y="6468.4921875" width="375" height="2197.4228515625">
+      <frame id="3364:11769" name="Mask group" x="10.15625" y="36" width="354.6875" height="203.22021484375">
+        <frame id="3364:11770" name="Frame 2147264195" x="10.156250000014552" y="36.00000000000091" width="354.6875" height="203.22021484375">
+          <frame id="3364:11771" name="Frame 2147263919" x="-10.15625" y="0" width="375" height="203.22021484375" />
+          <rounded-rectangle id="3364:11772" name="ChatGPT Image 09_23_51 12 thg 2, 2026 1" x="0" y="-9.094947017729282e-13" width="354.6875" height="203.22216796875" />
+          <rounded-rectangle id="3364:11773" name="ChatGPT Image 09_23_51 12 thg 2, 2026 2" x="-22.15625" y="-2.8125" width="407.4847412109375" height="208.85267639160156" />
+        </frame>
+      </frame>
+      <frame id="3364:11775" name="Frame 2147263786" x="0" y="263.22021484375" width="375" height="212.5500030517578">
+        <text id="3364:11776" name="ĐỊNH HƯỚNG TƯƠNG LAI" x="16" y="0" width="343" height="22.549999237060547" />
+        <text id="3364:11777" name="Heading 2 → Explore Our Brands" x="16" y="34.54999923706055" width="343" height="26" />
+        <text id="3364:11779" name="Heading 2 → En ANUC fusionamos el interiorismo con la
+inteligencia emocional para crear espacios
+únicos que inspiran bienestar y equilibrio." x="16" y="72.55000305175781" width="343" height="140" />
+      </frame>
+      <frame id="3470:11162" name="Frame 2147264316" x="2" y="499.77020263671875" width="371" height="1661.652587890625">
+        <frame id="3364:11678" name="Frame 1410139015" x="15.5" y="39" width="340" height="319.3100280761719">
+          <frame id="3470:11163" name="Frame 2147264315" x="0" y="0" width="340" height="243.31002807617188">
+            <ellipse id="3470:11164" name="Ellipse 2496" x="229.99609375" y="32.73046875" width="97.4825210571289" height="97.4825210571289" />
+            <rounded-rectangle id="3470:11165" name="Rectangle 34625956" x="-0.39453125" y="-27.37890625" width="340.7865295410156" height="270.559814453125" />
+            <rounded-rectangle id="3470:11166" name="Nikon 0848" x="-0.39453125" y="0.28125" width="340.7882080078125" height="242.9013671875" />
+          </frame>
+          <frame id="3484:11509" name="Frame 2147264317" x="0" y="219.31002807617188" width="340" height="100">
+            <frame id="3364:11686" name="Frame 1410139012" x="0" y="0" width="340" height="100">
+              <frame id="3364:11687" name="Frame 1410138484" x="-2.5" y="0" width="345" height="23">
+                <text id="3364:11690" name="KHỞI TẠO NỀN TẢNG CHẾ TÁC ĐỘC BẢN" x="0" y="0" width="345" height="23" />
+              </frame>
+              <text id="3364:11691" name="Duy trì các giá trị thủ công cốt lõi làm nền tảng để hiện thực hóa mọi ý tưởng thiết kế riêng biệt." x="0" y="28" width="340" height="72" />
+            </frame>
+          </frame>
+        </frame>
+        <line id="3364:11692" name="Line 458" x="185.5" y="376.3100280761719" width="0.000002098146069329232" height="48" />
+        <frame id="3364:11693" name="Frame 1410139016" x="15.5" y="442.3100280761719" width="340" height="327.3100280761719">
+          <frame id="3470:11168" name="Frame 2147264315" x="0" y="0" width="340" height="243.31002807617188">
+            <ellipse id="3470:11169" name="Ellipse 2496" x="15.76953125" y="59.16015625" width="97.4825210571289" height="97.4825210571289" />
+            <rounded-rectangle id="3470:11170" name="Rectangle 34625956" x="-0.39453125" y="-27.37890625" width="340.7865295410156" height="270.559814453125" />
+            <rounded-rectangle id="3470:11171" name="Nikon 0848" x="-0.39453125" y="0.28125" width="340.7882080078125" height="242.9013671875" />
+          </frame>
+          <frame id="3484:11510" name="Frame 2147264318" x="0" y="227.31002807617188" width="340" height="100">
+            <frame id="3364:11705" name="Frame 1410139012" x="0" y="0" width="340" height="100">
+              <frame id="3364:11706" name="Frame 1410138484" x="35.83984375" y="0" width="268.3203125" height="23">
+                <text id="3364:11709" name="SÁNG TẠO KHÔNG GIỚI HẠN" x="0" y="0" width="268.3203125" height="23" />
+              </frame>
+              <text id="3364:11710" name="Phá vỡ các khuôn mẫu đại trà, không ngừng tìm kiếm giải pháp thẩm mỹ mới cho không gian sống đẳng cấp." x="0" y="28" width="340" height="72" />
+            </frame>
+          </frame>
+        </frame>
+        <line id="3364:11711" name="Line 459" x="185.5" y="787.6200561523438" width="0.000002054432115983218" height="47" />
+        <frame id="3364:11712" name="Frame 1410139018" x="18.5" y="852.6200561523438" width="334" height="343.01629638671875">
+          <frame id="3470:11173" name="Frame 2147264315" x="0" y="0" width="334" height="239.0163116455078">
+            <ellipse id="3470:11174" name="Ellipse 2496" x="49.984375" y="36.96484375" width="151.7330322265625" height="151.7330322265625" />
+            <rounded-rectangle id="3470:11175" name="Rectangle 34625956" x="-0.390625" y="-26.8984375" width="334.77264404296875" height="265.78521728515625" />
+            <rounded-rectangle id="3470:11176" name="Nikon 0848" x="-0.390625" y="0.2734375" width="334.7742919921875" height="238.6148681640625" />
+          </frame>
+          <frame id="3484:11511" name="Frame 2147264319" x="0" y="219.0163116455078" width="334" height="124">
+            <frame id="3364:11728" name="Frame 1410139012" x="0" y="0" width="329" height="124">
+              <frame id="3364:11729" name="Frame 1410138484" x="31.5" y="0" width="266" height="23">
+                <text id="3364:11732" name="ĐỔI MỚI CÔNG NGHỆ CHẾ TÁC" x="0" y="0" width="266" height="23" />
+              </frame>
+              <text id="3364:11733" name="Ứng dụng công nghệ vào quản lý vận hành, kết hợp với đội xe limousine hiện đại nhằm đảm bảo độ chính xác, an toàn và hiệu suất tối ưu trong từng chuyến đi." x="0" y="28" width="329" height="96" />
+            </frame>
+          </frame>
+        </frame>
+        <line id="3364:11734" name="Line 460" x="185.5" y="1213.6363525390625" width="0.000002054432115983218" height="47" />
+        <frame id="3364:11735" name="Frame 1410139020" x="18.5" y="1278.6363525390625" width="334" height="344.01629638671875">
+          <frame id="3470:11178" name="Frame 2147264315" x="0" y="0" width="334" height="239.0163116455078">
+            <ellipse id="3470:11179" name="Ellipse 2497" x="0" y="99.2109375" width="95.76223754882812" height="95.76223754882812" />
+            <ellipse id="3470:11180" name="Ellipse 2496" x="225.9375" y="32.15234375" width="95.76223754882812" height="95.76223754882812" />
+            <rounded-rectangle id="3470:11181" name="Rectangle 34625956" x="-0.390625" y="-26.8984375" width="334.77264404296875" height="265.78521728515625" />
+            <rounded-rectangle id="3470:11182" name="Nikon 0848" x="-0.390625" y="0.2734375" width="334.7742919921875" height="238.6148681640625" />
+          </frame>
+          <frame id="3364:11752" name="Frame 1410139012" x="0" y="253.0163116455078" width="334" height="91">
+            <frame id="3364:11753" name="Frame 1410138484" x="20" y="0" width="294" height="23">
+              <text id="3364:11756" name="VƯƠN TẦM HỢP TÁC CHIẾN LƯỢC" x="0" y="0" width="294" height="23" />
+            </frame>
+            <text id="3364:11757" name="Thiết lập mối quan hệ bền vững với các đối tác kiến trúc sư, cùng kiến tạo những công trình nội thất biểu tượng." x="0" y="28" width="334" height="63" />
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+    <frame id="3359:10549" name="Frame 2147264183" x="0" y="8664.916015625" width="375" height="954.5499877929688" />
+    <frame id="3347:10001" name="Frame 2147263892" x="0" y="9618.4658203125" width="375" height="316.4472961425781" />
+    <instance id="3327:9536" name="container" x="0" y="9933.9130859375" width="375" height="823" />
+  </frame>
+  <frame id="2495:30876" name="Về chúng tôi" x="819" y="552" width="1600" height="12452.416015625">
+    <frame id="2495:30877" name="Frame 2147263243" x="0" y="0" width="1600" height="550">
+      <rounded-rectangle id="2495:30878" name="Rectangle 34626796" x="0" y="-2.890625" width="1600.3173828125" height="553.1845703125" />
+      <rounded-rectangle id="2495:30879" name="Gradient" x="0" y="-2.9765625" width="1600.0000335388322" height="191.82005819526785" />
+      <rounded-rectangle id="2495:30880" name="Gradient" x="0" y="-2.109375" width="1600.0000335388322" height="191.82005819526785" />
+      <frame id="2495:30881" name="Header" x="0" y="0.46875" width="1600" height="93.44999694824219">
+        <frame id="2495:30882" name="Frame 2147256179" x="0" y="59.8125" width="1600" height="19">
+          <frame id="2495:30883" name="Frame 2147256177" x="60" y="0" width="345.4100036621094" height="19">
+            <text id="2495:30884" name="Giới thiệu" x="0" y="0" width="88" height="19" />
+            <text id="2495:30885" name="Năng lực sản xuất" x="124" y="0" width="168" height="19" />
+            <text id="2495:30886" name="Dự án tiêu biểu" x="328" y="0" width="134" height="19" />
+          </frame>
+          <text id="2495:30887" name="MINH PHÚ SOFA FACTORY" x="674" y="0" width="252" height="19" />
+          <frame id="2495:30888" name="Frame 2147256178" x="1194.5899658203125" y="0" width="345.4100036621094" height="19">
+            <text id="2495:30889" name="ĐỐi tác chiến lược" x="-110.58999633789062" y="0" width="171" height="19" />
+            <text id="2495:30890" name="sản phẩm" x="96.41000366210938" y="0" width="84" height="19" />
+            <text id="2495:30891" name="TIn tức &amp; Blog" x="216.41000366210938" y="0" width="129" height="19" />
+          </frame>
+        </frame>
+        <frame id="2495:30892" name="Overlay" x="0" y="-2.578125" width="1600" height="50.08000183105469">
+          <frame id="2495:30893" name="Frame 2147263014" x="-0.0078125" y="7" width="1600" height="36.428863525390625">
+            <frame id="2495:30894" name="Container" x="60" y="10.214431762695312" width="328.69000244140625" height="16">
+              <frame id="2495:30895" name="Image" x="0" y="0.48828125" width="15.029999732971191" height="15.029999732971191">
+                <frame id="2495:30896" name="icon-lang.svg fill" x="0" y="0" width="15.029999732971191" height="15.029999732971191">
+                  <frame id="2495:30897" name="icon-lang.svg" x="0" y="0" width="15.029999732971191" height="15.029999732971191" />
+                </frame>
+              </frame>
+              <text id="2495:30905" name="EN" x="21.6953125" y="1" width="17" height="15" />
+              <frame id="2495:30906" name="Image" x="48.2890625" y="3.83203125" width="8.34000015258789" height="8.34000015258789">
+                <frame id="2495:30907" name="icon-select.svg fill" x="0" y="0" width="8.34000015258789" height="8.34000015258789">
+                  <frame id="2495:30908" name="icon-select.svg" x="0" y="1.76953125" width="8.34000015258789" height="4.800192832946777" />
+                </frame>
+              </frame>
+            </frame>
+            <rounded-rectangle id="2495:30911" name="PNG MP Furniture 1" x="770.87890625" y="0" width="58.2421875" height="36.428863525390625" />
+            <frame id="2495:30912" name="Frame 2147263015" x="1211.31005859375" y="10.699432373046875" width="328.69000244140625" height="15.029999732971191">
+              <text id="2495:30913" name="Catalogues" x="148.66000366210938" y="0.014999866485595703" width="80" height="15" />
+              <rounded-rectangle id="2495:30914" name="Vertical Divider" x="237.66000366210938" y="1.6700000762939453" width="1" height="11.6899995803833" />
+              <text id="2495:30915" name="Liên hệ" x="247.66000366210938" y="0.014999866485595703" width="47" height="15" />
+              <rounded-rectangle id="2495:30916" name="Vertical Divider" x="303.6600036621094" y="1.6700000762939453" width="1" height="11.6899995803833" />
+              <frame id="2495:30917" name="Image" x="313.6600036621094" y="0" width="15.029999732971191" height="15.029999732971191">
+                <frame id="2495:30918" name="icon-search.svg fill" x="0" y="0" width="15.029999732971191" height="15.029999732971191">
+                  <frame id="2495:30919" name="icon-search.svg" x="0.3515625" y="0" width="14.335773468017578" height="15.029999732971191" />
+                </frame>
+              </frame>
+            </frame>
+          </frame>
+        </frame>
+      </frame>
+      <frame id="2495:30924" name="Frame 2147263835" x="-0.5" y="371.8828125" width="432" height="178">
+        <frame id="2495:30925" name="Frame 2147256180" x="70" y="46" width="205.546875" height="17">
+          <frame id="2495:30926" name="Breadcrumbs White" x="0" y="0" width="205.546875" height="17">
+            <text id="2495:30927" name="Link 1" x="0" y="0" width="82" height="17" />
+            <frame id="2495:30928" name="Image" x="90" y="12.2734375" width="7.5468758067218005" height="7.5468758067218005">
+              <frame id="2495:30929" name="icon-select.svg fill" x="0" y="0" width="7.5468758067218005" height="7.5468758067218005">
+                <frame id="2495:30930" name="icon-select.svg" x="-7.000198820605874e-8" y="1.6015625" width="4.343700261983031" height="7.546875666706001" />
+              </frame>
+            </frame>
+            <text id="2495:30933" name="Về chúng tôi" x="105.546875" y="0" width="100" height="17" />
+          </frame>
+        </frame>
+        <frame id="2495:30934" name="Frame 2147263625" x="70" y="82" width="292" height="50">
+          <text id="2495:30935" name="Heading 1 → Makes Everything Lovely Within Reach" x="0" y="0" width="292" height="50" />
+        </frame>
+      </frame>
+    </frame>
+    <frame id="2495:30936" name="Frame 2147263833" x="0" y="550" width="1600" height="2232">
+      <rounded-rectangle id="2495:30937" name="image 1" x="-38.5" y="-0.39453125" width="1677.561767578125" height="1565.6234130859375" />
+      <instance id="2495:30938" name="Frame 2147263986" x="0.25" y="1422.80078125" width="1600" height="809" />
+      <instance id="2495:30939" name="Component 2147263296" x="0.28125" y="121.01953125" width="1600" height="1339.234619140625" />
+    </frame>
+    <instance id="2495:30940" name="Frame 2147263922" x="0" y="2782" width="1600" height="947" />
+    <frame id="3299:21164" name="Frame 2147264246" x="0" y="3729" width="1600" height="682">
+      <rounded-rectangle id="3299:21112" name="Rectangle 34628067" x="-0.4453125" y="-83.015625" width="1605.8671875" height="854.2041015625" />
+      <frame id="3299:21165" name="Frame 2147264213" x="-0.609375" y="0.25" width="1601" height="682" hidden="true">
+        <frame id="3299:21166" name="Frame 2147262937" x="0" y="0" width="1601" height="170.73248291015625" />
+      </frame>
+      <rounded-rectangle id="3299:21206" name="image 13" x="1600" y="0" width="1599.1378173828125" height="682.550048828125" />
+      <text id="3299:21113" name="Heading 3 → Servicios" x="94.8671875" y="258.0859375" width="74" height="19" />
+      <text id="3299:21114" name="Heading 2 → En ANUC fusionamos el interiorismo con la
+inteligencia emocional para crear espacios
+únicos que inspiran bienestar y equilibrio." x="94.8671875" y="297.0859375" width="749.96875" height="94" />
+      <vector id="3299:21116" name="Ellipse 3628" x="909.3359375" y="-90.07421875" width="389.7255351727872" height="861.2617233974306" />
+      <frame id="3299:21139" name="Frame 2147264242" x="925.609375" y="59.55859375" width="563" height="562">
+        <frame id="3299:21119" name="Frame 2147264236" x="0" y="0" width="474" height="118">
+          <frame id="3299:21120" name="Frame 2147264033" x="20" y="20" width="434" height="78">
+            <text id="3299:21121" name="Hiện thực hóa bản vẽ độc bản:" x="0" y="0" width="434" height="24" />
+            <text id="3299:21122" name="Là &quot;cánh tay nối dài&quot; biến mọi ý tưởng táo bạo trên giấy thành kiệt tác hiện hữu." x="0" y="30" width="434" height="48" />
+          </frame>
+        </frame>
+        <frame id="3299:21140" name="Frame 2147264243" x="0" y="148" width="563" height="266">
+          <frame id="3299:21127" name="Frame 2147264239" x="63" y="0" width="500" height="118">
+            <frame id="3299:21128" name="Frame 2147264033" x="20" y="20" width="460" height="78">
+              <text id="3299:21129" name="Nâng tầm trải nghiệm:" x="0" y="0" width="460" height="24" />
+              <text id="3299:21130" name="Tạo ra những di sản bền bỉ, tối ưu hóa công năng và thẩm mỹ cho gia chủ." x="0" y="30" width="460" height="48" />
+            </frame>
+          </frame>
+          <frame id="3299:21131" name="Frame 2147264240" x="63" y="148" width="500" height="118">
+            <frame id="3299:21132" name="Frame 2147264033" x="20" y="20" width="460" height="78">
+              <text id="3299:21133" name="Trách nhiệm môi trường:" x="0" y="0" width="460" height="24" />
+              <text id="3299:21134" name="Nghiên cứu, cải tiến máy móc để giảm thải, hướng tới không gian sống &quot;Xanh&quot;, an toàn." x="0" y="30" width="460" height="48" />
+            </frame>
+          </frame>
+        </frame>
+        <frame id="3299:21135" name="Frame 2147264241" x="0" y="444" width="474" height="118">
+          <frame id="3299:21136" name="Frame 2147264033" x="20" y="20" width="434" height="78">
+            <text id="3299:21137" name="Phát huy giá trị con người:" x="0" y="0" width="434" height="24" />
+            <text id="3299:21138" name="Kết hợp bàn tay nghệ nhân với tư duy công nghệ để giữ nguyên &quot;linh hồn&quot; sản phẩm từ bản vẽ 3D." x="0" y="30" width="434" height="48" />
+          </frame>
+        </frame>
+      </frame>
+      <frame id="3299:21143" name="Frame 2147264238" x="850.609375" y="123.75" width="18.4453125" height="18.4453125" />
+      <frame id="3299:21152" name="Frame 2147264243" x="850.609375" y="561.1953125" width="18.4453125" height="18.4453125" />
+      <frame id="3299:21156" name="Frame 2147264244" x="896.609375" y="409.53125" width="18.4453125" height="18.4453125" />
+      <frame id="3299:21160" name="Frame 2147264245" x="896.609375" y="280.75" width="18.4453125" height="18.4453125" />
+    </frame>
+    <instance id="3126:8417" name="Frame 2147264224" x="0" y="4411" width="1600" height="741" />
+    <instance id="3039:24790" name="Frame 2147264176" x="0" y="5152" width="1600" height="734" />
+    <instance id="2495:31043" name="Frame 2147263920" x="0" y="5886" width="1600" height="991" />
+    <instance id="2495:31044" name="Frame 2147263919" x="0" y="6877" width="1600" height="1019.1428833007812" />
+    <frame id="3039:24902" name="Frame 2147264199" x="0" y="7896.14306640625" width="1600" height="863" />
+    <frame id="3347:9913" name="Frame 2147263918" x="0" y="8759.142578125" width="1600" height="1841">
+      <vector id="3347:9915" name="Vector 2345" x="483.296875" y="1566.44140625" width="153.68948759767954" height="219.7812786947493" hidden="true" />
+      <frame id="3347:9916" name="Frame 2147263835" x="338.828125" y="526.5703125" width="920" height="188">
+        <frame id="3347:9917" name="Frame 2147263929" x="0" y="0" width="920" height="86">
+          <text id="3347:9918" name="Heading 3 → Servicios" x="361" y="0" width="198" height="19" />
+          <text id="3347:9919" name="Heading 2 → En ANUC fusionamos el interiorismo con la
+inteligencia emocional para crear espacios
+únicos que inspiran bienestar y equilibrio." x="0" y="39" width="920" height="47" />
+        </frame>
+        <text id="3347:9920" name="Heading 2 → En ANUC fusionamos el interiorismo con la
+inteligencia emocional para crear espacios
+únicos que inspiran bienestar y equilibrio." x="0" y="116" width="920" height="72" />
+      </frame>
+      <frame id="3347:9921" name="Frame 2147264196" x="-1.171875" y="0.00390625" width="1600" height="480">
+        <frame id="3347:9922" name="Mask group" x="68" y="58.859375" width="1464" height="395">
+          <frame id="3347:9924" name="Frame 2147264195" x="68" y="58.859375" width="1464" height="395">
+            <frame id="3347:9925" name="Frame 2147263919" x="0" y="0" width="1464" height="395" />
+            <rounded-rectangle id="3347:9923" name="ChatGPT Image 09_23_51 12 thg 2, 2026 1" x="-68" y="-103.22265625" width="1376.328857421875" height="515.80859375" />
+            <rounded-rectangle id="3347:9926" name="ChatGPT Image 09_23_51 12 thg 2, 2026 2" x="0" y="0" width="1123" height="395" />
+          </frame>
+        </frame>
+      </frame>
+      <frame id="3347:9937" name="Frame 1410139021" x="133.5" y="742" width="1333" height="1007">
+        <frame id="3347:9939" name="route-tien-tieu-hoc.svg" x="230.5" y="68.0234375" width="349" height="188">
+          <frame id="3347:9940" name="route-tien-tieu-hoc.svg fill" x="0" y="0" width="349" height="188">
+            <frame id="3347:9941" name="route-tien-tieu-hoc.svg" x="0" y="0" width="349" height="188" />
+          </frame>
+        </frame>
+        <frame id="3347:9942" name="Layer_1" x="838" y="719.0234375" width="320" height="251.12582397460938" />
+        <vector id="3347:9943" name="Vector 2317" x="553" y="223.0234375" width="285" height="114" />
+        <vector id="3347:9944" name="Vector 2318" x="597" y="675.4296875" width="317.203125" height="170.42578125" />
+        <vector id="3347:9945" name="Vector 2319" x="853.8984375" y="965" width="468.49169921875" height="52.9765625" />
+        <ellipse id="3347:9948" name="Ellipse 2492" x="764" y="699.0234375" width="506" height="292" />
+        <ellipse id="3347:9949" name="Ellipse 2493" x="90" y="487.0234375" width="506" height="292" />
+        <frame id="3347:9950" name="Frame 1410139015" x="80.734375" y="3.3125" width="465" height="391">
+          <frame id="3470:11115" name="Frame 2147264315" x="18" y="0" width="429" height="307">
+            <ellipse id="3470:11113" name="Ellipse 2496" x="290.203125" y="41.296875" width="123" height="123" />
+            <rounded-rectangle id="3470:11085" name="Rectangle 34625956" x="-0.5" y="-34.546875" width="429.9924011230469" height="341.3828125" />
+            <rounded-rectangle id="3470:11086" name="Nikon 0848" x="-0.5" y="0.3515625" width="429.9945373535156" height="306.484375" />
+          </frame>
+          <frame id="3470:11105" name="Frame 1410139012" x="0" y="307" width="465" height="84">
+            <frame id="3470:11106" name="Frame 1410138484" x="0" y="0" width="465" height="29">
+              <text id="3470:11107" name="01" x="0" y="0" width="23" height="29" />
+              <ellipse id="3470:11108" name="Ellipse 2489" x="28" y="12.5" width="4" height="4" />
+              <text id="3470:11109" name="KHỞI TẠO NỀN TẢNG CHẾ TÁC ĐỘC BẢN" x="37" y="0" width="428" height="29" />
+            </frame>
+            <text id="3470:11110" name="Duy trì các giá trị thủ công cốt lõi làm nền tảng để hiện thực hóa mọi ý tưởng thiết kế riêng biệt." x="0" y="36" width="465" height="48" />
+          </frame>
+        </frame>
+        <frame id="3470:11128" name="Frame 1410139021" x="853.8984375" y="48.5234375" width="431" height="391">
+          <frame id="3470:11129" name="Frame 2147264315" x="1" y="0" width="429" height="307">
+            <ellipse id="3470:11130" name="Ellipse 2496" x="19.8984375" y="74.64453125" width="123" height="123" />
+            <rounded-rectangle id="3470:11131" name="Rectangle 34625956" x="-0.5" y="-34.546875" width="429.9924011230469" height="341.3828125" />
+            <rounded-rectangle id="3470:11132" name="Nikon 0848" x="-0.5" y="0.3515625" width="429.9945373535156" height="306.484375" />
+          </frame>
+          <frame id="3470:11133" name="Frame 1410139012" x="0" y="307" width="431" height="84">
+            <frame id="3470:11134" name="Frame 1410138484" x="0" y="0" width="346" height="29">
+              <text id="3470:11135" name="02" x="0" y="0" width="26" height="29" />
+              <ellipse id="3470:11136" name="Ellipse 2489" x="31" y="12.5" width="4" height="4" />
+              <text id="3470:11137" name="SÁNG TẠO KHÔNG GIỚI HẠN" x="40" y="0" width="306" height="29" />
+            </frame>
+            <text id="3470:11138" name="Phá vỡ các khuôn mẫu đại trà, không ngừng tìm kiếm giải pháp thẩm mỹ mới cho không gian sống đẳng cấp." x="0" y="36" width="431" height="48" />
+          </frame>
+        </frame>
+        <frame id="3470:11139" name="Frame 1410139022" x="79.734375" y="457.5234375" width="429" height="391">
+          <frame id="3470:11140" name="Frame 2147264315" x="0" y="0" width="429" height="307">
+            <ellipse id="3470:11141" name="Ellipse 2496" x="64.203125" y="47.48046875" width="194.890625" height="194.890625" />
+            <rounded-rectangle id="3470:11142" name="Rectangle 34625956" x="-0.5" y="-34.546875" width="429.9924011230469" height="341.3828125" />
+            <rounded-rectangle id="3470:11143" name="Nikon 0848" x="-0.5" y="0.3515625" width="429.9945373535156" height="306.484375" />
+          </frame>
+          <frame id="3470:11144" name="Frame 1410139012" x="0" y="307" width="429" height="84">
+            <frame id="3470:11145" name="Frame 1410138484" x="0" y="0" width="370" height="29">
+              <text id="3470:11146" name="03" x="0" y="0" width="26" height="29" />
+              <ellipse id="3470:11147" name="Ellipse 2489" x="31" y="12.5" width="4" height="4" />
+              <text id="3470:11148" name="ĐỔI MỚI CÔNG NGHỆ CHẾ TÁC" x="40" y="0" width="330" height="29" />
+            </frame>
+            <text id="3470:11149" name="Ứng dụng kỹ thuật số và dây chuyền hiện đại vào quy trình may đo để đạt độ chuẩn xác tuyệt đối trên từng sản phẩm." x="0" y="36" width="429" height="48" />
+          </frame>
+        </frame>
+        <frame id="3470:11150" name="Frame 1410139023" x="877.203125" y="576.0234375" width="429" height="391">
+          <frame id="3470:11151" name="Frame 2147264315" x="0" y="0" width="429" height="307">
+            <ellipse id="3470:11161" name="Ellipse 2497" x="0" y="127.42951965332031" width="123" height="123" />
+            <ellipse id="3470:11152" name="Ellipse 2496" x="290.203125" y="41.296875" width="123" height="123" />
+            <rounded-rectangle id="3470:11153" name="Rectangle 34625956" x="-0.5" y="-34.546875" width="429.9924011230469" height="341.3828125" />
+            <rounded-rectangle id="3470:11154" name="Nikon 0848" x="-0.5" y="0.3515625" width="429.9945373535156" height="306.484375" />
+          </frame>
+          <frame id="3470:11155" name="Frame 1410139012" x="0" y="307" width="429" height="84">
+            <frame id="3470:11156" name="Frame 1410138484" x="0" y="0" width="406" height="29">
+              <text id="3470:11157" name="04" x="0" y="0" width="27" height="29" />
+              <ellipse id="3470:11158" name="Ellipse 2489" x="32" y="12.5" width="4" height="4" />
+              <text id="3470:11159" name="VƯƠN TẦM HỢP TÁC CHIẾN LƯỢC" x="41" y="0" width="365" height="29" />
+            </frame>
+            <text id="3470:11160" name="Thiết lập mối quan hệ bền vững với các đối tác kiến trúc sư, cùng kiến tạo những công trình nội thất biểu tượng." x="0" y="36" width="429" height="48" />
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+    <frame id="2495:31233" name="Frame 2147263878" x="0" y="10600.142578125" width="1600" height="776">
+      <rounded-rectangle id="2495:31234" name="image 1" x="-22.4609375" y="856.9140625" width="1644.717041015625" height="866.3759765625" />
+      <frame id="2495:31235" name="Frame 2147263889" x="0" y="60.671875" width="1600" height="603.234375">
+        <frame id="2495:31236" name="Frame 2147263835" x="0" y="0" width="876" height="86">
+          <text id="2495:31237" name="Heading 3 → Servicios" x="70" y="0" width="114" height="19" />
+          <text id="2495:31238" name="Heading 2 → En ANUC fusionamos el interiorismo con la
+inteligencia emocional para crear espacios
+únicos que inspiran bienestar y equilibrio." x="70" y="39" width="736" height="47" />
+        </frame>
+        <instance id="2495:31239" name="Frame 2147263880" x="0" y="129" width="1600" height="474.234375" />
+      </frame>
+    </frame>
+    <frame id="2495:31240" name="Frame 2147263891" x="0" y="11376.142578125" width="1600" height="451.2734375">
+      <rounded-rectangle id="2495:31241" name="image 3" x="0" y="0" width="1600" height="451.2734375" />
+      <frame id="2495:31242" name="Frame 2147263892" x="0" y="93.08984375" width="1600" height="265.091796875">
+        <frame id="2495:31243" name="Frame 2147263894" x="70" y="0" width="713" height="265.091796875">
+          <rounded-rectangle id="2495:31244" name="Rectangle 34627917" x="0" y="0" width="713" height="265.091796875" />
+          <frame id="2495:31245" name="Mask group" x="328.578125" y="0" width="384.3448181152344" height="265.87890625">
+            <rounded-rectangle id="2495:31246" name="Rectangle 34627864" x="328.578125" y="0" width="384.3448181152344" height="265.87890625" />
+            <rounded-rectangle id="2495:31247" name="Rectangle 34627918" x="328.578125" y="0" width="384.3448181152344" height="265.87890625" />
+          </frame>
+          <frame id="2495:31248" name="Frame 2147263894" x="0" y="0.234375" width="344" height="265">
+            <frame id="2495:31249" name="Frame 2147263895" x="23" y="23" width="298" height="78">
+              <text id="2495:31250" name="KHÁM PHÁ NĂNG LỰC SẢN XUẤT" x="0" y="0" width="298" height="21" />
+              <text id="2495:31251" name="Tìm hiểu quy trình sản xuất chuẩn 5 sao trên diện tích 8.000m2." x="0" y="30" width="298" height="48" />
+            </frame>
+            <instance id="2495:31252" name="Button" x="23" y="218" width="141" height="24" />
+          </frame>
+        </frame>
+        <frame id="2495:31253" name="Frame 2147263893" x="817" y="0" width="713" height="265.091796875">
+          <rounded-rectangle id="2495:31254" name="Rectangle 34627917" x="0" y="0" width="713" height="265.091796875" />
+          <frame id="2495:31255" name="Mask group" x="328.578125" y="0" width="384.3448181152344" height="265.87890625">
+            <rounded-rectangle id="2495:31256" name="Rectangle 34627864" x="328.578125" y="0" width="384.3448181152344" height="265.87890625" />
+            <rounded-rectangle id="2495:31257" name="Rectangle 34627918" x="328.578125" y="0" width="384.3448181152344" height="265.87890625" />
+          </frame>
+          <frame id="2495:31258" name="Frame 2147263894" x="0" y="0.234375" width="344" height="265">
+            <frame id="2495:31259" name="Frame 2147263895" x="23" y="23" width="298" height="102">
+              <text id="2495:31260" name="các Dự án tiêu biểu" x="0" y="0" width="298" height="21" />
+              <text id="2495:31261" name="Chiêm ngưỡng những công trình thực tế Minh Phú đã thực thi cho các biệt thự, khách sạn cao cấp" x="0" y="30" width="298" height="72" />
+            </frame>
+            <instance id="2495:31262" name="Button" x="23" y="218" width="141" height="24" />
+          </frame>
+        </frame>
+      </frame>
+    </frame>
+    <instance id="2495:31263" name="Container" x="0" y="11827.416015625" width="1600" height="625" />
+    <frame id="2495:31264" name="Icon sticky PC" x="1515.140625" y="-2.59765625" width="84" height="788">
+      <frame id="2495:31265" name="Frame 2147255726" x="18" y="454" width="48" height="240">
+        <frame id="2495:31266" name="Icon Container" x="0" y="0" width="48" height="48">
+          <rounded-rectangle id="2495:31267" name="Icon Background" x="-6" y="-6" width="60" height="60" />
+          <rounded-rectangle id="2495:31268" name="Icon Background" x="0.1953125" y="0" width="48" height="48" />
+          <frame id="2495:31269" name="Status Indicator" x="36" y="2" width="10" height="10" />
+          <frame id="2495:31271" name="Layer_1" x="12" y="11.97265625" width="24" height="25" />
+        </frame>
+        <frame id="2495:31273" name="Icon Container" x="0" y="64" width="48" height="48">
+          <rounded-rectangle id="2495:31274" name="Icon Background" x="-6" y="-6" width="60" height="60" />
+          <rounded-rectangle id="2495:31275" name="Icon Background" x="0.1953125" y="0" width="48" height="48" />
+          <frame id="2495:31276" name="Layer_1" x="9.859375" y="9.6640625" width="28" height="28" />
+        </frame>
+        <frame id="2495:31289" name="Icon Container" x="0" y="128" width="48" height="48">
+          <rounded-rectangle id="2495:31290" name="Icon Background" x="-6" y="-6" width="60" height="60" />
+          <rounded-rectangle id="2495:31291" name="Icon Background" x="0" y="0" width="48" height="48" />
+          <frame id="2495:31292" name="Frame" x="12" y="12" width="24" height="24" />
+        </frame>
+        <frame id="2495:31296" name="Icon Container" x="0" y="192" width="48" height="48" />
+      </frame>
+    </frame>
+  </frame>
+  <section id="3750:10643" name="Section 9" x="2881" y="552" width="2481" height="11066">
+    <frame id="3039:24818" name="Frame 2147264175" x="409" y="324" width="1640" height="1528">
+      <symbol id="3039:24789" name="Property 1=Default" x="20" y="20" width="1600" height="734" />
+      <symbol id="3039:24819" name="Property 1=Variant2" x="20" y="774" width="1600" height="734" />
+    </frame>
+    <frame id="2495:27589" name="Frame 2147263834" x="360" y="1969" width="1640" height="2216">
+      <symbol id="2495:27590" name="Property 1=Default" x="20.9921875" y="65.703125" width="1600" height="967" />
+      <symbol id="2495:27604" name="Property 1=Variant2" x="20.578125" y="1141" width="1600" height="947" />
+    </frame>
+    <frame id="2495:27565" name="Frame 2147263985" x="420.5" y="4185" width="1640" height="1678">
+      <symbol id="2495:27566" name="Property 1=Default" x="20" y="20" width="1600" height="809" />
+      <symbol id="2495:27578" name="Property 1=Variant2" x="20" y="849" width="1600" height="809" />
+    </frame>
+    <frame id="2495:26991" name="Frame 2147263860" x="544" y="8658.62890625" width="1640" height="2098.285400390625">
+      <symbol id="2495:26992" name="Property 1=Default" x="20" y="20" width="1600" height="1019.1428833007812" />
+      <symbol id="2495:27025" name="Property 1=Variant2" x="20" y="1059.142822265625" width="1600" height="1019.1428833007812" />
+    </frame>
+    <frame id="2495:27056" name="Frame 2147264328" x="544" y="6204.59765625" width="1640" height="2042">
+      <symbol id="2495:27057" name="Property 1=Default" x="20" y="20" width="1600" height="991" />
+      <symbol id="2495:27078" name="Property 1=Variant2" x="20" y="1031" width="1600" height="991" />
+    </frame>
+  </section>
+  <section id="3750:12702" name="Section 10" x="6808" y="552" width="863" height="10757">
+    <frame id="3395:13871" name="Frame 2147264252" x="240" y="513" width="383" height="660.38134765625">
+      <symbol id="3395:13854" name="Property 1=Default" x="20" y="20" width="343" height="300.1899108886719" />
+      <symbol id="3395:13872" name="Property 1=Variant2" x="32.203125" y="390" width="343" height="300.1899108886719" />
+    </frame>
+  </section>
+</section>

@@ -42,6 +42,17 @@ import IconPhoneV2 from "./icons/IconPhoneV2.svg";
 import IconEmailV2 from "./icons/IconEmailV2.svg";
 import IconLocalV2 from "./icons/IconLocalV2.svg";
 import IconFacebookV2 from "./icons/IconFacebookV2.svg";
+import IconComma from "./icons/IconComma.svg";
+import IconCircle from "./icons/IconCircle.svg";
+import IconMission1 from "./icons/IconMission1.svg";
+import IconMission2 from "./icons/IconMission2.svg";
+import IconMission3 from "./icons/IconMission3.svg";
+import IconMission4 from "./icons/IconMission4.svg";
+
+import IconCoreValues1 from "./icons/IconCoreValues1.svg";
+import IconCoreValues2 from "./icons/IconCoreValues2.svg";
+import IconCoreValues3 from "./icons/IconCoreValues3.svg";
+import IconCoreValues4 from "./icons/IconCoreValues4.svg";
 
 type IconProps = SVGProps<SVGSVGElement> & {
   name?: string;
@@ -49,6 +60,26 @@ type IconProps = SVGProps<SVGSVGElement> & {
 
 export default function Icon({ name, className, ...props }: IconProps) {
   switch (name?.toLowerCase()) {
+    case "icon-core-1":
+      return <IconCoreValues1 className={className} {...props} />;
+    case "icon-core-2":
+      return <IconCoreValues2 className={className} {...props} />;
+    case "icon-core-3":
+      return <IconCoreValues3 className={className} {...props} />;
+    case "icon-core-4":
+      return <IconCoreValues4 className={className} {...props} />;
+    case "icon-mission-1":
+      return <IconMission1 className={className} {...props} />;
+    case "icon-mission-2":
+      return <IconMission2 className={className} {...props} />;
+    case "icon-mission-3":
+      return <IconMission3 className={className} {...props} />;
+    case "icon-mission-4":
+      return <IconMission4 className={className} {...props} />;
+    case "icon-circle":
+      return <IconCircle className={className} {...props} />;
+    case "icon-comma":
+      return <IconComma className={className} {...props} />;
     case "icon-phone-v2":
       return <IconPhoneV2 className={className} {...props} />;
     case "icon-email-v2":

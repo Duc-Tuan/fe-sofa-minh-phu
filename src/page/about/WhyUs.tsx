@@ -6,11 +6,13 @@ import w1 from "@/assets/images/figma/about/why-1.png";
 import w2 from "@/assets/images/figma/about/why-2.png";
 import w3 from "@/assets/images/figma/about/why-3.png";
 import w4 from "@/assets/images/figma/about/why-4.png";
+import w5 from "@/assets/images/figma/about/why-5.png";
+import bg from "@/assets/images/figma/about/bg-WhyUs.png";
 
 const CARDS = [
   {
     img: w1,
-    title: "Sản xuất trực tiếp tại xưởng 8.000m²",
+    title: "Sản xuất trực tiếp tại xưởng 8.000m2:",
     desc: "Toàn bộ quy trình khép kín tại nhà máy, kiểm soát chất lượng và tối ưu chi phí cho gia chủ.",
   },
   {
@@ -26,18 +28,21 @@ const CARDS = [
   {
     img: w4,
     title: "Kỹ nghệ từ đội ngũ 14+ năm kinh nghiệm",
-    desc: "Sở hữu những nghệ nhân am hiểu sâu sắc về cấu trúc sofa, đảm bảo độ bền vững và trải nghiệm ngồi êm ái nhất.",
+    desc: "Sở hữu những nghệ nhân am hiểu sâu sắc về cấu trúc sofa, đảm bảo độ bền vững và trải nghiệm ngồi êm ái nhất",
   },
   {
-    img: w1,
+    img: w5,
     title: "Tiến độ chuẩn xác",
-    desc: "Cam kết bàn giao đúng thời hạn, đảm bảo tính chuyên nghiệp và sự an tâm tuyệt đối cho mọi dự án.",
+    desc: "Cam kết bàn giao đúng thời hạn, đảm bảo tính chuyên nghiệp và sự an tâm tuyệt đối cho mọi dự án",
   },
 ];
 
 function WhyUs() {
   return (
     <section className="about-why">
+      <div className="about-why__bg">
+        <img src={bg.src} alt="" />
+      </div>
       <div className="about-why__inner my-container">
         <motion.div
           className="about-why__head"
@@ -46,14 +51,16 @@ function WhyUs() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="about-why__eyebrow">Về chúng tôi</span>
-          <h2 className="about-why__title">Tại sao chọn Minh Phú Sofa Factory?</h2>
+          <span className="about-why__eyebrow">VỀ CHÚNG TÔI</span>
+          <h2 className="about-why__title">
+            TẠI SAO CHỌN <br/> MINH PHÚ SOFA FACTORY?
+          </h2>
         </motion.div>
 
         <div className="about-why__grid">
           {CARDS.map((c, idx) => (
             <motion.article
-              key={idx}
+              key={c.title}
               className="about-why__card"
               initial={{ opacity: 0, y: 28 }}
               whileInView={{ opacity: 1, y: 0 }}
