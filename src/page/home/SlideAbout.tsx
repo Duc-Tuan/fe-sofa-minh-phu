@@ -1,12 +1,34 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Parallax, Autoplay, EffectFade } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper/types";
 import { motion, AnimatePresence } from "framer-motion";
+import "swiper/css";
+import "swiper/css/effect-fade";
 import slide1 from "@/assets/images/figma/home/slide-1.png";
 import slide2 from "@/assets/images/figma/home/slide-2.png";
 import capacity1 from "@/assets/images/figma/home/capacity-1.png";
 import capacity2 from "@/assets/images/figma/home/capacity-2.png";
 import Icon from "@/assets/icon";
+
+const MOBILE_MQ = "(max-width: 768px)";
+const IMAGE_PARALLAX = "70%";
+
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia(MOBILE_MQ);
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener("change", update);
+    return () => mq.removeEventListener("change", update);
+  }, []);
+
+  return isMobile;
+}
 
 interface SlideItem {
   index: string;
@@ -67,34 +89,76 @@ const slides: SlideItem[] = [
 ];
 
 function SlideAbout() {
-  const [active, setActive] = useState(0);
-  const current = slides[active];
+  const swiperRef = useRef<SwiperType | null>(null);
+  const activeIndexRef = useRef(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const isMobile = useIsMobile();
+  const current = slides[activeIndex];
+
+  const syncActiveIndex = (swiper: SwiperType) => {
+    activeIndexRef.current = swiper.realIndex;
+    setActiveIndex(swiper.realIndex);
+  };
 
   return (
-    <section className="home-slide-about">
-      <div className="" style={{ height: "20rem", overflow: "hidden" }}>
-        <AnimatePresence mode="sync">
-          <motion.div
-            key={current.image + active}
-            className="home-slide-about__bg"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <img src={current.image} alt={current.title} />
-          </motion.div>
-        </AnimatePresence>
-      </div>
+    <section
+      className={`home-slide-about ${isMobile ? "home-slide-about--fade" : "home-slide-about--parallax"}`}
+    >
+      <Swiper
+        key={isMobile ? "slide-about-fade" : "slide-about-parallax"}
+        modules={isMobile ? [EffectFade, Autoplay] : [Parallax, Autoplay]}
+        {...(isMobile
+          ? {
+            effect: "fade" as const,
+            fadeEffect: { crossFade: true },
+          }
+          : { parallax: true })}
+        slidesPerView={1}
+        loop
+        speed={isMobile ? 600 : 1200}
+        watchOverflow
+        allowTouchMove
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+          if (activeIndexRef.current > 0) {
+            swiper.slideToLoop(activeIndexRef.current, 0);
+          }
+          syncActiveIndex(swiper);
+        }}
+        onSlideChange={syncActiveIndex}
+        className="home-slide-about__swiper"
+      >
+        {slides.map((s) => (
+          <SwiperSlide key={s.index} className="home-slide-about__slide">
+            <div
+              className="home-slide-about__bg"
+              {...(!isMobile && { "data-swiper-parallax": IMAGE_PARALLAX })}
+            >
+              <img src={s.image} alt={s.title} />
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
       <div className="home-slide-about__overlay" />
 
-      <div className="home-slide-about__tabs">
+      <div
+        className="home-slide-about__tabs"
+        role="tablist"
+        aria-label="Slide about pagination"
+      >
         {slides.map((s, idx) => (
           <button
             key={s.index}
-            className={`home-slide-about__tab ${active === idx ? "is-active" : ""}`}
-            onClick={() => setActive(idx)}
+            type="button"
+            role="tab"
+            aria-selected={activeIndex === idx}
+            className={`home-slide-about__tab ${activeIndex === idx ? "is-active" : ""}`}
+            onClick={() => swiperRef.current?.slideToLoop(idx)}
           >
             <span className="home-slide-about__tab-line" />
             <span className="home-slide-about__tab-index">{s.index}</span>
@@ -102,71 +166,71 @@ function SlideAbout() {
           </button>
         ))}
       </div>
+
       <div className="home-slide-about__tabs home-slide-about__tabs--mobile">
-        <button
-          className={`home-slide-about__tab is-active`}
-          // onClick={() => setActive(idx)}
-        >
+        <button type="button" className="home-slide-about__tab is-active">
           <span className="home-slide-about__tab-line" />
-          <span className="home-slide-about__tab-index">0{active + 1}</span>
+          <span className="home-slide-about__tab-index">{current.index}</span>
           <span className="home-slide-about__tab-label">{current.label}</span>
         </button>
       </div>
 
-      <motion.div
-        key={`content-${active}`}
-        className="home-slide-about__content my-container"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.15 }}
-      >
-        <p className="home-slide-about__title">MINH PHÚ SOFA FACTORY</p>
-        <div className="home-slide-about__highlight">
-          <span className={`eyebrow eyebrow-${current.index}`}>
-            {current.eyebrow}
-          </span>
-          <span className={`big big-${current.index}`}>
-            {current.highlight}
-          </span>
-          <span className={`big-sub big-sub-${current.index}`}>
-            {current.highlightSub}
-          </span>
-          <span className={`line line-${current.index}`} />
-        </div>
-        <p className="home-slide-about__desc">{current.description}</p>
-      </motion.div>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeIndex}
+          className="home-slide-about__content my-container"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            duration: isMobile ? 0.2 : 0.4,
+            ease: "easeInOut",
+          }}
+        >
+          <p className="home-slide-about__title">
+            MINH PHÚ SOFA FACTORY
+          </p>
+
+          <div className="home-slide-about__highlight">
+            <span className={`eyebrow eyebrow-${current.index}`}>
+              {current.eyebrow}
+            </span>
+
+            <span className={`big big-${current.index}`}>
+              {current.highlight}
+            </span>
+
+            <span className={`big-sub big-sub-${current.index}`}>
+              {current.highlightSub}
+            </span>
+
+            <span className={`line line-${current.index}`} />
+          </div>
+
+          <p className="home-slide-about__desc">
+            {current.description}
+          </p>
+        </motion.div>
+      </AnimatePresence>
+
       <div className="home-capacity__controls my-container">
         <span className="home-capacity__pagination">
-          <strong>{String(active + 1).padStart(2, "0")}</strong>
+          <strong>{String(activeIndex + 1).padStart(2, "0")}</strong>
           <em>/ {String(slides.length).padStart(2, "0")}</em>
         </span>
         <div className="home-capacity__nav">
           <button
+            type="button"
             className="home-capacity__nav-btn prev"
-            onClick={() =>
-              setActive((prev) => {
-                const dataNew = active - 1;
-                if (dataNew < 0) {
-                  return 0;
-                }
-                return dataNew;
-              })
-            }
+            onClick={() => swiperRef.current?.slidePrev()}
             aria-label="prev"
           >
             <Icon name="icon-arrow-line" />
           </button>
           <button
+            type="button"
             className="home-capacity__nav-btn next"
-            onClick={() =>
-              setActive((prev) => {
-                const dataNew = active + 1;
-                if (dataNew === slides.length) {
-                  return slides.length - 1;
-                }
-                return dataNew;
-              })
-            }
+            onClick={() => swiperRef.current?.slideNext()}
             aria-label="next"
           >
             <Icon name="icon-arrow-line" />
