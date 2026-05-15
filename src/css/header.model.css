@@ -101,9 +101,8 @@
 
 .contact-social-network {
   position: fixed;
-  top: 50%;
+  bottom: 5.875rem;
   right: 1.2rem;
-  transform: translateY(-50%);
   display: inline-flex;
   flex-direction: column;
   gap: 0.62rem;
