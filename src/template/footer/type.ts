@@ -8,19 +8,19 @@ export interface IFooterContact {
 
 export const dataFooterContact: IFooterContact[] = [
     {
-        icon: "icon-headquarters",
-        local: "286 đường Vân Trì, xã Phúc Thịnh, TP. Hà Nội",
-        name: "NHÀ MÁY SẢN XUẤT",
-        map: "",
-        phone: "0925.36.28.28"
-    },
-    {
         icon: "icon-factory",
         local: "286 đường Vân Trì, xã Phúc Thịnh, TP. Hà Nội",
         name: "Trụ sở chính",
         map: "",
         phone: "0925.36.28.28"
     },
+    {
+        icon: "icon-headquarters",
+        local: "286 đường Vân Trì, xã Phúc Thịnh, TP. Hà Nội",
+        name: "NHÀ MÁY SẢN XUẤT",
+        map: "",
+        phone: "0925.36.28.28"
+    }
 ]
 
 export const dataSocialNetwork = [

@@ -78,7 +78,7 @@ function Process() {
               title="Quy trình sản xuất"
               typeIcon="cross"
               color="black"
-              handleClick={() => {}}
+              handleClick={() => { }}
             />
           </div>
         </div>
@@ -134,6 +134,15 @@ function Process() {
             <ProcessStep step={bottom[1]} delay={0.08} placement="bottom" />
             <ProcessStep step={bottom[0]} delay={0.16} placement="bottom" />
           </div>
+        </div>
+
+        <div className="home-process__cta--mobile">
+          <Button
+            title="Quy trình sản xuất"
+            typeIcon="cross"
+            color="black"
+            handleClick={() => { }}
+          />
         </div>
       </div>
     </section>

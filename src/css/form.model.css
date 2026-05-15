@@ -160,6 +160,10 @@
   position: relative;
 }
 
+.home-contact-form__map-imagebgMap.mobile {
+  display: none;
+}
+
 .home-contact-form__map-svg {
   width: 100%;
   max-width: 12rem;
@@ -244,8 +248,13 @@
     width: 100%;
   }
 
-  .home-contact-form__map-imagebgMap {
+  .home-contact-form__map-imagebgMap.mobile {
+    display: block;
     height: 18.64569rem;
+  }
+
+  .home-contact-form__map-imagebgMap {
+    display: none;
   }
 
   .home-contact-form__eyebrow {
@@ -286,6 +295,7 @@
     min-height: 14rem;
     padding: 1.25rem;
     padding-top: 0;
+    background: url("../assets/images/figma/home/image\ 13\ mb.png") lightgray 0.17px -10.574px / 99.978% 103.163% no-repeat;
   }
 
   .home-contact-form__map-deco {

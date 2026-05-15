@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import SectionHeader from "./SectionHeader";
 import bgChooseUs from "@/assets/images/figma/home/choose-us-1.png";
+import bgChooseUsMb from "@/assets/images/figma/home/choose-us-mb.png";
 import Icon from "@/assets/icon";
 import SwiperOne from "@/components/swiper/swiperOne";
 import { SwiperSlide } from "swiper/react";
@@ -41,7 +42,12 @@ function ChooseUs() {
   return (
     <section
       className="home-choose-us my-container"
-      style={{ background: `url(${bgChooseUs.src})` }}
+      style={
+        {
+          "--bg-choose-us": `url(${bgChooseUs.src})`,
+          "--bg-choose-us-mb": `url(${bgChooseUsMb.src})`,
+        } as React.CSSProperties
+      }
     >
       <SectionHeader
         eyebrow="LỢI THẾ CỦA CHÚNG TÔI"

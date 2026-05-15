@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, EffectFade } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper/types";
-// @ts-ignore
+
 import "swiper/css";
 import capacity1 from "@/assets/images/figma/home/capacity-1.png";
 import capacity2 from "@/assets/images/figma/home/capacity-2.png";
@@ -18,6 +18,7 @@ type Stat = {
   value: string;
   unit?: string;
   label: string;
+  labelMore: string;
 };
 
 const stats: Stat[] = [
@@ -25,14 +26,16 @@ const stats: Stat[] = [
     value: "8.000",
     unit: "M²",
     label: "Nhà xưởng vận hành song song theo quy trình khép kín",
+    labelMore: "Không gian sản xuất được tổ chức bài bản, đảm bảo hiệu quả vận hành và chất lượng sản phẩm."
   },
   {
     value: "02",
     unit: "Nhà máy",
     label: "Vận hành song song theo quy trình khép kín",
+    labelMore: "Hệ thống nhà máy hiện đại đáp ứng đa dạng nhu cầu sản xuất.",
   },
-  { value: "1.000+", label: "Đối tác & khách hàng" },
-  { value: "20.000+", label: "Sản phẩm/năm" },
+  { value: "1.000+", label: "Đối tác & khách hàng", labelMore: "Đồng hành cùng hàng nghìn đối tác và khách hàng trên toàn quốc." },
+  { value: "20.000+", label: "Sản phẩm/năm", labelMore: "Năng lực sản xuất lớn, đáp ứng tiến độ cho nhiều dự án mỗi năm." },
 ];
 
 const images = [
@@ -47,12 +50,12 @@ function Capacity() {
   const swiperRef = useRef<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const dataComponent = [
-    <ComponentOne />,
-    <ComponentTow />,
-    <ComponentThree />,
-    <ComponentFire />,
-  ];
+  // const dataComponent = [
+  //   <ComponentOne />,
+  //   <ComponentTow />,
+  //   <ComponentThree />,
+  //   <ComponentFire />,
+  // ];
 
   return (
     <section className="home-capacity my-container">
@@ -71,7 +74,9 @@ function Capacity() {
 
       <div className="home-capacity__body">
         <div className="home-capacity__panel">
-          {dataComponent[activeIndex]}
+
+          {/* {dataComponent[activeIndex]} */}
+          <StatsContent activeIndex={activeIndex} />
 
           <div className="home-capacity__controls none-mobile">
             <span className="home-capacity__pagination">
@@ -156,88 +161,152 @@ function Capacity() {
   );
 }
 
-const ComponentOne = () => {
+const StatsContent = ({
+  activeIndex,
+}: {
+  activeIndex: number;
+}) => {
+  const renderStats =
+    activeIndex === 0
+      ? stats
+      : [stats[activeIndex - 1]];
+
   return (
-    <ul className="home-capacity__stats">
-      {stats.map((s, i) => (
-        <motion.li
-          key={s.label}
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: i * 0.1 }}
-        >
-          <div className="home-capacity__stats-num">
-            <span className="value">{s.value}</span>
-            {s.unit && <span className="unit">{s.unit}</span>}
-          </div>
-          <span className="home-capacity__stats-label">{s.label}</span>
-        </motion.li>
-      ))}
-    </ul>
+    <AnimatePresence mode="wait">
+      <motion.ul
+        key={activeIndex}
+        className={`home-capacity__stats ${activeIndex !== 0 ? "is-not-single" : ""}`}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{
+          duration: 0.4,
+          ease: "easeInOut",
+        }}
+      >
+        {renderStats.map((s, i) => (
+          <motion.li
+            key={s.label}
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: i * 0.1,
+            }}
+          >
+            <div className="home-capacity__stats-num">
+              <span className="value">{s.value}</span>
+
+              {s.unit && (
+                <span className="unit">{s.unit}</span>
+              )}
+            </div>
+
+            <span className="home-capacity__stats-label">
+              {activeIndex === 0
+                ? s.label
+                : s.labelMore}
+            </span>
+
+            {activeIndex !== 0 && (
+              <div className="home-capacity__stats-more">
+                Xem thêm
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M17.668 17.6685V5.66846H5.66797M17.668 5.66846L5.98376 17.3527" stroke="#252525" stroke-width="2" stroke-linecap="square" />
+                </svg>
+              </div>
+            )}
+          </motion.li>
+        ))}
+      </motion.ul>
+    </AnimatePresence>
   );
 };
-const ComponentTow = () => {
-  return (
-    <ul className="home-capacity__stats">
-      {stats.map((s, i) => (
-        <motion.li
-          key={s.label}
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: i * 0.1 }}
-        >
-          <div className="home-capacity__stats-num">
-            <span className="value">{s.value}</span>
-            {s.unit && <span className="unit">{s.unit}</span>}
-          </div>
-          <span className="home-capacity__stats-label">{s.label}</span>
-        </motion.li>
-      ))}
-    </ul>
-  );
-};
-const ComponentThree = () => {
-  return (
-    <ul className="home-capacity__stats">
-      {stats.map((s, i) => (
-        <motion.li
-          key={s.label}
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: i * 0.1 }}
-        >
-          <div className="home-capacity__stats-num">
-            <span className="value">{s.value}</span>
-            {s.unit && <span className="unit">{s.unit}</span>}
-          </div>
-          <span className="home-capacity__stats-label">{s.label}</span>
-        </motion.li>
-      ))}
-    </ul>
-  );
-};
-const ComponentFire = () => {
-  return (
-    <ul className="home-capacity__stats">
-      {stats.map((s, i) => (
-        <motion.li
-          key={s.label}
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, delay: i * 0.1 }}
-        >
-          <div className="home-capacity__stats-num">
-            <span className="value">{s.value}</span>
-            {s.unit && <span className="unit">{s.unit}</span>}
-          </div>
-          <span className="home-capacity__stats-label">{s.label}</span>
-        </motion.li>
-      ))}
-    </ul>
-  );
-};
+
 export default Capacity;
+
+// const ComponentOne = () => {
+//   return (
+//     <ul className="home-capacity__stats">
+//       {stats.map((s, i) => (
+//         <motion.li
+//           key={s.label}
+//           initial={{ opacity: 0, x: -30 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           viewport={{ once: true, amount: 0.3 }}
+//           transition={{ duration: 0.5, delay: i * 0.1 }}
+//         >
+//           <div className="home-capacity__stats-num">
+//             <span className="value">{s.value}</span>
+//             {s.unit && <span className="unit">{s.unit}</span>}
+//           </div>
+//           <span className="home-capacity__stats-label">{s.label}</span>
+//         </motion.li>
+//       ))}
+//     </ul>
+//   );
+// };
+// const ComponentTow = () => {
+//   return (
+//     <ul className="home-capacity__stats">
+//       {stats.map((s, i) => (
+//         <motion.li
+//           key={s.label}
+//           initial={{ opacity: 0, x: -30 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           viewport={{ once: true, amount: 0.3 }}
+//           transition={{ duration: 0.5, delay: i * 0.1 }}
+//         >
+//           <div className="home-capacity__stats-num">
+//             <span className="value">{s.value}</span>
+//             {s.unit && <span className="unit">{s.unit}</span>}
+//           </div>
+//           <span className="home-capacity__stats-label">{s.label}</span>
+//         </motion.li>
+//       ))}
+//     </ul>
+//   );
+// };
+// const ComponentThree = () => {
+//   return (
+//     <ul className="home-capacity__stats">
+//       {stats.map((s, i) => (
+//         <motion.li
+//           key={s.label}
+//           initial={{ opacity: 0, x: -30 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           viewport={{ once: true, amount: 0.3 }}
+//           transition={{ duration: 0.5, delay: i * 0.1 }}
+//         >
+//           <div className="home-capacity__stats-num">
+//             <span className="value">{s.value}</span>
+//             {s.unit && <span className="unit">{s.unit}</span>}
+//           </div>
+//           <span className="home-capacity__stats-label">{s.label}</span>
+//         </motion.li>
+//       ))}
+//     </ul>
+//   );
+// };
+// const ComponentFire = () => {
+//   return (
+//     <ul className="home-capacity__stats">
+//       {stats.map((s, i) => (
+//         <motion.li
+//           key={s.label}
+//           initial={{ opacity: 0, x: -30 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           viewport={{ once: true, amount: 0.3 }}
+//           transition={{ duration: 0.5, delay: i * 0.1 }}
+//         >
+//           <div className="home-capacity__stats-num">
+//             <span className="value">{s.value}</span>
+//             {s.unit && <span className="unit">{s.unit}</span>}
+//           </div>
+//           <span className="home-capacity__stats-label">{s.label}</span>
+//         </motion.li>
+//       ))}
+//     </ul>
+//   );
+// };
+// export default Capacity;

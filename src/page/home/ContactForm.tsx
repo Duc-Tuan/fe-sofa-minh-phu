@@ -1,6 +1,7 @@
 "use client";
 
 import ImagebgMap from "@/assets/images/figma/home/Image Container.png";
+import ImagebgMapMb from "@/assets/images/figma/home/Image Container Mobile.png";
 import Imagebg from "@/assets/images/figma/home/image-contactForm.png";
 import Button from "@/components/button/Button";
 import Input from "@/components/input";
@@ -120,6 +121,11 @@ function ContactForm({ background = Imagebg.src }: { background?: string }) {
               src={ImagebgMap.src}
               alt=""
               className="home-contact-form__map-imagebgMap"
+            />
+            <img
+              src={ImagebgMapMb.src}
+              alt=""
+              className="home-contact-form__map-imagebgMap mobile"
             />
           </div>
         </motion.div>

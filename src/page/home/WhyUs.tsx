@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import bgWhyUs from "@/assets/images/figma/home/why-us.png";
+import bgWhyUsBg from "@/assets/images/figma/home/why-us-bg.png";
 import Icon from "@/assets/icon";
 import SwiperOne from "@/components/swiper/swiperOne";
 import { SwiperSlide } from "swiper/react";
@@ -39,7 +39,7 @@ const items: Item[] = [
 function WhyUs() {
   return (
     <section className="home-why-us">
-      <img src={bgWhyUs.src} alt="" className="home-why-us_bg-sub" />
+      <img src={bgWhyUsBg.src} alt="" className="home-why-us_bg-sub" />
       <div className="my-container">
         <div className="home-why-us__head">
           <span className="home-why-us__eyebrow">ĐỐI TÁC CHIẾN LƯỢC</span>

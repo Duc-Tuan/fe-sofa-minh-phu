@@ -21,7 +21,7 @@ function Collections() {
   return (
     <section className="home-collections my-container">
       <SectionHeader
-        eyebrow="MINH PHÚ SOFA FACTORY"
+        eyebrow="Khám phá"
         title="BỘ SƯU TẬP CỦA CHÚNG TÔI"
       />
 
