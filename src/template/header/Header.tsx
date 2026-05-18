@@ -23,13 +23,20 @@ function Header() {
 
   const headerHeight = headerRef.current?.offsetHeight || 122;
 
+  const [isTop, setIsTop] = useState(true);
+
   useMotionValueEvent(scrollY, "change", (current) => {
     const previous = scrollY.getPrevious() ?? 0;
+
+    // check top
+    setIsTop(current <= 100);
+
     if (current > previous && current > 100) {
       setHidden(true);
       setScrollButton(true);
     } else if (current < previous) {
       setHidden(false);
+
     } else if (current <= 50) {
       setScrollButton(false);
       setHidden(false);
@@ -55,7 +62,7 @@ function Header() {
           y: hidden ? -headerHeight : 0,
           transition: { duration: 0.3, ease: "easeInOut" },
         }}
-        className={`header header-sticky ${showMenu ? "show-menu-sub" : ""}`}
+        className={`header header-sticky ${showMenu ? "show-menu-sub" : ""} ${!isTop ? "header-scrolled" : ""}`}
       >
         <motion.div
           initial={{ opacity: 0, y: -100 }}

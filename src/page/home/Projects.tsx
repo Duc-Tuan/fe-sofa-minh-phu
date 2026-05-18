@@ -1,9 +1,9 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay, EffectCoverflow } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper/types";
 // @ts-ignore
 import "swiper/css";
@@ -53,6 +53,21 @@ const projects: ProjectItem[] = [
 function Projects() {
   const swiperRef = useRef<SwiperType | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+
+    window.addEventListener("resize", checkMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
 
   return (
     <section className="home-projects">
@@ -109,25 +124,42 @@ function Projects() {
       </div>
 
       <Swiper
-        modules={[Navigation, Autoplay]}
-        slidesPerView={1.6}
+        modules={[Navigation, Autoplay, EffectCoverflow]}
+        effect={isMobile ? "slide" : "coverflow"}
+        slidesPerView='auto'
         centeredSlides
-        spaceBetween={20}
+        spaceBetween={isMobile ? 28 : 0}
         loop
-        speed={700}
+        speed={600}
         onBeforeInit={(s) => (swiperRef.current = s)}
         onSlideChange={(s) => setActiveIndex(s.realIndex)}
         className="home-projects__swiper"
-        breakpoints={{
-          640: { slidesPerView: 1.6 },
-          0: { slidesPerView: 1.1 },
-        }}
+        coverflowEffect={
+          !isMobile
+            ? {
+              rotate: 0,
+              stretch: -120,
+              depth: 250,
+              modifier: 1,
+              scale: 0.85,
+              slideShadows: false,
+            }
+            : undefined
+        }
       >
         {projects.map((p) => (
           <SwiperSlide key={p.index} className="home-projects__slide">
             <span className="home-projects__slide-index">{p.index}</span>
             <div className="home-projects__slide-inner">
               <img src={p.image} alt={p.name} />
+            </div>
+            <div className="home-projects__caption my-container">
+              <span className="home-projects__caption-city">
+                {projects[activeIndex]?.city}
+              </span>
+              <h3 className="home-projects__caption-name">
+                {projects[activeIndex]?.name}
+              </h3>
             </div>
           </SwiperSlide>
         ))}
@@ -139,19 +171,19 @@ function Projects() {
           <em>/ {String(projects.length).padStart(2, "0")}</em>
         </span>
         <div className="home-projects__caption-action">
-          <div className="home-projects__caption my-container">
+          {/* <div className="home-projects__caption my-container">
             <span className="home-projects__caption-city">
               {projects[activeIndex]?.city}
             </span>
             <h3 className="home-projects__caption-name">
               {projects[activeIndex]?.name}
             </h3>
-          </div>
+          </div> */}
           <Button
             title="DANH SÁCH DỰ ÁN"
             typeIcon="cross"
             color="white"
-            handleClick={() => {}}
+            handleClick={() => { }}
           />
         </div>
         <div className="home-projects__nav">

@@ -9,9 +9,16 @@
   width: 100%;
   transition:
     transform 0.3s ease-in-out,
-    opacity 0.3s ease-in-out;
+    opacity 0.3s ease-in-out,
+    background 0.3s ease,
+    backdrop-filter 0.3s ease;
   will-change: transform, opacity;
   backdrop-filter: blur(9.949999809265137px);
+}
+
+.header.header-scrolled {
+  background: rgba(58, 58, 58, 0.6);
+  backdrop-filter: blur(9.95px);
 }
 
 .header .header-menu-sub {
