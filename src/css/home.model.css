@@ -1038,6 +1038,11 @@
   width: 46.62975rem;
   height: 20.74875rem;
   pointer-events: none;
+  overflow: visible;
+}
+
+.home-process__path-runner {
+  filter: drop-shadow(0 0 0.4rem rgba(205, 178, 124, 0.45));
 }
 
 .home-process__row {
@@ -1054,7 +1059,7 @@
 }
 
 .home-process__row.bottom {
-  margin-top: 7.6rem;
+  margin-top: 7.33rem;
   align-items: end;
 }
 
@@ -1160,18 +1165,20 @@
 }
 
 .home-process__step-dot {
-  width: 0.55rem;
-  height: 0.55rem;
+  width: 0.81375rem;
+  height: 0.8135rem;
   background: #cdb27c;
   border-radius: 50%;
   position: relative;
   z-index: 1;
   flex: none;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
 }
 
 .home-process__step.is-active .home-process__step-dot {
-  width: 0.55rem;
-  height: 0.55rem;
   background: #cdb27c;
   box-shadow:
     0 0 0 4px #fff,
@@ -1759,7 +1766,7 @@
   }
 
   .home-process__path-mobile {
-    display: block;
+    display: block !important;
     position: absolute;
     right: 0;
     top: 6.5rem;
