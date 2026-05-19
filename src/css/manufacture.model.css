@@ -1796,6 +1796,7 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding: 0 1rem 2rem;
+    scroll-padding-left: 1rem;
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
@@ -1808,6 +1809,16 @@
     height: 17.375rem;
     border-radius: 0.375rem;
     scroll-snap-align: start;
+  }
+  .manuf-stats__cell-shade {
+    background: linear-gradient(
+      180deg,
+      #001017 0%,
+      rgba(0, 16, 23, 0) 50%
+    );
+  }
+  .manuf-stats__cell-img--hover {
+    display: none;
   }
   .manuf-stats__cell-text {
     left: 1.25rem;
