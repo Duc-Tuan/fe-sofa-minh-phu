@@ -5,10 +5,9 @@ import { motion } from "framer-motion";
 
 export interface ProjectItem {
   id: string;
+  category: string;
   name: string;
-  city: string;
   image: string;
-  wide?: boolean;
 }
 
 interface Props {
@@ -18,21 +17,22 @@ interface Props {
 
 function ProjectCard({ project, index = 0 }: Props) {
   return (
-    <motion.article
-      className={`project-list__card ${project.wide ? "wide" : ""}`}
+    <motion.button
+      type="button"
+      className="project-card"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.4, delay: (index % 3) * 0.08 }}
+      transition={{ duration: 0.4, delay: (index % 2) * 0.08 }}
     >
-      <div className="project-list__card-image">
+      <div className="project-card__image">
         <img src={project.image} alt={project.name} />
       </div>
-      <div className="project-list__card-content">
-        <span>{project.city}</span>
-        <h3>{project.name}</h3>
+      <div className="project-card__text">
+        <span className="project-card__category">{project.category}</span>
+        <h3 className="project-card__name">{project.name}</h3>
       </div>
-    </motion.article>
+    </motion.button>
   );
 }
 
