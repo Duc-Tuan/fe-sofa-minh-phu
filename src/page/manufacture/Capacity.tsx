@@ -37,7 +37,7 @@ function Capacity() {
   return (
     <div className="manuf-capacity-and-manuf-compare">
       <img src={bg.src} alt="" className="manuf-capacity-and-manuf-compare__bgImg"/>
-      <section className="manuf-capacity">
+      <section className="manuf-capacity my-container ">
         <div className="manuf-capacity__glow" />
         <div className="manuf-capacity__head">
           <span className="manuf-capacity__eyebrow">Đội ngũ tinh hoa</span>
