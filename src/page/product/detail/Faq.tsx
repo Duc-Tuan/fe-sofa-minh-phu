@@ -2,49 +2,86 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import bg from "@/assets/images/figma/home/collection-interior-1.png";
 
-export interface FaqItem {
+interface Item {
   q: string;
   a: string;
 }
 
 interface Props {
-  items: FaqItem[];
+  items: Item[];
 }
 
 function Faq({ items }: Props) {
-  const [open, setOpen] = useState<number | null>(0);
+  const [openIdx, setOpenIdx] = useState(0);
 
   return (
-    <section className="product-detail__faq my-container">
-      <div className="product-detail__faq-head">
-        <span>HỎI & ĐÁP</span>
-        <h2>CÂU HỎI THƯỜNG GẶP</h2>
+    <section className="product-detail__faq">
+      <div className="product-detail__faq-bg">
+        <img src={bg.src} alt="" />
+        <div className="product-detail__faq-shade" />
       </div>
-      <div className="product-detail__faq-list">
-        {items.map((f, idx) => {
-          const isOpen = open === idx;
-          return (
-            <div key={f.q} className={`product-detail__faq-item ${isOpen ? "is-open" : ""}`}>
-              <button type="button" onClick={() => setOpen(isOpen ? null : idx)}>
-                <span>{f.q}</span>
-                <em>{isOpen ? "−" : "+"}</em>
-              </button>
-              <AnimatePresence initial={false}>
-                {isOpen && (
-                  <motion.p
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: "auto", opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.25 }}
+
+      <div className="product-detail__faq-inner">
+        <div className="product-detail__faq-head">
+          <span>Sản phẩm</span>
+          <h2>Câu hỏi thường gặp</h2>
+        </div>
+
+        <ul className="product-detail__faq-list">
+          {items.map((it, idx) => {
+            const open = openIdx === idx;
+            return (
+              <li
+                key={it.q}
+                className={`product-detail__faq-item ${
+                  open ? "is-open" : ""
+                }`}
+              >
+                <button
+                  type="button"
+                  onClick={() => setOpenIdx(open ? -1 : idx)}
+                  aria-expanded={open}
+                >
+                  <span>{`${idx + 1}. ${it.q}`}</span>
+                  <svg
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden
+                    style={{
+                      transform: open ? "rotate(180deg)" : "rotate(0deg)",
+                      transition: "transform 0.25s",
+                    }}
                   >
-                    {f.a}
-                  </motion.p>
-                )}
-              </AnimatePresence>
-            </div>
-          );
-        })}
+                    <path
+                      d="M4 6l4 4 4-4"
+                      stroke="currentColor"
+                      strokeWidth="1.4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+                <AnimatePresence initial={false}>
+                  {open && (
+                    <motion.div
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.25 }}
+                      style={{ overflow: "hidden" }}
+                    >
+                      <p>{it.a}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );

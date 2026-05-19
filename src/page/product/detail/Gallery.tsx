@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 interface Props {
   images: string[];
@@ -9,35 +9,71 @@ interface Props {
 
 function Gallery({ images }: Props) {
   const [active, setActive] = useState(0);
+  const count = images.length;
+
+  const prev = () => setActive((i) => (i - 1 + count) % count);
+  const next = () => setActive((i) => (i + 1) % count);
 
   return (
-    <div className="product-detail__gallery">
+    <motion.div
+      className="product-detail__gallery"
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="product-detail__gallery-main">
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={active}
-            src={images[active]}
-            alt="product"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          />
-        </AnimatePresence>
+        <img src={images[active]} alt="" />
+        <div className="product-detail__gallery-shade" />
+
+        <button
+          className="product-detail__gallery-arrow product-detail__gallery-arrow--left"
+          onClick={prev}
+          aria-label="Ảnh trước"
+        >
+          <svg viewBox="0 0 16 12" fill="none" aria-hidden>
+            <path
+              d="M14 6H2M2 6l4-4M2 6l4 4"
+              stroke="currentColor"
+              strokeWidth="1.4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+        <button
+          className="product-detail__gallery-arrow product-detail__gallery-arrow--right"
+          onClick={next}
+          aria-label="Ảnh kế"
+        >
+          <svg viewBox="0 0 16 12" fill="none" aria-hidden>
+            <path
+              d="M2 6h12M14 6l-4-4M14 6l-4 4"
+              stroke="currentColor"
+              strokeWidth="1.4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
       </div>
+
       <div className="product-detail__thumbs">
-        {images.map((img, idx) => (
+        {images.map((src, idx) => (
           <button
             key={idx}
             type="button"
-            className={`product-detail__thumb ${active === idx ? "is-active" : ""}`}
+            className={`product-detail__thumb ${
+              idx === active ? "is-active" : ""
+            }`}
             onClick={() => setActive(idx)}
+            aria-label={`Xem ảnh ${idx + 1}`}
           >
-            <img src={img} alt={`thumb-${idx}`} />
+            <img src={src} alt="" />
           </button>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }
 

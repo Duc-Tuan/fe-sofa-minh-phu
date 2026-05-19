@@ -2,83 +2,127 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import img1 from "@/assets/images/figma/home/capacity-1.png";
-import img2 from "@/assets/images/figma/home/capacity-2.png";
-import img3 from "@/assets/images/figma/home/capacity-3.png";
-import img4 from "@/assets/images/figma/home/capacity-4.png";
 
-const tabs = [
+interface ExpertItem {
+  big?: string;
+  largeTitle?: string;
+  largeTitleMobile?: string;
+  unit?: string[];
+  desc: string;
+}
+
+const items: ExpertItem[] = [
   {
-    id: "design",
-    title: "TƯ VẤN & THIẾT KẾ 3D",
-    desc: "Đội ngũ kỹ thuật chuyển bản vẽ KTS thành mô hình 3D chính xác, đảm bảo phương án sản xuất khả thi và đúng tinh thần thiết kế.",
-    image: img1.src,
+    big: "20+",
+    unit: ["Chuyên viên", "tư vấn"],
+    desc: "Thấu hiểu khách hàng, đưa ra giải pháp kỹ thuật tối ưu nhất.",
   },
   {
-    id: "frame",
-    title: "GIA CÔNG KHUNG SOFA",
-    desc: "Hệ thống máy CNC, cưa và xử lý gỗ tự động, đảm bảo từng khung được cắt – ghép – sấy đạt chuẩn về độ bền và độ chính xác.",
-    image: img2.src,
+    big: "100+",
+    unit: ["Nghệ nhân &", "Thợ lành nghề"],
+    desc: "14+ năm kinh nghiệm, am hiểu sâu sắc kết cấu và vật liệu.",
   },
   {
-    id: "upholstery",
-    title: "BỌC NỆM & MAY VẢI",
-    desc: "Phòng cắt may riêng biệt với máy may công nghiệp, đảm bảo từng đường chỉ – đường viền của bọc sofa đều ở chuẩn cao cấp.",
-    image: img3.src,
-  },
-  {
-    id: "qc",
-    title: "KIỂM ĐỊNH CHẤT LƯỢNG",
-    desc: "Mỗi sản phẩm trải qua nhiều bước QC trước khi xuất xưởng – kiểm tra cấu trúc, độ êm, chất liệu và tổng thể thẩm mỹ.",
-    image: img4.src,
+    largeTitle: "Kỹ sư thiết kế\n& Kỹ thuật",
+    largeTitleMobile: "Kỹ sư thiết kế & Kỹ thuật",
+    desc: "Những người chuyển hóa bản vẽ 3D thành kiệt tác thực tế.",
   },
 ];
 
 function Capacity() {
-  const [active, setActive] = useState(0);
-  const cur = tabs[active];
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
 
   return (
-    <section className="manuf-capacity my-container">
+    <section className="manuf-capacity">
+      <div className="manuf-capacity__glow" />
       <div className="manuf-capacity__head">
-        <span className="manuf-capacity__eyebrow">GIẢI PHÁP TRỌN GÓI</span>
+        <span className="manuf-capacity__eyebrow">Đội ngũ tinh hoa</span>
         <h2 className="manuf-capacity__title">
-          NĂNG LỰC SẢN XUẤT TRỌN GÓI <br /> THEO TỪNG DỰ ÁN
+          “Bàn tay vàng” <br /> trong làng nội thất
         </h2>
+        <p className="manuf-capacity__intro">
+          Mỗi sản phẩm không chỉ được làm bằng máy móc, mà còn được ‘thổi hồn’ bởi
+          sự tận tâm.
+        </p>
       </div>
 
-      <div className="manuf-capacity__body">
-        <div className="manuf-capacity__tabs">
-          {tabs.map((t, i) => (
-            <button
-              key={t.id}
-              className={`manuf-capacity__tab ${active === i ? "is-active" : ""}`}
-              onClick={() => setActive(i)}
+      <div className="manuf-capacity__grid my-container">
+        {items.map((it, idx) => {
+          const isOpen = openIdx === idx;
+          return (
+            <motion.div
+              key={idx}
+              className={`manuf-capacity__item${isOpen ? " is-open" : ""}`}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
             >
-              <span className="manuf-capacity__tab-index">0{i + 1}</span>
-              <span className="manuf-capacity__tab-title">{t.title}</span>
-            </button>
-          ))}
-        </div>
-
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={cur.id}
-            className="manuf-capacity__panel"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -20 }}
-            transition={{ duration: 0.4 }}
-          >
-            <div className="manuf-capacity__panel-image">
-              <img src={cur.image} alt={cur.title} />
-            </div>
-            <div className="manuf-capacity__panel-content">
-              <h3>{cur.title}</h3>
-              <p>{cur.desc}</p>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+              <button
+                type="button"
+                className="manuf-capacity__item-head"
+                onClick={() => setOpenIdx(isOpen ? null : idx)}
+                aria-expanded={isOpen}
+              >
+                {it.big && (
+                  <>
+                    <strong className="manuf-capacity__item-num">{it.big}</strong>
+                    <span className="manuf-capacity__item-unit">
+                      {it.unit?.map((u, i) => (
+                        <React.Fragment key={i}>
+                          {u}
+                          {i < (it.unit?.length || 0) - 1 ? <br /> : null}
+                        </React.Fragment>
+                      ))}
+                    </span>
+                  </>
+                )}
+                {it.largeTitle && (
+                  <h3 className="manuf-capacity__item-title">
+                    <span className="manuf-capacity__item-title--pc">
+                      {it.largeTitle}
+                    </span>
+                    <span className="manuf-capacity__item-title--mobile">
+                      {it.largeTitleMobile || it.largeTitle}
+                    </span>
+                  </h3>
+                )}
+                <span className="manuf-capacity__item-caret" aria-hidden>
+                  <svg
+                    viewBox="0 0 16 10"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 1.5L8 8.5L15 1.5"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <span className="manuf-capacity__item-divider" />
+              <p className="manuf-capacity__item-desc manuf-capacity__item-desc--pc">
+                {it.desc}
+              </p>
+              <AnimatePresence initial={false}>
+                {isOpen && (
+                  <motion.p
+                    className="manuf-capacity__item-desc manuf-capacity__item-desc--mobile"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.25, ease: "easeOut" }}
+                  >
+                    <span>{it.desc}</span>
+                  </motion.p>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          );
+        })}
       </div>
     </section>
   );

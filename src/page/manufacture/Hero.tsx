@@ -14,29 +14,36 @@ function Hero() {
         <div className="manuf-hero__overlay" />
       </div>
 
-      <div className="manuf-hero__content my-container">
+      <div className="manuf-hero__top-gradient" />
+
+      <div className="manuf-hero__content">
         <nav className="manuf-hero__breadcrumb">
           <Link href={PathName.HOME}>Trang chủ</Link>
-          <span>›</span>
-          <span>NĂNG LỰC SẢN XUẤT</span>
+          <svg
+            className="manuf-hero__breadcrumb-sep"
+            viewBox="0 0 8 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden
+          >
+            <path
+              d="M2 1l4 3-4 3"
+              stroke="currentColor"
+              strokeWidth="1"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+          <span>Năng lực sản xuất</span>
         </nav>
 
-        <motion.div
-          className="manuf-hero__big"
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="manuf-hero__big-num">8.000</span>
-          <div className="manuf-hero__big-meta">
-            <span className="unit">M²</span>
-            <span className="caption">Tổng diện tích nhà máy</span>
-          </div>
-        </motion.div>
-
-        <p className="manuf-hero__lead">
-          NHÀ MÁY HOẠT ĐỘNG SONG SONG <br /> ĐẢM BẢO NĂNG LỰC SẢN XUẤT QUY MÔ LỚN
-        </p>
+          Năng lực sản xuất
+        </motion.h1>
       </div>
     </section>
   );
