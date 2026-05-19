@@ -1047,6 +1047,7 @@
   background: #fff;
   padding: 4.375rem 6.25rem;
   position: relative;
+  overflow: hidden;
 }
 .manuf-esg__grid {
   /* display: grid;
