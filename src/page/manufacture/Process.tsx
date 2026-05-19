@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Icon from "@/assets/icon";
 import bg from "@/assets/images/figma/manufacture/process-bg.png";
@@ -116,7 +116,19 @@ function Process() {
   const [active, setActive] = useState(1);
   const [dir, setDir] = useState<"forward" | "back">("forward");
   const prevActive = useRef(1);
+  const stripRef = useRef<HTMLDivElement>(null);
   const cur = steps[active];
+
+  useEffect(() => {
+    const strip = stripRef.current;
+    if (!strip) return;
+    const track = strip.firstElementChild as HTMLElement | null;
+    if (!track) return;
+    const item = track.children[active + 1] as HTMLElement | undefined;
+    if (!item) return;
+    const offset = item.offsetLeft - (strip.clientWidth - item.offsetWidth) / 2;
+    strip.scrollTo({ left: Math.max(0, offset), behavior: "smooth" });
+  }, [active]);
 
   const top = steps.slice(0, 4);
   const bottom = steps.slice(4); // [05, 06, 07]
@@ -128,8 +140,7 @@ function Process() {
     setActive(i);
   };
 
-  const prev = () =>
-    goTo((active - 1 + steps.length) % steps.length);
+  const prev = () => goTo((active - 1 + steps.length) % steps.length);
   const next = () => goTo((active + 1) % steps.length);
 
   return (
@@ -142,7 +153,34 @@ function Process() {
       <div className="manuf-process__inner my-container">
         <div className="manuf-process__head">
           <span className="manuf-process__eyebrow">Mô hình vận hành</span>
-          <h2 className="manuf-process__title">Quy trình sản xuất</h2>
+          <h2 className="manuf-process__title">
+            Quy trình sản xuất
+            <span className="manuf-process__title-suffix"> 7 bước</span>
+          </h2>
+        </div>
+
+        <div className="manuf-process__strip" role="tablist" ref={stripRef}>
+          <div className="manuf-process__strip-track">
+            <span className="manuf-process__strip-line" aria-hidden="true" />
+            {steps.map((s, i) => (
+              <button
+                key={s.id}
+                type="button"
+                role="tab"
+                aria-selected={i === active}
+                aria-label={s.short}
+                className={`manuf-process__strip-step${
+                  i === active ? " is-active" : ""
+                }`}
+                onClick={() => goTo(i)}
+              >
+                <div className="manuf-process__strip-icon">
+                  <Icon name={s.iconName} />
+                </div>
+                <span className="manuf-process__strip-dot" aria-hidden="true" />
+              </button>
+            ))}
+          </div>
         </div>
 
         <div className="manuf-process__body">
@@ -151,9 +189,9 @@ function Process() {
               <motion.div
                 key={cur.id}
                 className="manuf-process__panel"
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
               >
                 <h3 className="manuf-process__panel-title">{cur.short}</h3>
@@ -213,7 +251,7 @@ function Process() {
               />
             </svg>
 
-            {(() => {
+            {/* {(() => {
               if (active === 0) return null;
               const target = indicatorAt(active, dir);
               const prevPos = indicatorAt(prevActive.current, dir);
@@ -263,7 +301,7 @@ function Process() {
                   aria-hidden
                 />
               );
-            })()}
+            })()} */}
 
             <div className="manuf-process__row top">
               {top.map((s, idx) => (
