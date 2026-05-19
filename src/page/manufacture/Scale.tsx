@@ -8,6 +8,7 @@ import imgQuote from "@/assets/images/figma/manufacture/scale-quote.png";
 import imgPaper from "@/assets/images/figma/manufacture/scale-paper.png";
 import imgRoom from "@/assets/images/figma/manufacture/scale-room.png";
 import imgHotel from "@/assets/images/figma/manufacture/scale-hotel.png";
+import bg from "@/assets/images/figma/manufacture/bg-manuf-scale.png";
 
 function Star() {
   return (
@@ -23,6 +24,7 @@ function Star() {
 function Scale() {
   return (
     <section className="manuf-scale my-container">
+      <img src={bg.src} alt="" className="manuf-scale__bg"/>
       <div className="manuf-scale__head">
         <div>
           <span className="manuf-scale__eyebrow">Về chúng tôi</span>

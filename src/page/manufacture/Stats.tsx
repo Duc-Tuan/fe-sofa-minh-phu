@@ -15,6 +15,7 @@ const cards = [
     label: ["Nghệ Nhân &", "Nhân Sự Tinh Anh"],
     desc: 'Đội ngũ nghệ nhân với hơn 14 năm kinh nghiệm là "linh hồn" của nhà máy, am hiểu về cấu trúc khung xương và tỉ lệ nhân trắc học, đảm bảo sản phẩm đạt độ hoàn thiện cao nhất.',
     valueRight: false,
+    alignEnd: false,
     image: w1.src,
   },
   {
@@ -22,7 +23,78 @@ const cards = [
     label: ["Chỉ Số Công Nghệ Chính Xác"],
     desc: "Chúng tôi đầu tư vào máy móc hiện đại như máy cắt CNC tự động và máy may kỹ thuật số, giúp tối ưu hóa 25% nguyên liệu, giảm rác thải và hướng tới quy trình sản xuất bền vững.",
     valueRight: true,
+    alignEnd: false,
     image: w2.src,
+  },
+  {
+    value: "20.000+",
+    label: ["Sản phẩm", "/năm"],
+    desc: "Mỗi năm, hơn 20.000 sản phẩm tinh xảo được bàn giao.",
+    valueRight: false,
+    alignEnd: true,
+    image: w3.src,
+  },
+  {
+    value: "1.000+",
+    label: ["Đối tác"],
+    desc: "Khẳng định uy tín với hơn 1.000 khách hàng và đối tác chiến lược (KTS, đơn vị thiết kế) trên toàn quốc.",
+    valueRight: false,
+    alignEnd: true,
+    image: w4.src,
+  },
+];
+
+type PCStat = {
+  value: string;
+  label: string[];
+  desc: string;
+  valueRight: boolean;
+  alignEnd: boolean;
+};
+
+const cardsPC: { solid: boolean; stats: PCStat[] }[] = [
+  {
+    solid: true,
+    stats: [
+      {
+        value: "100+",
+        label: ["Nghệ Nhân &", "Nhân Sự Tinh Anh"],
+        desc: 'Đội ngũ nghệ nhân với hơn 14 năm kinh nghiệm là "linh hồn" của nhà máy, am hiểu về cấu trúc khung xương và tỉ lệ nhân trắc học, đảm bảo sản phẩm đạt độ hoàn thiện cao nhất.',
+        valueRight: false,
+        alignEnd: false,
+      },
+    ],
+  },
+  {
+    solid: false,
+    stats: [
+      {
+        value: "99%",
+        label: ["Chỉ Số Công Nghệ Chính Xác"],
+        desc: "Chúng tôi đầu tư vào máy móc hiện đại như máy cắt CNC tự động và máy may kỹ thuật số, giúp tối ưu hóa 25% nguyên liệu, giảm rác thải và hướng tới quy trình sản xuất bền vững.",
+        valueRight: true,
+        alignEnd: false,
+      },
+    ],
+  },
+  {
+    solid: false,
+    stats: [
+      {
+        value: "20.000+",
+        label: ["Sản phẩm/năm"],
+        desc: "Mỗi năm, hơn 20.000 sản phẩm tinh xảo được bàn giao.",
+        valueRight: false,
+        alignEnd: true,
+      },
+      {
+        value: "1.000+",
+        label: ["Đối tác"],
+        desc: "Khẳng định uy tín với hơn 1.000 khách hàng và đối tác chiến lược (KTS, đơn vị thiết kế) trên toàn quốc.",
+        valueRight: false,
+        alignEnd: true,
+      },
+    ],
   },
 ];
 
@@ -37,7 +109,7 @@ const workers = [
 function Stats() {
   const cardsRef = useRef<HTMLDivElement>(null);
   const [activeCard, setActiveCard] = useState(0);
-  const totalCards = cards.length + 1;
+  const totalCards = cards.length;
 
   useEffect(() => {
     const el = cardsRef.current;
@@ -106,7 +178,7 @@ function Stats() {
             <span className="unit-sup">2</span>
           </span>
           <span className="manuf-stats__big-caption">
-            Diện tích
+            Diện tích{" "}
             <br />
             nhà máy
           </span>
@@ -114,7 +186,49 @@ function Stats() {
 
         <div className="manuf-stats__divider" />
 
-        <div className="manuf-stats__cards" ref={cardsRef}>
+        <div className="manuf-stats__cards manuf-stats__cards--pc">
+          {cardsPC.map((c, idx) => (
+            <motion.article
+              key={idx}
+              className={`manuf-stats__card${
+                c.solid ? " manuf-stats__card--solid" : ""
+              }`}
+              style={{ backgroundImage: `url(${cardBg.src})` }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+            >
+              <div className="manuf-stats__card-body">
+                {c.stats.map((s, i) => (
+                  <React.Fragment key={i}>
+                    <div
+                      className={`manuf-stats__card-head${
+                        s.valueRight ? " is-right" : ""
+                      }${s.alignEnd ? " is-bottom" : ""}`}
+                    >
+                      <strong>{s.value}</strong>
+                      <span>
+                        {s.label.map((l, j) => (
+                          <React.Fragment key={j}>
+                            {l}
+                            {j < s.label.length - 1 ? <br /> : null}
+                          </React.Fragment>
+                        ))}
+                      </span>
+                    </div>
+                    <p>{s.desc}</p>
+                  </React.Fragment>
+                ))}
+              </div>
+            </motion.article>
+          ))}
+        </div>
+
+        <div
+          className="manuf-stats__cards manuf-stats__cards--mobile"
+          ref={cardsRef}
+        >
           {cards.map((c, idx) => (
             <motion.article
               key={c.value}
@@ -131,9 +245,9 @@ function Stats() {
               <img className="manuf-stats__card-image" src={c.image} alt="" />
               <div className="manuf-stats__card-body">
                 <div
-                  className={`manuf-stats__card-head ${
-                    c.valueRight ? "is-right" : ""
-                  }`}
+                  className={`manuf-stats__card-head${
+                    c.valueRight ? " is-right" : ""
+                  }${c.alignEnd ? " is-bottom" : ""}`}
                 >
                   <strong>{c.value}</strong>
                   <span>
@@ -149,35 +263,6 @@ function Stats() {
               </div>
             </motion.article>
           ))}
-
-          <motion.article
-            className="manuf-stats__card"
-            style={{
-              backgroundImage: `url(${cardBg.src})`,
-              ["--card-bg" as string]: `url(${cardBg.src})`,
-            }}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <img className="manuf-stats__card-image" src={w3.src} alt="" />
-            <div className="manuf-stats__card-body">
-              <div className="manuf-stats__card-head">
-                <strong>20.000+</strong>
-                <span>Sản phẩm/năm</span>
-              </div>
-              <p>Mỗi năm, hơn 20.000 sản phẩm tinh xảo được bàn giao.</p>
-              <div className="manuf-stats__card-head">
-                <strong>1.000+</strong>
-                <span>Đối tác</span>
-              </div>
-              <p>
-                Khẳng định uy tín với hơn 1.000 khách hàng và đối tác chiến lược
-                (KTS, đơn vị thiết kế) trên toàn quốc.
-              </p>
-            </div>
-          </motion.article>
         </div>
 
         <div className="manuf-stats__pagination" role="tablist">

@@ -19,12 +19,10 @@ function ManufacturePage() {
       <Stats />
       <People />
       <Capacity />
-      <Compare />
       <Scale />
       <Gallery />
       <Process />
       <Esg />
-      {/* <Cta /> */}
     </div>
   );
 }
