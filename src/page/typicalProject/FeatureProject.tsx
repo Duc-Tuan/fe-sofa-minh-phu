@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import bg from "@/assets/images/figma/project/bg-featureProject.png";
 
 export interface FeaturedProjectData {
   eyebrow: string;
@@ -95,6 +96,8 @@ function FeatureProject({ project, variant = "white" }: Props) {
 
   return (
     <section className={`project-feature project-feature--${variant}`}>
+      <img src={bg.src} alt="" className="project-feature__bg" />
+
       <div className="project-feature__head my-container">
         <span className="project-feature__eyebrow">{project.eyebrow}</span>
         <h2 className="project-feature__title">{project.title}</h2>
@@ -193,12 +196,15 @@ function FeatureProject({ project, variant = "white" }: Props) {
         <div className="project-feature__production">
           <span className="project-feature__rule" />
           <div className="project-feature__production-row">
-            <div className="project-feature__production-item" onClick={() => setProductionOpen(!productionOpen)}>
+            <div
+              className="project-feature__production-item"
+              onClick={() => setProductionOpen(!productionOpen)}
+            >
               <span className="project-feature__production-label">
                 Hạng mục sản xuất:
               </span>
               <svg
-              className={`${productionOpen ? "" : "project-feature__production-label__svg"}`}
+                className={`${productionOpen ? "" : "project-feature__production-label__svg"}`}
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 10 6"
                 fill="none"
@@ -212,7 +218,9 @@ function FeatureProject({ project, variant = "white" }: Props) {
                 />
               </svg>
             </div>
-            <span className={`project-feature__production-text ${productionOpen ? "activate" : ""}`}>
+            <span
+              className={`project-feature__production-text ${productionOpen ? "activate" : ""}`}
+            >
               {project.production}
             </span>
           </div>

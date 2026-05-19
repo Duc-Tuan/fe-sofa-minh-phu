@@ -97,6 +97,10 @@
   padding: 4.375rem 0;
   overflow: hidden;
 }
+.project-feature__bg{
+  position: absolute;
+  inset: 0;
+}
 .project-feature__production-item {
   display: flex;
   justify-content: space-between;
