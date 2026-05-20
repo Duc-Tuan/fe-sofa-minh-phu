@@ -292,6 +292,7 @@
 .project-feature__slide {
   position: relative;
   flex: 0 0 auto;
+  width: 52.3125rem;
   height: 29.0625rem;
   border-radius: 0.625rem;
   overflow: hidden;
@@ -301,7 +302,7 @@
 .project-feature__slide img {
   display: block;
   height: 100%;
-  width: auto;
+  width: 100%;
   max-width: none;
   object-fit: cover;
   opacity: 0.3;
