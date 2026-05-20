@@ -604,9 +604,9 @@
     height: auto;
     transition: all 0.5s;
   }
-  .project-feature__carousel {
+  /* .project-feature__carousel {
     margin-top: 1.25rem;
-  }
+  } */
   .project-feature__track {
     gap: 1rem;
   }
@@ -696,15 +696,16 @@
   }
   .project-list__pagination {
     gap: 1rem;
-    margin-top: 0.5rem;
+    margin-top: 1.25rem;
+    margin-bottom: 2.25rem;
   }
   .project-list__pages {
     gap: 0.375rem;
   }
   .project-list__page {
-    min-width: 2.25rem;
-    height: 2.25rem;
+    min-width: 1.625rem;
+    height: 1.625rem;
     font-size: 0.875rem;
-    padding: 0 0.5rem;
+    padding: 0.16869rem 0.50606rem;
   }
 }
