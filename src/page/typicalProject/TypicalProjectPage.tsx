@@ -89,8 +89,12 @@ function TypicalProjectPage() {
   return (
     <div className="project-page">
       <Hero />
-      <FeatureProject project={featured1} variant="white" />
-      <FeatureProject project={featured2} variant="gray" />
+      <div className="project-page__one">
+        <FeatureProject project={featured1} variant="white" />
+      </div>
+      <div className="project-page__two">
+        <FeatureProject project={featured2} variant="gray" />
+      </div>
       <ProjectList projects={projects} totalPages={10} />
     </div>
   );
