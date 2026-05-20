@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import bg from "@/assets/images/figma/project/bg-featureProject.png";
+import { useEffect, useRef, useState } from "react";
 
 export interface FeaturedProjectData {
   eyebrow: string;
@@ -94,9 +93,30 @@ function FeatureProject({ project, variant = "white" }: Props) {
   const goPrev = () => setActive((a) => a - 1);
   const goNext = () => setActive((a) => a + 1);
 
+  const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+  const SWIPE_THRESHOLD = 40;
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+  };
+
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null || touchStartY.current === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    const dy = e.changedTouches[0].clientY - touchStartY.current;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > SWIPE_THRESHOLD) {
+      if (dx < 0) goNext();
+      else goPrev();
+    }
+    touchStartX.current = null;
+    touchStartY.current = null;
+  };
+
   return (
     <section className={`project-feature project-feature--${variant}`}>
-      <img src={bg.src} alt="" className="project-feature__bg" />
+      <div className="project-feature__bg" />
 
       <div className="project-feature__head my-container">
         <span className="project-feature__eyebrow">{project.eyebrow}</span>
@@ -109,6 +129,8 @@ function FeatureProject({ project, variant = "white" }: Props) {
         ref={containerRef}
         role="region"
         aria-roledescription="carousel"
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
       >
         <motion.div
           className="project-feature__track"
