@@ -1861,6 +1861,9 @@
   .about-story__vision{
     height: auto;
   }
+  .about-team{
+    height: 55rem;
+  }
 }
 /* ============================================================ */
 /* MOBILE                                                       */
