@@ -1133,7 +1133,8 @@
 
 /* ========== Team ========== */
 .about-team {
-  height: 53.9375rem;
+  /* height: 53.9375rem; */
+  height: 44rem;
   position: relative;
   padding: 4.375rem 0 3rem;
   background: #fff;
