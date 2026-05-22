@@ -1879,6 +1879,9 @@
   .about-team {
     height: 44rem;
   }
+  .about-story__pano {
+    background-position-y: 14%;
+  }
 }
 /* ============================================================ */
 /* MOBILE                                                       */
@@ -1996,7 +1999,7 @@
   .about-story__pano-title {
     font-size: 1.25rem;
   }
-  .about-story__pano-content_icon-bg{
+  .about-story__pano-content_icon-bg {
     display: none;
   }
   .about-story__pano-quote {
