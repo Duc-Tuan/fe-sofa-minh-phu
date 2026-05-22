@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import bg from "@/assets/images/figma/about/mission-bg.png";
 import Icon from "@/assets/icon";
@@ -33,6 +33,18 @@ const ITEMS = [
 ];
 
 function Mission() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <section className="about-mission">
       <div className="about-mission__bg" aria-hidden>
@@ -61,26 +73,53 @@ function Mission() {
             <Icon name="icon-circle" />
           </div>
           <div className="about-mission__list">
-            {ITEMS.map((it, idx) => (
-              <motion.div
-                className="about-mission__item-content"
-                key={it.title}
-                initial={{ opacity: 0, x: 24 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-              >
-                <div className="svg">
-                  <Icon name={it.icon} />
-                </div>
-                <div
-                  className={`about-mission__item about-mission__item--off-${it.offset}`}
-                >
-                  <h3>{it.title}</h3>
-                  <p>{it.desc}</p>
-                </div>
-              </motion.div>
-            ))}
+            {isMobile
+              ? ITEMS.map((it, idx) => (
+                  <motion.div
+                    className="about-mission__item-content"
+                    key={`${it.title}-${isMobile ? "m" : "d"}`}
+                    initial={{
+                      opacity: 0,
+                      y: 40,
+                    }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  >
+                    <div className="svg">
+                      <Icon name={it.icon} />
+                    </div>
+                    <div
+                      className={`about-mission__item about-mission__item--off-${it.offset}`}
+                    >
+                      <h3>{it.title}</h3>
+                      <p>{it.desc}</p>
+                    </div>
+                  </motion.div>
+                ))
+              : ITEMS.map((it, idx) => (
+                  <motion.div
+                    className="about-mission__item-content"
+                    key={`${it.title}-${isMobile ? "m" : "d"}`}
+                    initial={{
+                      opacity: 0,
+                      x: 24,
+                    }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, amount: 0.3 }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  >
+                    <div className="svg">
+                      <Icon name={it.icon} />
+                    </div>
+                    <div
+                      className={`about-mission__item about-mission__item--off-${it.offset}`}
+                    >
+                      <h3>{it.title}</h3>
+                      <p>{it.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
           </div>
         </div>
       </div>

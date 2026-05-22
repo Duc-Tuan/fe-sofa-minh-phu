@@ -958,6 +958,7 @@
 .about-mile {
   padding: 6.75rem 0;
   background: #fff;
+  overflow-x: hidden;
 }
 .about-mile__inner {
   display: flex;
@@ -1906,6 +1907,7 @@
 
   .about-story {
     padding-top: 2.25rem;
+    overflow: hidden;
   }
   .about-story__watermark {
     display: none;
@@ -1916,7 +1918,7 @@
     position: relative;
   }
   .about-story__image-mobile {
-    display: flex;
+    display: flex !important;
     gap: 0.5em;
   }
   .about-story__side,
@@ -2071,6 +2073,7 @@
   .about-mission__inner {
     grid-template-columns: 1fr;
     gap: 0;
+    overflow: hidden;
   }
   .about-mission__eyebrow {
     text-align: center;
@@ -2295,9 +2298,9 @@
     border: 1px solid #4e85e6;
   }
   .about-rnd__circle--mobile::after {
-    width: 4.9375rem;
-    height: 4.9375rem;
-    top: 17%;
+    width: 5.9375rem;
+    height: 5.9375rem;
+    top: 24%;
   }
   .about-rnd__circle--mobile .about-rnd__circle-no {
     font-size: 1.5rem;
@@ -2567,7 +2570,6 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    position: relative;
   }
   .about-team::after {
     content: "";
