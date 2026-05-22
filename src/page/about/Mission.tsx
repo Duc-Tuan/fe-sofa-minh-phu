@@ -40,10 +40,6 @@ function Mission() {
         <div className="about-mission__bg-overlay" />
       </div>
 
-      <div className="about-mission__connector">
-        <Icon name="icon-circle" />
-      </div>
-
       <div className="about-mission__inner my-container">
         <motion.div
           className="about-mission__head"
@@ -61,18 +57,24 @@ function Mission() {
         </motion.div>
 
         <div className="about-mission__list-wrap">
+          <div className="about-mission__connector">
+            <Icon name="icon-circle" />
+          </div>
           <div className="about-mission__list">
             {ITEMS.map((it, idx) => (
-              <motion.div className="about-mission__item-content" key={it.title} initial={{ opacity: 0, x: 24 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, amount: 0.3 }}
-                  transition={{ duration: 0.5, delay: idx * 0.1 }}>
+              <motion.div
+                className="about-mission__item-content"
+                key={it.title}
+                initial={{ opacity: 0, x: 24 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+              >
                 <div className="svg">
                   <Icon name={it.icon} />
                 </div>
                 <div
                   className={`about-mission__item about-mission__item--off-${it.offset}`}
-                  
                 >
                   <h3>{it.title}</h3>
                   <p>{it.desc}</p>

@@ -20,6 +20,18 @@ const reveal = (delay = 0) => ({
   viewport: { once: true, amount: 0.2 },
   transition: { duration: 0.6, delay },
 });
+const revealX = (delay = 0) => ({
+  initial: { opacity: 0, x: 28 },
+  whileInView: { opacity: 1, x: 0 },
+  viewport: { once: true, amount: 0.2 },
+  transition: { duration: 0.6, delay },
+});
+const revealXY = (delay = 0) => ({
+  initial: { opacity: 0, x: 28, y: 28 },
+  whileInView: { opacity: 1, x: 0, y: 0 },
+  viewport: { once: true, amount: 0.2 },
+  transition: { duration: 0.6, delay },
+});
 
 function Story() {
   return (
@@ -99,28 +111,26 @@ function Story() {
         </div>
       </div>
 
-      <motion.div className="about-story__pano" {...reveal()}>
-        {/* <img src={imgPano.src} alt="Toàn cảnh nhà máy Minh Phú" /> */}
-        {/* <div className="about-story__pano-overlay" /> */}
+      <motion.div className="about-story__pano" {...revealX()}>
         <div className="about-story__pano-content my-container">
-          <motion.div className="about-story__pano-image" {...reveal(0.1)}>
+          <motion.div className="about-story__pano-image" {...revealX(0.1)}>
             <img src={imgWatermark.src} alt="Sản phẩm hoàn thiện" />
           </motion.div>
 
           <div className="about-story__pano-content--text">
-            <motion.div {...reveal(0.1)}>
+            <motion.div {...revealX(0.1)}>
               <Icon name="icon-comma" />
             </motion.div>
-            <motion.p className="about-story__pano-title" {...reveal(0.1)}>
+            <motion.p className="about-story__pano-title" {...revealX(0.1)}>
               CEO LƯƠNG VĂN MINH:
               <br />
               &quot;CHÚNG TÔI SẢN XUẤT SỰ TỬ TẾ&quot;
             </motion.p>
             <motion.div
               className="about-story__pano-content--text-separation"
-              {...reveal(0.1)}
+              {...revealX(0.1)}
             />
-            <motion.p className="about-story__pano-quote" {...reveal(0.1)}>
+            <motion.p className="about-story__pano-quote" {...revealX(0.1)}>
               &quot;Trong nội thất may đo, sự tinh tế không đến từ vẻ xa hoa, mà
               nằm ở sự trung thực của khung xương và sự tỉ mỉ trong từng đường
               chỉ. Tại Minh Phú, chúng tôi không chỉ làm ghế, chúng tôi chế tác
@@ -131,7 +141,7 @@ function Story() {
           </div>
         </div>
       </motion.div>
-      <motion.div className="about-story__vision" {...reveal()}>
+      <motion.div className="about-story__vision" {...revealXY()}>
         <img
           src={imgstory2.src}
           alt="Toàn cảnh nhà máy Minh Phú"
@@ -143,19 +153,19 @@ function Story() {
           className="about-story__vision-bg-two"
         />
         <div className="about-story__vision-content my-container">
-          <motion.h3 className="about-story__vision-title" {...reveal(0.1)}>
+          <motion.h3 className="about-story__vision-title" {...revealXY(0.1)}>
             TẦM NHÌN
           </motion.h3>
-          <motion.h1 className="about-story__vision-context" {...reveal(0.1)}>
+          <motion.h1 className="about-story__vision-context" {...revealXY(0.1)}>
             NHÀ MÁY THÔNG MINH <br/> <span>-</span> SẢN XUẤT XANH
           </motion.h1>
-          <motion.p className="about-story__vision-quote" {...reveal(0.1)}>
+          <motion.p className="about-story__vision-quote" {...revealXY(0.1)}>
             Đến năm 2030: Khẳng định vị thế Nhà máy sản xuất đồ rời số 1 miền
             Bắc. Minh Phú tiên phong hội tụ công nghệ hiện đại và kỹ nghệ di sản
             để kiến tạo hệ sinh thái bền vững và thân thiện với môi trường.
           </motion.p>
 
-          <motion.div {...reveal(0.1)} className="about-story__vision--review-img">
+          <motion.div {...revealXY(0.1)} className="about-story__vision--review-img">
             <img src={imgstory4.src} alt="Sản phẩm hoàn thiện" />
           </motion.div>
         </div>
