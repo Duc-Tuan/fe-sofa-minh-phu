@@ -113,6 +113,10 @@ function Story() {
 
       <motion.div className="about-story__pano" {...revealX()}>
         <div className="about-story__pano-content my-container">
+          <motion.div {...revealX(0.1)} className="about-story__pano-content_icon-bg">
+            <Icon name="icon-comma" />
+          </motion.div>
+
           <motion.div className="about-story__pano-image" {...revealX(0.1)}>
             <img src={imgWatermark.src} alt="Sản phẩm hoàn thiện" />
           </motion.div>
@@ -141,7 +145,8 @@ function Story() {
           </div>
         </div>
       </motion.div>
-      <motion.div className="about-story__vision" {...revealXY()}>
+
+      <motion.div className="about-story__vision" {...reveal()}>
         <img
           src={imgstory2.src}
           alt="Toàn cảnh nhà máy Minh Phú"
@@ -153,19 +158,22 @@ function Story() {
           className="about-story__vision-bg-two"
         />
         <div className="about-story__vision-content my-container">
-          <motion.h3 className="about-story__vision-title" {...revealXY(0.1)}>
+          <motion.h3 className="about-story__vision-title" {...reveal(0.1)}>
             TẦM NHÌN
           </motion.h3>
-          <motion.h1 className="about-story__vision-context" {...revealXY(0.1)}>
-            NHÀ MÁY THÔNG MINH <br/> <span>-</span> SẢN XUẤT XANH
+          <motion.h1 className="about-story__vision-context" {...reveal(0.1)}>
+            NHÀ MÁY THÔNG MINH <br /> <span>-</span> SẢN XUẤT XANH
           </motion.h1>
-          <motion.p className="about-story__vision-quote" {...revealXY(0.1)}>
+          <motion.p className="about-story__vision-quote" {...revealX(0.1)}>
             Đến năm 2030: Khẳng định vị thế Nhà máy sản xuất đồ rời số 1 miền
             Bắc. Minh Phú tiên phong hội tụ công nghệ hiện đại và kỹ nghệ di sản
             để kiến tạo hệ sinh thái bền vững và thân thiện với môi trường.
           </motion.p>
 
-          <motion.div {...revealXY(0.1)} className="about-story__vision--review-img">
+          <motion.div
+            {...reveal(0.2)}
+            className="about-story__vision--review-img"
+          >
             <img src={imgstory4.src} alt="Sản phẩm hoàn thiện" />
           </motion.div>
         </div>
