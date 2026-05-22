@@ -1876,9 +1876,9 @@
   .about-story__vision {
     height: auto;
   }
-  .about-team {
+  /* .about-team {
     height: 44rem;
-  }
+  } */
   .about-story__pano {
     background-position-y: 14%;
   }
