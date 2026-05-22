@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useRef, useState } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import bg from "@/assets/images/figma/about/rnd-bg.png";
 
 const CARDS = [
@@ -22,21 +22,23 @@ const CARDS = [
   },
 ];
 
-const MOBILE_POSITIONS = ["top", "left", "right"] as const;
-
 function RnD() {
   const [active, setActive] = useState(0);
   const [mobileActive, setMobileActive] = useState<number | null>(null);
   const [mobileLastSelected, setMobileLastSelected] = useState<number | null>(
     null
   );
+  const circlesRef = useRef<HTMLDivElement>(null);
+  const isCirclesInView = useInView(circlesRef, { once: true, amount: 0.4 });
+  const mobileClusterRef = useRef<HTMLDivElement>(null);
+  const isMobileInView = useInView(mobileClusterRef, { once: true, amount: 0.4 });
 
   const selectMobile = (idx: number) => {
     setMobileActive(idx);
     setMobileLastSelected(idx);
   };
   const collapseMobile = () => setMobileActive(null);
-  const mobileBodyIdx = mobileActive ?? mobileLastSelected;
+  const mobileBodyIdx = (mobileActive ?? mobileLastSelected) || 0;
 
   return (
     <section className="about-rnd my-container">
@@ -84,25 +86,35 @@ function RnD() {
             hợp giữa tư duy đổi mới và trách nhiệm môi trường, hướng tới hệ sinh
             thái nội thất: Sạch – Sang – Bền vững.
           </motion.p>
-          <div className="about-rnd__circles">
-            {CARDS.map((c, idx) => (
-              <motion.button
-                key={c.no}
-                type="button"
-                className={`about-rnd__circle ${
-                  active === idx ? "is-active" : ""
-                }`}
-                style={{ zIndex: CARDS.length - idx }}
-                onClick={() => setActive(idx)}
-                initial={{ opacity: 0, scale: 0.92 }}
-                whileInView={{ opacity: 1, scale: 1, zIndex: active === idx ? 10 : CARDS.length - idx }}
-                viewport={{ once: true, amount: 0.3 }}
-                transition={{ duration: 0.5, delay: idx * 0.12 }}
-              >
-                <span className="about-rnd__circle-no">{c.no}</span>
-                <span className="about-rnd__circle-title">{c.title}</span>
-              </motion.button>
-            ))}
+          <div className="about-rnd__circles" ref={circlesRef}>
+            {CARDS.map((c, idx) => {
+              const stepPx = 15.6875 * 10;
+              const initialX = (1 - idx) * stepPx;
+              return (
+                <motion.button
+                  key={c.no}
+                  type="button"
+                  className={`about-rnd__circle ${
+                    active === idx ? "is-active" : ""
+                  }`}
+                  style={{
+                    zIndex: active === idx ? 10 : CARDS.length - idx,
+                    transform: `translate3d(${initialX}px, 0, 0)`,
+                  }}
+                  onClick={() => setActive(idx)}
+                  initial={{ x: initialX }}
+                  animate={{ x: isCirclesInView ? 0 : initialX }}
+                  transition={{
+                    duration: 0.9,
+                    ease: [0.22, 0.61, 0.36, 1],
+                    delay: isCirclesInView ? 0.15 : 0,
+                  }}
+                >
+                  <span className="about-rnd__circle-no">{c.no}</span>
+                  <span className="about-rnd__circle-title">{c.title}</span>
+                </motion.button>
+              );
+            })}
           </div>
 
           <AnimatePresence mode="wait">
@@ -128,7 +140,7 @@ function RnD() {
             mobileActive !== null ? "is-selected" : ""
           }`}
         >
-          <div className="about-rnd__mobile-cluster">
+          <div className="about-rnd__mobile-cluster" ref={mobileClusterRef}>
             {CARDS.map((c, idx) => {
               const isSelected = mobileActive !== null;
               const isActive = mobileActive === idx;
@@ -143,6 +155,7 @@ function RnD() {
               const centerTop = 62.5;
               const dx = centerLeft - basePos.left;
               const dy = centerTop - basePos.top;
+              const centered = !isMobileInView || isSelected;
 
               return (
                 <motion.button
@@ -159,12 +172,26 @@ function RnD() {
                     isActive ? "is-active" : ""
                   }`}
                   aria-label={`${c.no} ${c.title}`}
+                  initial={{ x: dx, y: dy, opacity: 0, scale: 0.6 }}
                   animate={{
-                    x: isSelected ? dx : 0,
-                    y: isSelected ? dy : 0,
-                    opacity: isSelected && !isActive ? 0 : 1,
+                    x: centered ? dx : 0,
+                    y: centered ? dy : 0,
+                    opacity: !isMobileInView
+                      ? 0
+                      : isSelected && !isActive
+                        ? 0
+                        : 1,
+                    scale: !isMobileInView ? 0.6 : 1,
                   }}
-                  transition={{ duration: 0.2, ease: "easeOut" }}
+                  transition={
+                    isSelected
+                      ? { duration: 0.25, ease: "easeOut" }
+                      : {
+                          duration: 0.75,
+                          ease: [0.22, 0.61, 0.36, 1],
+                          delay: isMobileInView ? 0.1 + idx * 0.1 : 0,
+                        }
+                  }
                   whileTap={{ scale: 0.96 }}
                   style={{
                     left: basePos.left,
