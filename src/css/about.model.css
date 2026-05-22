@@ -2564,6 +2564,7 @@
 
   /* ===== Team mobile ===== */
   .about-team {
+    top: -2rem;
     height: auto;
     padding: 2.25rem 0 2.4rem;
     background: url("../assets/images/figma/about/about-team-2.png");
