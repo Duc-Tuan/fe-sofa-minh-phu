@@ -68,8 +68,8 @@ function Partners() {
         <div className="about-partners__gallery" aria-hidden>
           <motion.div
             className="about-partners__photo about-partners__photo--p1"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.55 }}
           >
@@ -77,8 +77,8 @@ function Partners() {
           </motion.div>
           <motion.div
             className="about-partners__photo about-partners__photo--p2"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.55, delay: 0.1 }}
           >
@@ -86,10 +86,10 @@ function Partners() {
           </motion.div>
           <motion.div
             className="about-partners__photo about-partners__photo--p3"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.55, delay: 0.15 }}
+            transition={{ duration: 0.55, delay: 0.2 }}
           >
             <img src={v1.src} alt="Dự án cao cấp" />
           </motion.div>

@@ -235,6 +235,8 @@
   overflow: hidden;
   background: url("../assets/images/figma/about/image-mission-1.png") center
     center no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 .about-story__pano img {
   width: 100%;
@@ -296,10 +298,12 @@
 .about-story__vision-bg-two {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
 }
 .about-story__vision-bg-one {
   z-index: 10;
-  height: 60.4375rem;
+  height: 100%;
 }
 .about-story__vision-title {
   color: var(
@@ -316,6 +320,9 @@
 .about-story__vision--review-img {
   border-radius: 0.625rem;
   overflow: hidden;
+}
+.about-story__vision--review-img img {
+  width: 100%;
 }
 .about-story__vision-context {
   color: #1d262d;
@@ -379,7 +386,7 @@
 /* ========== Mission (dark) ========== */
 .about-mission {
   position: relative;
-  padding: 7rem 0;
+  /* padding: 7rem 0; */
   color: #fff;
   background: #050505;
   overflow: hidden;
@@ -421,6 +428,7 @@
   gap: 1.25rem;
   justify-content: center;
   height: 100%;
+  padding: 7rem 0;
 }
 .about-mission__eyebrow {
   display: block;
@@ -442,11 +450,12 @@
 }
 .about-mission__list-wrap {
   position: relative;
+  padding: 7rem 0;
   padding-left: 1.5rem;
 }
 .about-mission__connector {
   position: absolute;
-  left: 28%;
+  left: -83%;
   top: 0;
   height: 100%;
   pointer-events: none;
@@ -1200,6 +1209,9 @@
   transform: translateX(-50%);
   width: 90%;
 }
+.about-team__center img {
+  width: 100%;
+}
 .about-team__center-avatar {
   width: 4.86rem;
   height: 4.86rem;
@@ -1576,8 +1588,9 @@
   z-index: 0;
   pointer-events: none;
 }
-.about-why__bg img{
+.about-why__bg img {
   height: 100%;
+  width: 100%;
 }
 .about-why__inner {
   position: relative;
@@ -1837,6 +1850,16 @@
 .about-mile__mobile,
 .about-team__org {
   display: none;
+}
+
+@media (min-width: 1248px) {
+  .about-team__center {
+    width: 70%;
+    top: 2rem;
+  }
+  .about-story__vision{
+    height: auto;
+  }
 }
 /* ============================================================ */
 /* MOBILE                                                       */
