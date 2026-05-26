@@ -1,9 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import ProjectCard, { ProjectItem } from "./ProjectCard";
+import { AnimatePresence } from "framer-motion";
+import ProjectCard, { ProjectItem, ProjectSlide } from "./ProjectCard";
+import ProjectPopup from "./ProjectPopup";
 
-export type { ProjectItem } from "./ProjectCard";
+export type { ProjectItem, ProjectSlide } from "./ProjectCard";
 
 interface Props {
   projects: ProjectItem[];
@@ -25,6 +27,9 @@ function buildPagination(current: number, total: number): (number | "...")[] {
 
 function ProjectList({ projects, totalPages = 10 }: Props) {
   const [page, setPage] = useState(1);
+  const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(
+    null,
+  );
   const items = buildPagination(page, totalPages);
 
   const goPrev = () => setPage((p) => Math.max(1, p - 1));
@@ -39,9 +44,23 @@ function ProjectList({ projects, totalPages = 10 }: Props) {
 
       <div className="project-list__grid">
         {projects.map((p, idx) => (
-          <ProjectCard key={p.id} project={p} index={idx} />
+          <ProjectCard
+            key={p.id}
+            project={p}
+            index={idx}
+            onClick={() => setSelectedProject(p)}
+          />
         ))}
       </div>
+
+      <AnimatePresence>
+        {selectedProject && (
+          <ProjectPopup
+            project={selectedProject}
+            onClose={() => setSelectedProject(null)}
+          />
+        )}
+      </AnimatePresence>
 
       <nav className="project-list__pagination" aria-label="Phân trang">
         <button

@@ -3,23 +3,34 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+export interface ProjectSlide {
+  image: string;
+  title: string;
+  description: string;
+  meta: { label: string; value: string }[];
+  production: string;
+}
+
 export interface ProjectItem {
   id: string;
   category: string;
   name: string;
   image: string;
+  slides: ProjectSlide[];
 }
 
 interface Props {
   project: ProjectItem;
   index?: number;
+  onClick?: () => void;
 }
 
-function ProjectCard({ project, index = 0 }: Props) {
+function ProjectCard({ project, index = 0, onClick }: Props) {
   return (
     <motion.button
       type="button"
       className="project-card"
+      onClick={onClick}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
