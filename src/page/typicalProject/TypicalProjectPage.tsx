@@ -49,7 +49,7 @@ const featured2: FeaturedProjectData = {
 function makeSlides(images: string[]): ProjectSlide[] {
   const titles = [
     "Nhà Sang - Group Nghiện nhà",
-    "Phòng Khách Liền Kề",
+    "Sản phẩm ghế bar",
     "Không Gian Bếp Mở",
     "Phòng Ngủ Master",
     "Phòng Tắm Hiện Đại",
@@ -58,7 +58,7 @@ function makeSlides(images: string[]): ProjectSlide[] {
   ];
   const descs = [
     "Không gian biệt thự được thiết kế theo tinh thần nghỉ dưỡng, kết hợp vật liệu gỗ tự nhiên, ánh sáng dịu và bố cục mở, mang lại cảm giác thư giãn và riêng tư tuyệt đối.",
-    "Phòng khách với bộ sofa da cao cấp nhập khẩu từ Ý, kết hợp cùng đá cẩm thạch tự nhiên tạo điểm nhấn sang trọng cho không gian tiếp khách.",
+    "Không gian biệt thự được thiết kế theo tinh thần nghỉ dưỡng, kết hợp vật liệu gỗ tự nhiên, ánh sáng dịu và bố cục mở, mang lại cảm giác thư giãn và riêng tư tuyệt đối. Không gian biệt thự được thiết kế theo tinh thần nghỉ dưỡng, kết hợp vật liệu gỗ tự nhiên, ánh sáng dịu và bố cục mở, mang lại cảm giác thư giãn và riêng tư tuyệt đối.Không gian biệt thự được thiết kế theo tinh thần nghỉ dưỡng, kết hợp vật liệu gỗ tự nhiên, ánh sáng dịu và bố cục mở, mang lại cảm giác thư giãn và riêng tư tuyệt đối.",
     "Không gian bếp mở được thiết kế thông minh với hệ tủ bếp gỗ óc chó nhập khẩu, đảo bếp trung tâm tích hợp nhiều công năng.",
     "Phòng ngủ master với giường king-size bọc nỉ cao cấp, hệ thống đèn thông minh và rèm tự động tạo không gian nghỉ ngơi hoàn hảo.",
     "Phòng tắm hiện đại với sen vòi nhập khẩu, bồn tắm nằm thiết kế tinh tế, ốp lát đá tự nhiên cao cấp.",
@@ -76,7 +76,8 @@ function makeSlides(images: string[]): ProjectSlide[] {
   ];
   return images.map((img, i) => ({
     image: img,
-    title: titles[i % titles.length] + (i >= titles.length ? ` (${i + 1})` : ""),
+    title:
+      titles[i % titles.length] + (i >= titles.length ? ` (${i + 1})` : ""),
     description: descs[i % descs.length],
     meta: [
       { label: "Phân loại", value: categories[i % categories.length] },
@@ -86,6 +87,7 @@ function makeSlides(images: string[]): ProjectSlide[] {
     ],
     production:
       "Sofa, ghế đơn, giường tủ, kệ TV, tab đầu giường và một số hạng mục khác.",
+    type: i === 1 ? "product" : "default",
   }));
 }
 
@@ -95,42 +97,90 @@ const projects: ProjectItem[] = [
     category: "Căn hộ cao cấp",
     name: "Dự án Mini Hotel",
     image: cap1.src,
-    slides: makeSlides([cap1.src, p1.src, p3.src, slide1.src, slide2.src, p2.src, p4.src]),
+    slides: makeSlides([
+      cap1.src,
+      p1.src,
+      p3.src,
+      slide1.src,
+      slide2.src,
+      p2.src,
+      p4.src,
+    ]),
   },
   {
     id: "2",
     category: "Biệt thự",
     name: "Dự án du thuyền Diana Curse",
     image: cap3.src,
-    slides: makeSlides([cap3.src, slide1.src, p4.src, p2.src, p1.src, slide2.src, p3.src]),
+    slides: makeSlides([
+      cap3.src,
+      slide1.src,
+      p4.src,
+      p2.src,
+      p1.src,
+      slide2.src,
+      p3.src,
+    ]),
   },
   {
     id: "3",
     category: "Căn hộ cao cấp",
     name: "Dự án nha khoa Adora",
     image: p2.src,
-    slides: makeSlides([p2.src, p4.src, slide2.src, cap1.src, p3.src, slide1.src, cap3.src]),
+    slides: makeSlides([
+      p2.src,
+      p4.src,
+      slide2.src,
+      cap1.src,
+      p3.src,
+      slide1.src,
+      cap3.src,
+    ]),
   },
   {
     id: "4",
     category: "Biệt thự",
     name: "Dự án khách sạn Sheraton Hà Nội",
     image: p4.src,
-    slides: makeSlides([p4.src, cap3.src, p1.src, slide2.src, slide1.src, p2.src, cap1.src]),
+    slides: makeSlides([
+      p4.src,
+      cap3.src,
+      p1.src,
+      slide2.src,
+      slide1.src,
+      p2.src,
+      cap1.src,
+    ]),
   },
   {
     id: "5",
     category: "Biệt thự",
     name: "Dự án nội thất Novaworld Resort",
     image: slide1.src,
-    slides: makeSlides([slide1.src, cap1.src, p3.src, p4.src, p2.src, cap3.src, slide2.src]),
+    slides: makeSlides([
+      slide1.src,
+      cap1.src,
+      p3.src,
+      p4.src,
+      p2.src,
+      cap3.src,
+      slide2.src,
+    ]),
   },
   {
     id: "6",
     category: "Căn hộ cao cấp",
     name: "Dự án Mini Hotel",
     image: slide2.src,
-    slides: makeSlides([slide2.src, p2.src, cap3.src, slide1.src, p1.src, p4.src, cap1.src]),
+    slides: makeSlides([
+      slide2.src,
+      p2.src,
+      cap3.src,
+      slide1.src,
+      p1.src,
+      p4.src,
+      cap1.src,
+    ]),
   },
 ];
 

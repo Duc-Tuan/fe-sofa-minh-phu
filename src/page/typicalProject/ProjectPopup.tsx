@@ -232,74 +232,97 @@ function ProjectPopup({ project, onClose }: Props) {
                 {slide.description}
               </motion.p>
 
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.25, delay: 0.2 }}
-                className="project-popup__details"
-              >
-                <div className="project-popup__details-col">
-                  {leftCol.map((m) => (
-                    <div key={m.label} className="project-popup__meta-item">
-                      <span className="project-popup__meta-rule" />
-                      <span className="project-popup__meta-label">
-                        {m.label}
-                      </span>
-                      <span className="project-popup__meta-value">
-                        {m.value}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-                <div className="project-popup__details-col">
-                  {rightCol.map((m) => (
-                    <div key={m.label} className="project-popup__meta-item">
-                      <span className="project-popup__meta-rule" />
-                      <span className="project-popup__meta-label">
-                        {m.label}
-                      </span>
-                      <span className="project-popup__meta-value">
-                        {m.value}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.25, delay: 0.26 }}
-                className="project-popup__production"
-              >
-                <span className="project-popup__meta-rule" />
-                <div
-                  className="project-popup__production-head"
-                  onClick={() => setProductionOpen(!productionOpen)}
-                >
-                  <span className="project-popup__production-label">
-                    Hạng mục sản xuất:
-                  </span>
-                  <svg
-                    className={`project-popup__production-chevron${productionOpen ? " is-open" : ""}`}
-                    viewBox="0 0 10 6"
-                    fill="none"
+              {slide.type !== "product" ? (
+                <>
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.25, delay: 0.2 }}
+                    className="project-popup__details"
                   >
-                    <path
-                      opacity="0.7"
-                      d="M0.355779 5.07959L4.72983 0.715667L9.09375 5.07959"
-                      stroke="currentColor"
-                      strokeWidth="1.01251"
-                      strokeMiterlimit="10"
-                    />
+                    <div className="project-popup__details-col">
+                      {leftCol.map((m) => (
+                        <div key={m.label} className="project-popup__meta-item">
+                          <span className="project-popup__meta-rule" />
+                          <span className="project-popup__meta-label">
+                            {m.label}
+                          </span>
+                          <span className="project-popup__meta-value">
+                            {m.value}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="project-popup__details-col">
+                      {rightCol.map((m) => (
+                        <div key={m.label} className="project-popup__meta-item">
+                          <span className="project-popup__meta-rule" />
+                          <span className="project-popup__meta-label">
+                            {m.label}
+                          </span>
+                          <span className="project-popup__meta-value">
+                            {m.value}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.25, delay: 0.26 }}
+                    className="project-popup__production"
+                  >
+                    <span className="project-popup__meta-rule" />
+                    <div
+                      className="project-popup__production-head"
+                      onClick={() => setProductionOpen(!productionOpen)}
+                    >
+                      <span className="project-popup__production-label">
+                        Hạng mục sản xuất:
+                      </span>
+                      <svg
+                        className={`project-popup__production-chevron${productionOpen ? " is-open" : ""}`}
+                        viewBox="0 0 10 6"
+                        fill="none"
+                      >
+                        <path
+                          opacity="0.7"
+                          d="M0.355779 5.07959L4.72983 0.715667L9.09375 5.07959"
+                          stroke="currentColor"
+                          strokeWidth="1.01251"
+                          strokeMiterlimit="10"
+                        />
+                      </svg>
+                    </div>
+                    <span
+                      className={`project-popup__production-text${productionOpen ? " is-open" : ""}`}
+                    >
+                      {slide.production}
+                    </span>
+                  </motion.div>
+                </>
+              ) : (
+                <div className="project-popup__product-decor">
+                  {/* <svg className="project-popup__product-circle project-popup__product-circle--left" viewBox="0 0 85 85">
+                    <circle cx="42.5" cy="42.5" r="42" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.15" />
                   </svg>
+                  <svg className="project-popup__product-circle project-popup__product-circle--right" viewBox="0 0 85 85">
+                    <circle cx="42.5" cy="42.5" r="42" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.15" />
+                  </svg>
+                  <div className="project-popup__product-dots">
+                    {Array.from({ length: 7 }).map((_, i) => (
+                      <span key={i} className="project-popup__product-dot" />
+                    ))}
+                  </div>
+                  <svg className="project-popup__product-x" width="38" height="38" viewBox="0 0 38 38">
+                    <circle cx="19" cy="19" r="18.5" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.12" />
+                    <line x1="12" y1="12" x2="26" y2="26" stroke="currentColor" strokeWidth="1" opacity="0.12" />
+                    <line x1="26" y1="12" x2="12" y2="26" stroke="currentColor" strokeWidth="1" opacity="0.12" />
+                  </svg> */}
                 </div>
-                <span
-                  className={`project-popup__production-text${productionOpen ? " is-open" : ""}`}
-                >
-                  {slide.production}
-                </span>
-              </motion.div>
+              )}
             </motion.div>
           </div>
         </AnimatePresence>

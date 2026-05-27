@@ -9,6 +9,7 @@ export interface ProjectSlide {
   description: string;
   meta: { label: string; value: string }[];
   production: string;
+  type?: "default" | "product";
 }
 
 export interface ProjectItem {
